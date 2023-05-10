@@ -2,25 +2,13 @@ name: package
 
 on:
   push:
-    branches:    
-      - master
-    tags:
-      - v*
-
-  pull_request:
-    branches:    
-      - master
-    tags:
-      - v*
+    branches: [ zh_cn ]
 
 jobs:
   build:
-
     runs-on: 	windows-2022
-    
     steps:
     - uses: actions/checkout@v2
-
     - name: release
       shell: bash
       run: |
@@ -32,7 +20,19 @@ jobs:
       run: |
         make.bat html
 
-    - uses: actions/upload-artifact@v1
+    - name: Setup aliyun oss
+      uses: sqwatermark/setup-ossutil@v3.0
       with:
-        name: build
-        path: build
+        # 对应你 oss存储桶endpoint，香港节点如下
+        endpoint: "oss-cn-hongkong.aliyuncs.com" 
+
+        # 通过secrets隐藏你的阿里云 OSS_ACCESSKEYID
+        access-key-id: ${{ secrets.OSS_ACCESSKEYID }}
+
+        # 通过secrets隐藏你的阿里云 OSS_ACCESSKEYSECRET
+        access-key-secret: ${{ secrets.OSS_ACCESSKEYSECRET }}
+        
+    - name: Deploy docs
+      # 发布文档 
+      # 推送dist的目录文件到对应存储桶，强制同步
+      run: ossutil sync ./build/html/ oss://sqwatermark/effekseer-doc/ -f --delete
