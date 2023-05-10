@@ -199,6 +199,7 @@ def setup(app):
             }, True)
     app.add_transform(AutoStructify)
     
+    app.add_js_file('jquery.js')
     app.add_js_file('js/three.min.js')
     app.add_js_file('js/effekseer.min.js')
     app.add_js_file('js/iframe.js')
