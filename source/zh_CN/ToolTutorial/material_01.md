@@ -1,103 +1,88 @@
-﻿# 01. The Introduction of Material
+﻿# 01. 材质入门
 
 ## 概要
 
-Until now, the only way to render was to specify images and parameters and do a simple drawing.
-However, this did not allow complicated rendering such as distorting the image itself or adding specific areas.
+到目前为止，只能通过设置图像和参数进行简单的渲染。然而，这无法实现复杂的渲染，例如扭曲图像本身或添加某些区域。
 
-Effekseer has materials to accomplish these complex rendering.
-You can use materials to specify how particles are drawn.
-Materials can be created in the Material Editor.
+为了实现这些复杂的渲染任务，Effekseer可以使用材质。材质可以用来指定粒子的绘制方式。材质可以在材质编辑器中制作。
 
-Here, let's create a material to create a complex rendering.
+让我们创建一个材质，实现复杂的渲染。
 
 <div align="center">
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_01/Sample07.efkefc'></iframe>
-<p>The effect created in this chapter</p>
+<p>本章制作的特效</p>
 </div>
 
-Effects created in this chapter
+请使用下面的链接下载预制的文件。
 
-## Basic
+<a href="../../Effects/Tutorials/Mat_01_01.zip">下载</a>
 
-Some files have already been prepared.
-Please download from the link below.
-
-<a href="../../Effects/Tutorials/Mat_01_01.zip">Download</a>
-
-When you open it, you can see that a simple sphere model has been drawn.
+打开后，你会看到界面中渲染出一个简单球体的模型。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/state1.png">
 </div>
 
-In order to create a material, change ``` Material ``` to ``` File ``` in ``` Basic Render Settings ```.
+要创建一个材质，在`基础渲染设置`面板中把`材质`改为`文件`。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/material_create_en.png">
 </div>
 
-Press the Create button. A dialog for creating a new material appears.
-When saving material is completed, the material editor starts.
+点击生成按钮。 然后会显示一个生成新材质的对话框。当你完成了材质的保存，材质编辑器就会启动。
 
-Initially, only ``` Output ``` node exists.
-The value connected to this ``` Output ``` node is drawn on the particle.
+最初，只有一个`输出`节点。连接到这个`输出`节点的值将被绘制在粒子上。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/initial_en.png">
 </div>
 
-In the Material Editor, connect these nodes and specify the formula for drawing.
-The result of the calculation is drawn as particles.
-It may seem difficult at first, but let's edit it little by little.
+在材质编辑器中，这些节点被连接在一起，以指定渲染结果的计算方法。计算的结果显示为一个粒子。一开始可能看起来很困难，但让我们一点一点地编辑吧。
 
-The simplest configuration is to connect ``` Constant3 ``` node to the ``` Output ``` node.
+最简单的设置是将`常量3`节点连接到`输出`节点上。
 
-Press right click to add a ``` Constant3 ``` node.
+按右键添加一个`常量3`节点。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_constant3_en.png">
 </div>
 
-Connect the ``` Constant3 ``` node and ``` Emissive ``` in the ``` Output ``` node.
+将`常量3`节点连接倒`输出`节点的`Emissive`上。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/connect_en.png">
 </div>
 
-Then, left-click on the ``` Constant3 ``` node and enter a value from the input field on the left of the screen.
+然后左键点击`常量`3节点，在屏幕左边的输入栏中输入数值。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/input_constant3.png">
 </div>
 
-Then, you can see that the color of the sphere changes according to the numerical value.
+然后，你会看到球体的颜色会根据其数值而变化。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/state2.png">
 </div>
 
-When adding ``` Constant3 ``` node, did you see that ``` Constant1-4 ``` node existed?
-There are several types of values ​​that are transfered between nodes.
+在添加`常量`3的节点时，你是否看到有`常量1-4`的节点？有几种类型的值可以在节点之间传输。
 
-It is often a value type consisting of 1 to 4 numerical values, from Number 1 to Number 4.
-It can also be an image.
+通常是一种由1到4个数组成的值，如数值1到数值4。也可以是图像。
 
+## 绘制一张图片
 
-## Draw an image
+可以使用`采样图像`绘制图像。
 
-Images can be drawn using a ```Sample Image``` node.
-
-Right-click to add a ```Sample Image``` node.
+右键添加一个`采样图像`节点。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_GridImage_en.png">
 </div>
 
-Specify the image from the input field on the left of the screen.
-This time, specify ```Textures/Grid01.png``` prepared.
+在屏幕左侧的输入栏指定图像。
+这次选择准备好的`Textures/Grid01.png`。
 
-Connect RGB in the ```Sample Image``` node instead of the ``` Constant3 ``` node.
+连接`采样图像`节点的RGB锚点，替代`常量3`节点。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_GridImage_en.png">
@@ -107,56 +92,49 @@ Connect RGB in the ```Sample Image``` node instead of the ``` Constant3 ``` node
 <img src="../../img/Tutorial/Mat_01/state1.png">
 </div>
 
-The image is drawn, but the transparent parts are not transparent.
+现在图像被显示出来了，但是透明区域并不透明。
 
-Therefore, connect ```A``` in the ```Sample Image``` to ```Opacity``` in the ``` Output ``` node.
-This connects the transparency of the image to the transparency of the material.
+所以我们将`采样图像`的`A`连接到`输出`节点的`Opacity`。这样就把图像的透明度与材质的透明度连接起来了。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/connect_alpha_en.png">
 </div>
 
-Then, the image was drawn.
+然后，图像就被绘制出来了。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/state3.png">
 </div>
 
-## Shift an area of drawing image
+## 改变图像的显示区域
 
-Until now, the behavior was the same as simply drawing an image on the model.
-However, various expressions can be made using materials.
-As a preparation, change the position of the UV coordinates.
+到目前为止，这种行为与简单地在模型上显示图像是一样的。然而，材质可以用来创建各种表现方式。作为准备，改变UV坐标的位置。
 
-UV in the ```Sample Image``` is a value indicating the pixel position of the image used for draw.
-Let's replace this UV.
+`采样图像`节点的UV是一个用于指定像素在图像中的位置的值。现在让我们来替换这个UV。
 
-Add a ```UV``` node.
+添加一个`UV`节点。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_uv_en.png">
 </div>
 
-Then, connect to the UV　in the ```Sample Image``` node.
+然后，将UV连接倒`采样图像`节点。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/connect_uv_en.png">
 </div>
 
-Nothing changes. The reason is that a ```UV``` node outputs the UV value of the model or particle as it is.
+没有任何变化。这是因为，`UV`节点输出的是模型或粒子原本的UV值。
 
-Let's change this UV value and move the display area of ​​the image.
+让我们改变UV值并移动图像的显示区域。
 
-Add an ```Add``` node and a ``` Constant2 ``` node.
-
-Then, connect the ``` Constant2 ``` node and the ```UV``` node to the ```Add``` node.
-Both can be connected because the value type is Number 2.
+添加一个`加`节点和一个`常量2`节点。然后将`常量2`节点和`UV`节点连接倒`加`节点。两者都可以连接，因为它们的类型都是数值2。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/connect_add_en.png">
 </div>
 
-Then, change the value of the ``` Constant2 ``` node. Then you can see that the display position is shifted.
+然后改变`常量2`节点的值。 然后你会看到显示位置被移动了。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/change_constant2_en.png">
@@ -166,100 +144,89 @@ Then, change the value of the ``` Constant2 ``` node. Then you can see that the 
 <img src="../../img/Tutorial/Mat_01/state4.png">
 </div>
 
-## Distort the image
+## 扭曲图像
 
-We just shifted the display area of the image, but now let's distort the image.
+前面我们只是移动了图像的显示区域，现在让我们来扭曲图像。
 
-Use an image instead of the ``` Constant2 ``` node.
-For the image, specify ```Textures/Distortion01.png``` prepared in advance.
+我们将用一个图像取代我们先前使用的`常量2`节点。图像选择预先准备好的`Textures/Distortion01.png`。
 
-Add a ```Sample Image``` node and specify the image.
+添加一个`采样图像`节点并设置图像。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_DistortionImage_en.png">
 </div>
 
-Since the value type of the image is Number 3, use a ```MaskElements``` node.
+因为图像的类型是数值3，使用`遮罩元素`节点。
 
-A ```MaskElements``` node extracts a part of an element.
-Here, we will use the first two values, so check R and G.
+`遮罩元素`节点从一个元素中抽取出一部分。这里我们使用前两个值，所以选择R和G。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_mask_en.png">
 </div>
 
-Then, connect the ```MaskElements``` node to the ```Add``` node.
+然后，将`遮罩元素`节点连接倒`加`节点。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/connect_mask_en.png">
 </div>
 
-Heavy distortion. But I don't want that distortion.
+出现了很强的扭曲，但我不希望它像这样扭曲。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/state5.png">
 </div>
 
-Use a ```Multiply``` node to make it smaller.
-Add a ```Multiply``` node.
+用一个`乘`节点来使其变小。添加一个乘法节点。
 
-Then, connect the ```MaskElements``` node to the ```Multiply``` node.
-Decrease the value of the ```Multiply``` node.
+然后将一个`遮罩元素`节点连接到`乘`节点上。减少`乘`节点的值。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_multiply_en.png">
 </div>
 
-Then it will be distorted well.
+这样扭曲的程度就很合适了。
 
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_01/Sample05.efkefc'></iframe>
 
-## Move the distortion
+## 移动扭曲
 
-Let's move the distortion because it is quiet when stopped.
-
-Add a ```MovingUV``` node.
-
-A ```MovingUV``` node outputs the value of the moving UV over time.
-Connect this to the ```Sample Image``` node.
-Change some parameters as well.
+因为静止下来很无趣，让我们移动变形。添加一个`移动UV`节点。`移动UV`节点输出随时间移动的UV值。把它连接到`采样图像`节点上。稍微改变一下参数。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/connect_movinguv_en.png">
 </div>
 
-You can see that the distortion moves.
+可以看到扭曲在移动。
 
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_01/Sample06.efkefc'></iframe>
 
-## Color
+## 颜色
 
-Finally, let's color.
+最后，给它上色。
 
-Add a ```Multiply``` node.
+添加一个`乘`节点。
 
-Connect the ```Sample Image``` node that outputs the image and the first fixed 3 nodes added to the ```Multiply``` node.
+将输出图像的`采样图像`和你添加的第一个`常量3`节点连接到`乘`节点。
 
-And connect it to Emissive.
+然后把它连接到Emmissive上。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/colorlize_en.png">
 </div>
 
 Because the colors are multiplied together, they are colored.
+颜色乘到一起，所以图像被上色了。
 
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_01/Sample07.efkefc'></iframe>
 
-Finally, I made it possible to download the effect created in this chapter.
+最后，你可以通过下面的链接下载本章中制作的特效。
 
-<a href="../../Effects/Tutorials/Mat_01_02.zip">Download</a>
+<a href="../../Effects/Tutorials/Mat_01_02.zip">下载</a>
 
-## Samples
+## 例子
 
-This time, we have introduced examples of materials, but we can do various things.
-Effeksseer has many sample materials, so you may want to look at them.
+我们已经向你展示了材质的例子，但我们可以制作不同的材质。在Effeksseer的示例中有许多材质，你可以看一下它们。
 
-## Summary
+## 总结
 
-This chapter has explained the basics of materials.
-The use of materials greatly expands the range of expression.
+本章介绍了材质基础。材质的使用极大地扩展了表现的范围。
