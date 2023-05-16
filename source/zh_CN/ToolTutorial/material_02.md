@@ -1,254 +1,225 @@
-# 02. Represent toon-like flames with materials.
+# 02. 用材质表现卡通风格火焰。
 
 ## 概要
 
-In this chapter, we will use materials to create a toon-like flame.You can achieve complex expressions that would be difficult to achieve without materials.
+在这一章中，我们用材质表现卡通风格的火焰。你可以用材质实现原本很难实现的表现。
 
 <div align="center">
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_02/Fire.efkefc'></iframe>
-<p>Effects to be created in this chapter</p>
+<p>本章制作的特效</p>
 </div>
 
-## Create
+## 制作
 
-We will use various images and 3D models in this chapter.
-In this case, create similar material data using software you are familiar with.
+本章使用了各种图像和3D模型。你可以用你熟悉的软件制作类似的材质素材。
 
-Since it takes a lot of time and effort to create those data, we have prepared the data that we have already created here.
-I will also explain a little about how to create them, but if you are unable or unwilling to create the data, please use these.
+准备这些数据是很耗时的，所以我们准备了预制的材质素材。我也会稍微解释一下如何制作它们，但如果你不能或不想制作这些素材，可以使用我们准备好的。
 
-<a href="../../Effects/Tutorials/Mat_02_01.zip">Download</a>
+创建这些数据是很耗时的，所以我们在这里准备了我们已经创建的材料数据。我们也会稍微解释一下如何创建它们，但是如果你无法创建材料或者觉得创建材料很繁琐，请使用这些材料。
 
-The model and material have already been set up.
-See the previous chapter for creating new materials and basic usage.
+<a href="../../Effects/Tutorials/Mat_02_01.zip">下载</a>
 
-The first step is to display a gray image of the first scrolling cloud pattern.
+模型和材质都已经设置好了。关于创建新材质和基本用法，请参见前一章。
 
-Add an ``` Sample Image Node ``` and select ``` Textures/Noise1.png ``` as the image.
-As it is, it just displays the image.
+首先，显示一张带有滚动的云层图案的灰色图像。
+
+添加一个`采样图像`节点，图像选择`Textures/Noise1.png`。它的作用仅仅是显示图片。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Grad_En.png
    :align: center
 ```
 
-Add ``` Moving UV Node ``` to move it.
-Then, connect to the ``` Sample Image Node ```.
-Enter ``` (0.0, 0.4) ``` for the speed of the moving UV node.
+添加一个`移动UV`节点来移动它。然后把它连接到`采样图像`节点。移动UV节点的速度输入(0.0, 0.4)。
 
-The image will now flow up and down.
+现在图像将垂直移动。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Noise_Moving_En.png
    :align: center
 ```
 
-However, the cloud pattern is too coarse as it is, so I will make it finer.
-Connects ``` Multiply Node ``` to UVs of ``` Sample Image Node ```.
-The value of the multiplication is the output of ``` Moving UV Node ``` and ``` (4.0, 1.0) ```.
+然而，现在的云层图案太粗糙了，需要加以完善。将一个`乘`节点连接到`采样图像`节点的UV上。乘法的输入是`移动UV`节点的输出和`(4.0, 1.0)`。
 
-Then 1 of the UV coordinates of the image will be 4.
-This means that four pictures will be displayed in the range where one picture was displayed before.
-This time, it will be displayed horizontally a lot.
+原本图像水平方向UV坐标中的1将变成4。这意味着之前水平方向显示一张图像的范围内将会显示4张图像。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Noise_Enlarge_En.png
    :align: center
 ```
 
-It doesn't look like a flame at all as it is.
-Add distortion to complicate the motion.
+就像现在这样，它看起来根本就不像一个火焰。添加扭曲来使运动复杂化。
 
-Add an ``` Sample Image Node ``` and select the distortion image ``` Textures/Normal1.png ```.
+添加一个`采样图像`节点，选择扭曲贴图`Textures/Normal1.png`。
 
-Add  an ``` Mask Elements Node ``` and extract the RG.
-Then add  ``` Subtract Node ```  and subtract 0.5.
-The red and green colors in the distorted image are distorted up, down, left and right with 0.5 as 0.
-Therefore, subtract 0.5 from the center.
+添加一个`遮罩元素`节点并选择RG。然后添加一个`减`节点并减去0.5。扭曲贴图中的红色和绿色表示上下和左右方向的扭曲，0.5表示0。因此，减去中间值0.5。
 
-In addition, multiply by 0.5 to adjust the intensity of the distortion.
+此外，乘以0.5来调整扭曲的强度。
 
-Then, add the distortion value to the UV.
+然后把扭曲值加到UV上。
 
-When I did so, the image became distorted.
-It may look somewhat like a flame.
+这样，图像就被扭曲了。它可能看起来有点像火焰。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Noise_Distort_En.png
    :align: center
 ```
 
-The flame is darker at the top and brighter at the bottom.
-To achieve this, we can add or multiply gradient images.
+火焰在顶部较暗，在底部较亮。为了实现这一点，可以加上或乘一个渐变图像。
 
-Add an ``` Sample Image Node ``` and select the image ``` Textures/Gradation1.png ```.
-Then, the distorted image and the added image are added together with ``` Add Node ```.
+添加一个`采样图像`节点并选择图像`Textures/Gradation1.png`。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Grad_En.png
    :align: center
 ```
 
-Then, add it to the distorted image from earlier with the addition node.
+然后用加法节点把它和之前的扭曲图像加在一起。
 
-The image is now glowing at the bottom.
+现在图像的底部会发光。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Grad_Add_En.png
    :align: center
 ```
 
-Next, to darken the upper part of the image, we multiply the previous image and the added image with the ``` Multiply Node ```.
+接下来，为了使图像的顶部变暗，用`乘`节点将之前的图像和新增的图像相乘。
 
-When I did so, the upper part of the image became darker.
-It has become somewhat like a flame.
+这将使图像的顶部部分变暗。现在它有点像火焰了。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Grad_Mul_En.png
    :align: center
 ```
 
-Finally, color it.
+最后，上色。
 
-Use a colored gradient image for coloring.
-Add an ``` Sample Image Node ``` and select the image ``` Textures/Gradation2.png ```.
+使用一个彩色的渐变图像来着色。添加一个`采样图像`节点并选择图像`Textures/Gradation2.png`。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Grad_Color_En.png
    :align: center
 ```
 
-Then, the ``` Mask Elements Node ``` extracts the RG from the flowing image.
-Enter it into the UV.
+然后，`遮罩元素`节点从流动的图像中提取RG。把它输入到UV中。（译注：图中未使用遮罩元素节点，而是直接将乘法的输出连接到UV中）
 
-
-Then the color will now change along the gradient image.
+然后颜色将随着渐变图像改变。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Grad_Color_Distort_En.png
    :align: center
 ```
 
-The position where the gradient image is referenced changes according to the color of the input flowing image.
-This will cause the color to change according to the gradient.
+渐变图像被参照的位置随着输入的流动的图像的颜色而改变。这导致颜色随着渐变而变化。
 
-Black color is 0, so it points to the top of the image, and white color is 1, so it points to the bottom of the image.
-We use it to turn a gray image into a color image.
+黑色的值为0，所以它指向图像的顶部，而白色的值为1，所以指向图像的顶部。我们据此将一张灰色的图像转换为一张彩色的图像。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/LookUp.png
    :align: center
 ```
 
-There is the question of whether we can enter two RG's when we only change the position of the reference up and down.
-For that matter, since the color is the same in the left and right directions this time, it doesn't matter what value you enter.
+There is the question of whether we can enter two RG's when we only change the position of the reference up and down. For that matter, since the color is the same in the left and right directions this time, it doesn't matter what value you enter.
+
+有一个问题是，当我们只改变参照的上下位置时，是否可以输入两个RG。就这一点而言，因为这个例子中左右方向的颜色是一样的，所以你输入什么值不重要。（译注：不知所云，但看图连接即可）
 
 Depending on the gradient image, you may want to fix the R value and change only the G value.
 
-Similarly, change the transparency.
-Add an ``` Sample Image Node ``` and select the image ``` Textures/Gradation3.png ```.
+根据梯度图像，R值应该是固定的，只有G值应该被改变。（译注：不知所云，但看图连接即可）
 
-Connect the flowing images in the same way.White areas will be opaque and black areas will be transparent.
+同样地，为了改变透明度。添加一个`采样图像`节点并选择图像`Textures/Gradation3.png`。以同样方式连接流动的图像。白色区域将是不透明的，黑色区域是透明的。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Grad_OpacityMask_Distort_En.png
    :align: center
 ```
 
-Connect the output of the ``` Sample Image Node ``` to the Emmisive.
+将Gradation2的`采样图像`节点连接到输出节点的Emmisive（自发光）。
 
-Connect the output of the ``` Sample Image Node ``` to the OpacityMask.
+将Gradation3的`采样图像`节点连接到输出节点的OpacityMask（不透明度遮罩）。
 
-The flame pattern is now displayed.
+火焰图案就显示出来了。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Output_En.png
    :align: center
 ```
 
-However, the colors of the small parts are not correct.
+但是，细节部分的颜色并不正确。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/PreResult.png
    :align: center
 ```
 
-The reason for this is that repeat is selected when referring to the image in the ``` Sample Image Node ```.
+原因是`采样图像`节点在引用图像时选择了Repeat（重复）。
 
-There are two types of images: clamp and repeat.
-This is a parameter for how to handle the ends.
+图像可以设置为Clamp（钳制）或Repeat，这是决定如何处理边缘的参数。
 
-When the UV coordinate exceeds 1.0, you can specify whether the edge will be treated as an edge color or whether the edge will be repeated.
-When referring to the end, if it is set to repeat, it will refer to the opposite side.
+当UV坐标超过1.0时，你可以指定超出边缘的区域是应该填充边缘的颜色，还是应该重复图像。如果设置为Repeat，它将从另一侧开始重复采样。
 
-The left is the clamp and the right is the repeat.
+下图左边是Clamp，右边是Repeat。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Clamp_Repeat.png
    :align: center
 ```
 
-If the color value exceeds 1.0 (255) or falls below 0, the result of referring to the other side will be wrong colors.
+颜色值可能超过1.0（255）或低于0，导致颜色被错误地引用到另一边。
 
-It can exceed 1.0 due to errors in the calculation, and in this case, because the images are added.
+它可能由于计算中的错误而超过1.0，就本案例而言，是因为图像被相加。
 
-Therefore, we will change the repeat of the gradient's ``` Sample Image Node ``` to clamp.
+因此，将渐变图像的`采样图像`节点的Repeat改为Clamp。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Sampler_En.png
    :align: center
 ```
 
-It is now complete.
+这样就完成了。
 
 <div align="center">
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_02/Fire.efkefc'></iframe>
 </div>
 
-Finally, I have made the effects created in this chapter available for download.
+最后，你可以通过下面的链接下载本章中制作的特效。
 
-<a href="../../Effects/Tutorials/Mat_02_02.zip">Download</a>
+<a href="../../Effects/Tutorials/Mat_02_02.zip">下载</a>
 
-### How to create a cloud image
+### 如何制作云层图像
 
-This time I am using PhotoShop.
-Create a new image with a resolution of 1024 and select Clouds in PhotoShop.
-Increase the contrast so that the black and white appear stronger.
+这次我使用PhotoShop。新建一张分辨率为1024的图像，在PhotoShop中选择云彩（译注：滤镜-渲染-云彩）。提高对比度使黑白对比更显著。
 
-Then, reduce the resolution to 512 and save it.
+然后将分辨率降低到512并保存。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Image_Cloud.png
    :align: center
 ```
 
-### How to create a distorted image
+### 如何制作扭曲贴图
 
-This time I am using PhotoShop.
-Create a new image with a resolution of 1024 and select Clouds in PhotoShop.
+这次我使用PhotoShop。新建一张分辨率为1024的图像，在PhotoShop中选择云彩。
 
-Next, we will create a 3072x3072 image.
-Copy 9 cloud patterns from the previous step.
-This is to make it easy to create a loop image.
-Then, create the normals.
+然后，我们新建一张3072x3071的图像。从之前的步骤复制九次云层的图案。这是为了方便地制作循环图案。然后，生成法线（译注：滤镜-3D-生成法线）。
 
-Finally, cut out the center 1024x1024 image, shrink it to 512, and save it.
+最后，剪切出中间的1024x1024的图案，将分辨率降低到512并保存。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/Image_Normal.png
    :align: center
 ```
 
-### How to create a gradient image
+### 如何制作渐变图像
 
-It is created with PhotoShop's gradient.
-Since it is a toon, the colors are made to change abruptly.
+这是通过PhotoShop的梯度制作的。由于是卡通风格，颜色做成了突然变化的样子。
 
-## Summary
+## 总结
 
-In this chapter, we have created a flame.
-For clarity, multiple images are separated, but in practice, images may be merged to make them lighter.
+本章中，我们制作了火焰。为了表述清楚，用了多张分开的图像，但是在实践中，这些图像可能被合并，以使之更轻量化。
 
 However, this will only result in a fixed continuous flow of flame.
 In the next chapter, we will be able to apply this to a variety of things.
+
+然而，制作出的火焰只是在固定地持续流动。在下一章，我们可以将其应用于各种东西。（译注：？？？）
 
