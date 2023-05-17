@@ -1,107 +1,109 @@
-# 03. Toon-like flames with sequential materials.
+# 03. 有序材质的卡通火焰。
+
+这个标题是个什么东西？？？
 
 ## 概要
 
-In the previous chapter, we created a toon-like flame.
-However, the parameters are all included in the material and cannot be used interchangeably.
-Also, it plays continuously and does not disappear in the middle.
-In this chapter, the flames from the previous chapter will be made available for general use.
+在前面的章节中，我们制作了一个卡通风格的火焰。
+但是，参数内嵌于材质中，无法可交互地更改。
+而且，它持续地播放，不会中途消失。
+在本章中，上一章中制作的火焰将变得更为通用。
 
 <div align="center">
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_03/Fire.efkefc'></iframe>
-<p>Effects to be created in this chapter</p>
+<p>本章制作的特效</p>
 </div>
 
-## Create
+## 制作
 
-In this chapter, we will make changes based on the effects we created in the previous chapter.
-For the sake of clarity, we have changed the lifetime of the particles.
+在本章中，我们将在上一章制作的特效的基础上做出更改。
+为了显示清楚，我们更改了粒子的生存时间。
 
-<a href="../../Effects/Tutorials/Mat_03_01.zip">Download</a>
+<a href="../../Effects/Tutorials/Mat_03_01.zip">下载</a>
 
-### Parameters
+### 参数
 
-Effekseer's materials have a node called Parameters.
-This node, called Parameters, allows you to change the parameters of the material from the Effekseer.
+Effekseer的材质有一个名叫参数的节点。
+这个叫参数的节点让你可以在Effekseer中改变材质的参数。
 
-First, to be able to edit the color of the effect from outside, we will replace the gradient image with a parameter.
+首先，为了从外部编辑特效的颜色，我们将把梯度图像替换为一个参数。
 
-Add a ```Parameter Image Node```.
+添加一个`参数图像`节点。
 
-Then, connect it to the ``` Sample Image Node ```.
+然后，把它连接到`采样图像`节点。
 
-Enter a name for the parameter node.This name will appear in Effekseer and will be used to associate the image with the one configured in Effekseer.
+给参数节点输入一个名字。这个名字会显示在Effekseer中，用于将图像与Effekseer中的配置相关联。
 Therefore, try not to change it too much.
-This time, since we are replacing a gradient, we will name it Gradation.
+因此，不要改变太多。（？？？）
+这次，因为我们替换的是梯度，我们将其命名为Gradation。
 
-Set the image to ``` Textures/Gradation2.png ``` as the default value.
+将图像的默认值设置为`Textures/Gradation2.png`。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_03/Grad_Parameter_En.png
    :align: center
 ```
 
-Effekseer now also shows the gradient parameters.
-Since the default image will still be displayed, we will set a new image.
+Effekseer现在也显示了梯度参数。
+因为目前显示的依然是默认图像，我们将设置一个新图像。
 
-This time, set ``` Textures/Gradation4.png ``` here.
+这一次，设置为`Textures/Gradation4.png`。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_03/Grad_Parameter_Editor_En.png
    :align: center
 ```
 
-The image of the effect has been replaced.
+特效的图案已经被替换了。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_03/Fire.png
    :align: center
 ```
 
-In this case, I tried to replace the texture, but you can also use numerical values as parameters.
+在这个例子中，我试着替换纹理，但是你也可以使用数值作为参数。
 
-Let's set the speed at which the image flows as a parameter.
+让我们将图像流动的速度设置为参数。
 
-Add a ``` Parameter 2 Node ```.
-Set the name to Speed.
-Set the default parameter to (0.1,0.1).
+添加一个`参数2`节点。
+命名为Speed。
+将默认参数设置为(0.1,0.1)。
 
-Then connect it to the ``` Moving UV Node ``` 's Speed.
+将其连接到`移动UV`节点的Speed。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_03/Speed_Parameter_En.png
    :align: center
 ```
 
-The Effekseer will display the speed and you can change the value.
+Effekseer将显示速度参数，你可以改变它的值。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_03/Speed_Parameter_Editor_En.png
    :align: center
 ```
 
-Changing the value will change the speed.
-In this case, the default value is fine, so we will leave the value at (0.1,0.1).
+更改它的值将改变速度。
+在这个例子中，默认值就很合适，所以我们将值保留在(0.1,0.1)。
 
-These can be set externally without having to embed the parameters in the material.
+这些可以在外部设置，无需将参数内置于材质中。
 
-### Custom Data
+### 自定义数据
 
-As it is, you have just externalized the parameters, but the flame is still flowing continuously.
-Custom data can be used to set the beginning and end.
+就像现在这样，你只是将参数外部化了，但火焰依旧是连续地流动。
+自定义数据可用于设置开始和结束。
 
-In this case, we will specify a node called Custom Data.
-This node is similar to a parameter, but allows you to set a different value for each particle in the effect, and also allows you to set the
-You can also set the F-curve and other parameters.
+在这个例子中，我们将指定一个名为自定义数据的节点。
+这个节点和参数类似，但允许你为特效中的每个粒子设置不同的值，也允许你设置F-曲线和其他参数。
 
-This time, we will extinguish the flames by moving the gradient map.
+这次，我们将通过移动梯度贴图将火焰扑灭。
 
-Shifts the referenced position of the gradient by an external parameter to achieve a fade-out.
+通过一个外部参数移动梯度的参考位置，实现淡出。
 
-Makes the gradient image transparent by moving it in the direction it will become transparent.
+使梯度图像向透明的方向移动，从而使它变得透明。
 
-First, we will add ``` CustomData 1 Node ```.
-And since it is UV, connect it to RG.
+首先，我们将添加一个`自定义数据1`节点。
+因为是UV，将它连接到RG。
 
 
 ```eval_rst
@@ -109,36 +111,36 @@ And since it is UV, connect it to RG.
    :align: center
 ```
 
-Then, set custom data from Effekseer's Basic Render Settings panel.
-In this case, we will use the F-curve since we will be moving the UVs to achieve the fade in and out.
+然后，在Effekseer的基础渲染设置面板设置自定义数据。
+在这个例子中，我们将使用F-曲线，因为我们将移动UV以实现淡入和淡出。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_03/CustomData_Editor_En.png
    :align: center
 ```
 
-Set the R value in the F-Curve to be -1 when it is off and 0 when it is on display.
+设置F-曲线中的R值，-1表示关闭，0表示显示。
 
--1 to refer to the upper part of the gradient image.
-This means that the image will disappear.
+-1引用了梯度图像的上部分。
+表示图像会消失。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_03/FCurve.png
    :align: center
 ```
 
-Then the effect will now fade in and out.
+然后特效现在会淡入和淡出。
 
 <div align="center">
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_03/Fire.efkefc'></iframe>
 </div>
 
-Finally, we have made the effects created in this chapter available for download.
+最后，你可以通过下面的链接下载本章中制作的特效。
 
-<a href="../../Effects/Tutorials/Mat_03_02.zip">Download</a>
+<a href="../../Effects/Tutorials/Mat_03_02.zip">下载</a>
 
-## Summary
+## 总结
 
-This time I created a variation of the flame.
-Creating a material for each effect is a lot of work, so it is important to create a generic material that can be used in many different ways.
+这次我们制作了火焰的一个变种。
+为每个特效制作一个材质很费事，所以制作一个可以用于很多地方的通用的材质是非常重要的。
 

@@ -214,7 +214,6 @@
 <img src="../../img/Tutorial/Mat_01/colorlize_en.png">
 </div>
 
-Because the colors are multiplied together, they are colored.
 颜色乘到一起，所以图像被上色了。
 
 <iframe src='../../Effects/viewer_en.html#Tutorials/Mat_01/Sample07.efkefc'></iframe>
