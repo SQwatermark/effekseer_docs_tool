@@ -1,40 +1,40 @@
-﻿# Rotation
+﻿# 旋转
 
-## Overview
+## 概述
 
-Set parameters related to the rotation of the node.
+设置与节点的旋转相关的参数。
 
 ## Parameters
 <div align="center">
 <img src="../../img/Tutorial/04_rotation_en.png">
-<p>"Rotation" window</p>
+<p>“旋转”窗口</p>
 </div>
 
-### Rotation
+### 旋转
 
-Specifies the spawn angle of the particle. This will influence the angle of the particle relative to its parent particle. If there is no parent particle, or angle is set to not inherit in the Basic Settings window, this will specify the absolute angle instead.
+指定粒子的旋转角度。这将影响粒子相对于其父粒子的角度。如果没有父粒子，或者基础设置窗口中设置了不继承角度，它将表示绝对角度。
 
-#### Fixed Angle
+#### 固定角度
 
-Specify the angle of the particle.
+指定粒子的角度。
 <iframe src='../../Effects/viewer_en.html#References/Rotation/rotation.efkefc' class='effect'></iframe>
 
-#### Position, Velocity, Acceleration (PVA)
+#### 角度・速度・加速度
 
-Specify the initial angle, rotational speed, and angular acceleration of the particle.
+指定粒子的初始角度、角速度和角加速度。
 <iframe src='../../Effects/viewer_en.html#References/Rotation/rotation_pva.efkefc' class='effect'></iframe>
 
-#### Easing
+#### 缓动
 
-Specify the initial angle for the particle, as well as the final angle for the particle at the end of its lifetime, and how to transition between the two.
+指定粒子的初始角度和粒子生命周期结束时的最终角度，以及之间的过渡。
 <iframe src='../../Effects/viewer_en.html#References/Rotation/rotation_easing.efkefc' class='effect'></iframe>
 
-#### F-Curve
+#### F-曲线
 
-Use an F-curve to modify the rotational value over the lifetime of the particle.
+使用F-曲线设置粒子整个生命周期内旋转角度。
 <iframe src='../../Effects/viewer_en.html#References/Rotation/rotation_f_curve.efkefc' class='effect'></iframe>
 
-#### Rotate in the viewpoint direction
+#### 旋转至摄像机方向
 
-Rotates so that the Z-axis points toward the camera.
-Since it uses the position of the camera, it will not work correctly if multiple cameras are present.
+旋转使Z轴指向摄像机。
+因为它使用的相机的位置，所以有多个相机时，它将无法正常工作。

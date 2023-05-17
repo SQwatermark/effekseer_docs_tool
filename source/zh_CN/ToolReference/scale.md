@@ -1,46 +1,46 @@
-﻿# Scale
+﻿# 缩放
 
-## Overview
+## 概述
 
-Set parameters related to the scale/expansion of the spawn scale of the particle.
+设置粒子缩放相关的参数。
 
-These parameters can be specified in ```Scale``` window.
+这些参数在`缩放`窗口中指定。
 
 <div align="center">
 <img src="../../img/Tutorial/04_scale_en.png">
-<p>"Scale" window</p>
+<p>“缩放”窗口</p>
 </div>
 
-This will influence the scale of the particle relative to its parent particle. If there is no parent particle, or scale is set to not inherit in the Basic Settings window, this will specify the absolute scale instead.
+它将影响粒子相对于父粒子的缩放。如果没有父粒子，或者基础设置窗口中设置了不继承缩放，它将表示绝对缩放。
 
-### Fixed Scale
+### 固定缩放
 
-Specify the scale of the particle.
+指定粒子的缩放。
 <iframe src='../../Effects/viewer_en.html#References/Scale/scale.efkefc' class='effect'></iframe>
 
-### Scale, Velocity, Acceleration (PVA)
+### 缩放・速度・加速度
 
-Specify the initial scale, expansion velocity, and expansion acceleration of the particle.
+指定粒子的初始缩放、放大速度和放大加速度。
 <iframe src='../../Effects/viewer_en.html#References/Scale/scale_pva.efkefc' class='effect'></iframe>
 
-### Easing
+### 缓动
 
-Specify the initial scale of the particle, as well as the final scale of the particle at the end of its lifetime, and how to transition between the two.
+指定粒子的初始缩放和粒子生命周期结束时的最终缩放，以及之间的过渡。
 <iframe src='../../Effects/viewer_en.html#References/Scale/scale_easing.efkefc' class='effect'></iframe>
 
-### F-Curve
+### F-曲线
 
-Use an F-curve to modify the scale value over the lifetime of the particle.
+使用F-曲线设置粒子整个生命周期内的缩放值。
 <iframe src='../../Effects/viewer_en.html#References/Scale/scale_f_curve.efkefc' class='effect'></iframe>
 
-### Scale, Velocity, Acceleration (PVA) (Single)
+### 缩放・速度・加速度（统一）
 
-It is a PVA with XYZ all having the same value.
+XYZ轴都有相同的值的缩放・速度・加速度。
 
-### Easing (Single)
+### 缓动（统一）
 
-It is an Easing with XYZ all having the same value.
+XYZ轴都有相同的值的缓动。
 
-### F-Curve (Single)
+### F-曲线（统一）
 
-It is an F-curve with XYZ all having the same value.
+XYZ轴都有相同的值的F-曲线。

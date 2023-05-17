@@ -1,50 +1,50 @@
-﻿# Position
+﻿# 位置
 
-## Overview
+## 概述
 
-Provides parameters that control the node's position over time, partiuarly concerning the position relative to the parent particle.
+提供控制节点的位置的参数，特别是相对于父节点的位置。
 
-## Parameter
+## 参数
 
-### Position
+### 位置
 
-Specifies the spawn position of the particle. This will influence the position of the particle relative to its parent particle. If there is no parent particle, or position is set to not inherit in the Basic Settings window, this will specify the absolute position instead.
+指定粒子的生成位置。它将影响粒子相对于其父节点的位置。如果没有父粒子，或者基础设置窗口中设置了不继承位置，它将表示绝对位置。
 
 <div align="center">
 <img src="../../img/Tutorial/02_position_en.png">
-<p>"Position" window</p>
+<p>“位置”窗口</p>
 </div>
 
-#### Set Position
+#### 固定位置
 
-Place the particles at a fixed position.
+将粒子置于一个固定的位置。
 <iframe src='../../Effects/viewer_en.html#References/Position/setposition.efkefc' class='effect'></iframe>
 
 
 
-#### Position, Velocity, Acceleration (PVA)
+#### 位置・速度・加速度
 
-Specify the position, velocity and acceleration of the particle.
+指定粒子的位置、速度和加速度。
 <iframe src='../../Effects/viewer_en.html#References/Position/movingposition.efkefc' class='effect'></iframe>
 
-#### Easing
+#### 缓动
 
-Specify the spawn and despawn positions, and the method of interpolating between these two positions over the lifetime of the particle.
+指定生成和移除的位置，以及粒子的生命周期中在这两个位置之间插值的方法。
 <iframe src='../../Effects/viewer_en.html#References/Position/easing.efkefc' class='effect'></iframe>
 
-#### F-Curve
+#### F-曲线
 
-Use the F-Curve window to control the position by defining automation curves.
+在F-曲线窗口中，通过定义自动化曲线来控制位置。
 <iframe src='../../Effects/viewer_en.html#References/Position/f_curve.efkefc' class='effect'></iframe>
 
-#### NURBS-Curve
+#### NURBS-曲线
 
-Import the 3D data of the curve created by other software such as Maya, and move the particles along it.
+导入其他软件（如Maya）制作的曲线的3D数据，让粒子沿着它移动。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/Location/NURBS-Curve.mp4"/></div>
 
-#### ViewOffset
+#### 相对于摄像机偏移
 
-Always display particles in the center of the camera.
-Only available for sprites and models.
-The location of effect doesn't affect to children.
+永远在摄像机的中心显示粒子。
+仅对精灵和模型有效。
+特效的位置不影响子节点。
