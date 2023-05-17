@@ -1,119 +1,119 @@
-﻿# Basic settings
+﻿# 基础设置
 
-## Overview
+## 概述
 
-From here, you can set some global parameters for the particle node, such as its name, the number of particles to be generated, and other particle settings.
+在此，你可以为粒子节点设置一些全局参数，例如名字、生成粒子的数量和一些其他设置。
 
-## Parameter
+## 参数
 
 <div align="center">
 <img src="../../img/Reference/common_parameters_en.png">
-<p>"Basic settings" window</p>
+<p>“基础设置”窗口</p>
 </div>
 
-### Visibility
+### 可见性
 
-Controls whether or not particles generated from this node are drawn on the screen. If you check this, particles will be visible. Note that even when outputting for games, particles will not be drawn unless this is checked.
+控制这个节点生成的粒子是否要被渲染到窗口中。如果勾选它，粒子将会可见。注意，如果没有勾选，即便输出到游戏中，粒子也不会被渲染。
 
-### Name
+### 名称
 
-Set the name displayed in the node tree. This is for organizational purposes only; to organize nodes when you have many nodes in your node tree. It does not affect the behavior of the particles in any way.
+设置显示在节点树中的名字。它的作用仅仅是，当你的节点数中有许多节点时，便于管理节点。它完全不影响粒子的行为。
 
-### Spawn Count
+### 生成数量
 
-Sets the maximum number of particles that will be generated from this node. You can also choose infinite to generate particles indefinitely (or until other conditional settings described later cause the particle generation to be stopped). However, when playing an effect from another application that incorporates Effekseer, please note that the "infinite" effect will not end unless a function is manually called to stop the effect.
+设置这个节点生成的粒子的最大数量。你可以选择正无穷以无限生成粒子（或者直到其他条件设置停止了粒子的生成）。然而，当在另一个内嵌了Effekseer的程序中播放特效时，注意除非触发了停止特效的函数，否则“正无穷”的特效将不会结束。
 
-### Inherit Position
+### 继承位置
 
-Sets how the position of the parent particle affects the particles generated from this node. Please refer to the following section for information regarding inheritance options.
+设置父粒子的位置如何影响这个节点生成的粒子。请参照接下来的小节以获得关于继承的信息。
 
-#### Only on create - FollowParent
+#### 仅生成时 - 跟随父节点
 
-The child particles move to follow the parent particle.
-The behavior can be controlled by the speed and steering.
+子粒子移动以跟随父粒子。
+可以控制这个行为的速度和转向。
 
-<div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/BasicRenderSettings/FollowParent.mp4"/></div>
+<div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/BasicSettings/FollowParent.mp4"/></div>
 
-### Inherit Rotation
+### 继承旋转
 
-Sets how the rotation of parent particles affects particles generated from this node. Please refer to the following section for information regarding inheritance options.
+设置父粒子的旋转如何影响这个节点生成的粒子。请参照接下来的小节以获得关于继承的信息。
 
-### Inherit Scale
+### 继承缩放
 
-Sets how the enlargement of parent particles affects particles generated from this node. Please refer to the following section for information regarding inheritance options.
+设置父粒子的缩放如何影响这个节点生成的粒子。请参照接下来的小节以获得关于继承的信息。
 
-### Inherit **
+### 继承**
 
-#### Always
+#### 始终
 
-It is continuously inherited. Whenever the value of the parent particle is changed, the child particles are also immediately updated. If the parent particle despawns, the value at the time of disappearance will be what is used for inheritance from that point on.
+它表示持续的继承，每当父粒子的位置变化时，子粒子也立刻更新变化。如果父粒子被移除，父粒子消失时的值将成为之后被子节点继承的值。
 
-#### Only on create
+#### 仅生成时
 
-The inherited value is used to initialize the value for each child particle only once, when the child particle is first generatated.
+仅在子粒子生成时一次性地用继承的值初始化子粒子的值。
 
-#### Never
+#### 从不
 
-The value will not be inherited. Regardless of the value of the parent particle, the behavior of the particle will be determined only by the parameters of the child node.
+该值不会被继承。无论父粒子的值是什么，子粒子的行为仅取决于子节点的参数。
 
-### Destroy after time
+### 生命周期结束后销毁
 
-When the number of frames spcified in "Time to live" passes, the particle will be despawned. If you do not check this, particles will not be despawned after their lifetime expires.
+当“生命周期”中指定的帧数结束时，粒子将被移除。如果不被勾选，粒子将不会在生命周期结束后被移除。
 
-### Destroy with parent
+### 跟随父节点销毁
 
-When the parent particle despawns, the child particle(s) will be despawned as well.
+当父粒子移除时，子粒子也会被移除。
 
-### Destroy when no more children
+### 子节点全部销毁时销毁
 
-If child particles of a parent particle are not present, and it is unlikely that any more children will be generated in the future, delete the parent particle.
+如果一个父粒子不存在子粒子，而且未来也不可能生成子粒子，则删除父粒子。
 
-### Time to live
+### 生命周期
 
-Sets the number of frames that should pass between the particle being spawned, and being despawned. However, if "Destroy after time" is unchecked, this parameter has no effect.
+设置粒子从生成到移除之间经过的帧数。然而，如果未选择“生命周期结束后销毁”，这个参数就没有作用。
 
-### Spawn Rate
+### 生成速率
 
-Sets the rate at which particles are generated. The number of frames specified will have to pass between one particle generating and the next. You can specify a value less than 1 for the spawn rate, in which case multiple particles will be generated per frame.
+设置粒子生成的速率。表示一个粒子生成后，再生成下一个粒子时需要经过的帧数。你可以指定一个小于1的值，在这种情况下每帧就会生成多个粒子。
 
-### Initial Delay
+### 生成开始时间
 
-Specify the number of frames that must pass between generation of parent particles and the initial generation of their child particles.
+指定从父粒子生成到子粒子第一次生成时需要经过的帧数。
 
-A negative numerical value can also be specified as Initial Delay. The particles that are supposed to be generated at a negative time are actually generated at the 0th frame.
+生成开始时间也可以设置为负数值。但应该在负数时间生成的粒子事实上会在第0帧生成。
 
-The following figure shows the relationship between Spawn Rate, Initial Delay and time. (1) is Spawn Rate, (2) is Initial Delay, (3) is time (frame unit). The start time is shifted by the value of Initial Delay. When Initial Delay elapses from the start time, particles are generated. However, all the particles generated at the negative time are generated in the 0th frame.
+下面的图表显示了生成速率、生成开始时间和时间的关系。(1)是生成速率，(2)是生成开始时间，(3)是时间（以帧为单位）。当经过了生成开始时间后，粒子开始生成。但是所有在负数时间内生成的粒子事实上在第0帧才被生成。
 
 ![](../../img/Reference/common_generatedTime.png)
 
-### Spawn Start Trigger
+### 开始生成的触发器
 
-Specifies the trigger number to initiate particle generation.
+指定触发粒子生成的触发器。
 
-If a trigger number is specified, particles will not be generated until the trigger is sent.
+如果指定了一个触发器，那么在触发器信号发送前，粒子不会生成。
 
-If the default "none" is specified, particle generation will start without sending a trigger.
+如果设置为默认的“无”，那么无需触发器信号，粒子也会开始生成。
 
-See also: [15.Let's Send triggers to change effects!](../ToolTutorial/15.md)
+参阅：[15.通过触发器改变特效！](../ToolTutorial/15.md)
 
-### Spawn Stop Trigger
+### 停止生成的触发器
 
-Specify a trigger number to stop particle generation.
+指定停止粒子生成的触发器。
 
-If a trigger number is specified, particle generation will stop when the trigger is sent.
+如果指定了一个触发器，那么在触发器信号发送时，粒子会停止生成。
 
-If the default "None" is specified, the trigger will not stop particle generation.
+如果设置为默认的“无”，那么触发器信号不会停止粒子的生成。
 
-See also: [15.Let's Send triggers to change effects!](../ToolTutorial/15.md)
+参阅：[15.通过触发器改变特效！](../ToolTutorial/15.md)
 
-### Destroy Trigger
+### 销毁的触发器
 
-Specifies the trigger number for deleting particles.
+指定删除粒子的触发器。
 
-If a trigger number is specified, particles existing at that moment will be deleted when the trigger is sent.
+如果指定了一个触发器，那么在触发器信号发送时，现存的粒子会被删除。
 
-If the default "None" is specified, particles are not deleted by the trigger.
+如果设置为默认的“无”，那么触发器信号不会删除粒子。
 
-Also, if you set the `Fadeout` in the `Common panel` to `Fadeout after destroyed`, the fade out will be performed after the trigger is sent.
+而且，如果你将`基础渲染设置`中的`淡出`设置为`在销毁后淡出`，那么在触发器信号发送时，粒子会被淡出。
 
-See also: [15.Let's Send triggers to change effects!](../ToolTutorial/15.md)
+参阅：[15.通过触发器改变特效！](../ToolTutorial/15.md)
