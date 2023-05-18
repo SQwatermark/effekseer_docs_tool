@@ -1,12 +1,11 @@
-﻿# Global Settings
+﻿# 全局设置
 
-## Overview
+## 概述
 
-Provides parameters that affects not only one node but also all nodes.
+设置影响所有节点的参数。
 
-## Parameter
+## 参数
 
-### Random seed
+### 随机种子
 
-Specify the seed of random elements in particle. The seed is a number that determines the behavior of random elements. If the seed is the same, the behavior of the random element is the same even if it is played more than once. If the random seed is 0 or less, the behavior of random elements change each time.
-
+指定粒子的随机元素的种子。种子是一个数字，决定了随机元素的行为。如果种子相同，随机元素的行为将是相同的，即使它被多次播放。如果随机种子小于或等于零，那么每次播放时，随机元素的行为都会发生变化。

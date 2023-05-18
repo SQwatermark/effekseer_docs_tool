@@ -1,12 +1,12 @@
 ﻿# 工具参考
 
-## Overview
+## 概述
 
-### Tool
+### 工具
 
 This tool consists of a viewer section to preview effects and multiple windows to edit the effects' parameters. By editing the parameters in each window, you can create an effect and change its appearance and behavior. By dragging and dropping each window, you can rearrange them as you please, or collapse them into tabs. By selecting "Menu bar -> Window", you can access windows that are not visible in the default view. Also, you can reset all windows back to their default locations.
 
-### Effect
+### 特效
 
 With this tool, you create an effect by editing nodes. Nodes have parent-child relationships, where children are influenced by their parents. By utilizing the parent-child relationships, it is possible to create complex effects.
 
@@ -17,28 +17,28 @@ I will explain parent-child relationships using an example. In this example, nod
    :align: center
 ```
 
-### How to operate
+### 如何操作
 
-#### Preview
+#### 预览
 
 <div align="center">
 <table border="1">
 <tr>
-<td>Rotation</td>
+<td>旋转</td>
 <td>Click the right mouse button and move the mouse while holding.</td>
 </tr>
 <tr>
-<td>Pan</td>
+<td>平移</td>
 <td>Click the middle mouse button or right button + Shift and move the mouse while holding.</td>
 </tr>
 <tr>
-<td>Zoom</td>
+<td>缩放</td>
 <td>Scroll the mouse wheel or right button + Control to zoom in and out.</td>
 </tr>
 </table>
 </div>
 
-#### How to input a value
+#### 如何输入值
 
 A value can be entered from the keyboard by left-clicking a text entry box with the mouse.
 
@@ -49,7 +49,7 @@ Left-click and drag a text entry box to change the value gradually.
    :align: center
 ```
 
-#### How to input a color
+#### 如何输入颜色
 
 In addition to the text box, the color can be entered by left-clicking the color field with the mouse.
 
@@ -65,7 +65,7 @@ Left-click and drag a color field to copy the value to another color field.
    :align: center
 ```
 
-#### Node Tree
+#### 节点树
 
 In the node tree, you can edit the nodes that compose the effect.
 You can right-click to add or delete a node.
@@ -80,7 +80,7 @@ You can shift and click at the same time to toggle display, including child node
    :align: center
 ```
 
-#### Panels (Windows)
+#### 面板（窗口）
 
 There are very few panels (windows) available for editing the parameters you create for your effects.
 If you select "Window" from the menu bar, you will see a list of windows that can be displayed.
@@ -103,19 +103,19 @@ You can also add to the tabs by dragging and dropping them between the tabs.
    :align: center
 ```
 
-### File Format
+### 文件格式
 
-#### Effect file (efkefc)
+#### 特效文件（efkefc）
 An effect is saved in a file with "efkefc" format.
 This file can be editted and played with a runtime in a game.
 
 Until version 1.4, the roles were separated from efkproj for tool editing and efk for game playback.
 For compatibility, the current version can read efkproj and efk.
 
-#### Resource file
+#### 资源文件
 A few resource files referenced by the effect. There are general file formats and Effekseer's own file formats.
 
-| extension| description   |
+| 扩展名 | 说明   |
 |----------|--------|
 | png      | Texture image file |
 | wav      | Sound wave file |
@@ -123,7 +123,7 @@ A few resource files referenced by the effect. There are general file formats an
 | efkmodel | 3D Model file(Convert from fbx,mqo) |
 | efkcurve | Curve parameter file(Convert from fbx) |
 
-#### Package file (efkpkg)
+#### 打包文件（efkpkg）
 An efkpkg file is a package file that contains one or more efkefc files and various resource files.
 
 When you export, the resource files referenced by the effect are automatically packaged with it.
@@ -133,7 +133,7 @@ It can be imported and used in another project of yourself or someone else.
 - <a href="fileExport.html">Export</a>
 
 
-## Effect parameters
+## 特效参数
 
 ```eval_rst
 .. toctree::
@@ -163,7 +163,7 @@ It can be imported and used in another project of yourself or someone else.
     proceduralModel
 ```
 
-## Effect features
+## 特效特性
 
 ```eval_rst
 .. toctree::
@@ -173,7 +173,7 @@ It can be imported and used in another project of yourself or someone else.
     easing
 ```
 
-## Tool functions
+## 工具方法
 
 ```eval_rst
 .. toctree::
@@ -191,7 +191,7 @@ It can be imported and used in another project of yourself or someone else.
     drawMode
 ```
 
-## Command Line
+## 命令行
 
 When starting Effekseer from the command line, you can change the behavior of Effekseer by adding arguments. For example, you can convert ".efkproj" files to ".efk" without activating the Effekseer GUI. By combining this with a script, you can batch convert effect files in any folder at once.
 

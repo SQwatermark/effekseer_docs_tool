@@ -1,31 +1,33 @@
-﻿# Culling
+﻿# 剔除
 
-## Overview
+## 概述
 
-From here, you can set parameters related to culling. Culling is set so that effects are not drawn when they are outside the screen. If the rough shape set by culling is not within the screen, the effect itself is not drawn as well. When culling is not set, the effect is always drawn.
+你可以设置和剔除相关的参数。剔除的用途是不渲染位于屏幕外的特效。如果“剔除”设置的粗糙的形状位于屏幕之外，那么特效本身就不会被渲染。如果没有设置剔除，特效总是被渲染。
 
-## Parameter
+译注：就是设置一个包裹特效的形状，当这个形状位于屏幕之外时，就判断特效整体都位于屏幕之外，就不需要渲染特效了。
 
-### Display Culling
+## 参数
 
-Set whether to display a visible preview of the culling shape on the screen.
+### 显示剔除
 
-### Culling mode
+设置是否在屏幕上显示剔除的形状。
 
-Set the shape that will be used for culling.
+### 剔除类型
 
-#### None
+设置剔除的形状。
 
-Culling is not applied. The effect is always drawn.
+#### 无
 
-#### Spherical
+不使用剔除，特效一直被绘制。
 
-Culling will be applied in the shape of a sphere.
+#### 球
 
-##### Radius
+球形剔除。
 
-The radius of the sphere.
+##### 半径
 
-##### Position
+球的半径。
 
-The position of the center of the sphere.
+##### 位置
+
+球的中心的位置。

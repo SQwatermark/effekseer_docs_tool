@@ -1,7 +1,7 @@
-# Levels Of Details
+# 细节层级（LOD）
 
-## Overview
-This window configures enabled of levels of details and distances from which they're utilized.
+## 概述
 
-See [Levels of Details Tutorial](../ToolTutorial/14.md) to learn more about what Levels of Details 
-are and how to use them.
+这个窗口设置启用哪些细节层级，以及它们生效的距离。
+
+关于什么是细节层级以及如何使用它，请参见[细节层级教程](../ToolTutorial/14.md)。
