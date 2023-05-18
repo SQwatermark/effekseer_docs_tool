@@ -1,105 +1,97 @@
-﻿# Options
+﻿# 选项
 
-## Overview
+## 概述
 
-Set options related to the editor's display window such as grid settings and background.
+设置与编辑器的显示窗口有关的选项，例如网格设置和背景。
 
-## Parameter
+## 参数
 
-### Grid Color
+### 网格颜色
 
-Specify the color of the grid.
+指定网格的颜色。
 
-### Grid Visibility
+### 网格可见性
 
-Specify whether to display the grid or not.
+指定是否显示网格。
 
-### X-Y Grid Visibility
+### X-Y网格可见性
 
-Specify whether to display the grid on the XY plane.
+指定是否显示XY平面上网格。
 
-### X-Z Grid Visibility
+### X-Z网格可见性
 
-Specify whether to display the grid on the XZ plane.
+指定是否显示XZ平面上网格。
 
-### Y-Z Grid Visibility
+### Y-Z网格可见性
 
-Specify whether to display the grid on the YZ plane.
+指定是否显示YZ平面上网格。
 
-### Grid Size
+### 网格尺寸
 
-Specify the size of the grid.
+指定网格的尺寸。
 
-### Light Direction
-
-Specify the direction of the light that illuminates the model when displaying the model.
-
-### Light Color
-
-Specify the color of the light.
-
-### Ambient Color
-
-Specify the color of ambient light.
-
-### Output Magnification
+### 输出放大
 
 This is a parameter that previews the enlargement that would be applied if you were to change the magnification ratio during final export to an "*.efk" file. When this parameter is set, the effect is displayed at its scaled size.
 
-### Output FPS
+译注：不懂。大概的意思可能是：用于模拟在外部工具或游戏引擎中缩放不同的情况下播放的特效。但原文不是这样。
 
-This is a parameter that reproduces the effect of changing the FPS in your external tool or game engine. When this parameter is set, FPS is changed and displayed.
+### 输出FPS
 
-### Coordinate System
+用于模拟在外部工具或游戏引擎中FPS不同的情况下播放的特效。
 
-This is a parameter that reproduces the effect of changing the coordinate system in your external tool or game engine. When this parameter is set, the coordinate system is changed and displayed.
+### 坐标系统
 
-### Color Space
+用于模拟在外部工具或游戏引擎中使用不同的坐标系统的情况下播放的特效。
 
-This is a parameter that reproduces the appearance if you were to change the color space and play the effect in your external tool or game engine. There are gamma space and linear space options for the color space.
+### 色彩空间
 
-#### Gamma space
+用于模拟在外部工具或游戏引擎中使用不同的色彩空间的情况下播放的特效。
+
+#### 伽马空间
+
 ![](../../img/Reference/colorSpace_GammaSpace.png)
-#### Linear space
+
+#### 线性空间
+
 ![](../../img/Reference/colorSpace_LinearSpace.png)
 
+最近的游戏引擎，如Unity，允许你改变色彩空间。请将其设置为与你所使用的外部游戏引擎的色彩空间一致。关于色彩空间本身的含义，请查看每个游戏引擎的使用说明。Effekseer的默认色彩空间是伽马空间。
 
-In Unity and other recent game engines, you can change the color space. Set this parameter according to the color space you plan to use in your external game engine. Please check the description of each game engine etc. for the details of the color space itself. Effekseer's color space is gamma space by default.
+### 鼠标映射
 
-### Mouse Mapping
+指定如何使用鼠标控制视点。
+选项包括Effekseer、Maya、Unity和Blender。
 
-Specify how to control the viewpoint with the mouse.
-There are options like Effekseer, Maya, Unity, and Blender.
+### 鼠标旋转方向（X）
 
-### Mouse Rotation (X)
+指定X方向移动鼠标进行旋转时，旋转的方向。
 
-Specify the rotation direction of the mouse.
+### 鼠标旋转方向（Y）
 
-### Mouse Rotation (Y)
+指定Y方向移动鼠标进行旋转时，旋转的方向。
 
-Specify the rotation direction of the mouse.
+### 鼠标平移方向（X）
 
-### Mouse Panning (X)
+指定X方向移动鼠标进行平移时，平移的方向。
 
-Specify the slide direction of the mouse.
+### 鼠标平移方向（Y）
 
-### Mouse Panning (Y)
+指定Y方向移动鼠标进行平移时，平移的方向。
 
-Specify the slide direction of the mouse.
+### 字体
 
-### Font
+指定字体。
 
-Specify a kind of fonts.
+### 字体尺寸
 
-### Font size
+指定字体的尺寸。
 
-Specify the size of font.
+### 小数位数
 
-### Float Format Digits
+控制浮点数小数点之后显示的位数。
 
-Controls displayed amount of digits after decimal points for floating point numbers.
+### 自动保存间隔
 
-### Auto Save Interval
-
-Defines interval at which auto saves of the edited projects are performed.
-See [Recovering Data](recoveringData.md)
+指定正在编辑的项目的自动保存间隔。
+参见[恢复数据](recoveringData.md)。

@@ -1,39 +1,25 @@
-﻿# Recovering Data
+﻿# 恢复数据
 
-There are various reasons why you may accidentally lose your work.
-The editor might crash, a power outage may happen, or simply clicking
-the wrong button may result in corruption of the effect you've been 
-working on for hours. For these reasons, the Effekseer editor uses 
-auto saves to increase the likelihood of successful recovery of lost 
-projects.
+你的工作可能因为各种各样的原因突然丢失。编辑器可能会崩溃，电量可能会耗尽，或者可能只是按错了按键，几个小时的工作就崩溃了。Effekseer编辑器有自动保存的功能，以增大成功恢复丢失的项目的可能。
 
-Auto saves are performed at a fixed interval over time, as well as 
-every time you close the editor. Auto saves are enabled by default, 
-and you can't disable auto save on editor exit.
+自动保存会在固定的时间间隔以及每次关闭编辑器时生效。自动保存在默认情况下是启用的，而且你不能禁用关闭编辑器时的自动保存。
 
-## Recovering Auto Saves
+## 恢复自动保存的存档
 
-### Last Session
+### 最后一次会话
 
 `
-Menu: File > Recover > Last Session
+菜单：文件 > 恢复 > 最后一次会话
 `
 
-Opens the `efk_quit.efkbac` file which is saved in Temporary directory when the editor 
-is closed under normal operation. This option allows to recover project 
-which was lost when you accidentally closed the editor and didn't save changes. 
-If such a file is not found an error will be shown.
+打开正常关闭编辑器时保存在临时目录中的`efk_quit.efkbac`。当你意外关闭编辑器而没有保存修改时，这个选项可以恢复项目。如果找不到这个文件，会显示一个错误。
 
-
-### Auto Save
+### 自动保存
 
 `
-Menu: File > Recover > Auto Save...
+菜单：文件 > 恢复 > 自动保存...
 `
 
-Allows you to choose an auto saved file from Temporary directory.
-Auto saved files will have `efk_autosave` prefix and `efkbac` extension. 
-These files are saved automatically with interval configured in options menu
-(2 minutes by default). If auto save interval is set to 0 auto saves wont
-be performed.
+你可以从临时目录中选择自动保存的文件。自动保存的文件的前缀是`efk_autosave`，扩展名为`efkbac`。
 
+这些文件是按照选项窗口中设定的时间间隔（默认为2分钟）自动保存的。如果时间间隔被设置为0，自动保存将不起作用。
