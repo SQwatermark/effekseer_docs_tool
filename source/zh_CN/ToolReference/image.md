@@ -1,13 +1,15 @@
-# About images
+# 关于图像
 
-## Supported formats
+## 支持的格式
 
-png, dds, and tga are supported.
+支持png、dds和tga格式。
 
-However, whether those files can be used with each plug-in depends on the plug-in.
-png can be used in most environments.
+然而，这些文件是否能在插件中使用还取决于每个插件。
+png可以在大多数环境中使用。
 
-## Mipmap
+## 多级纹理（Mipmap）
 
-If _NoMip is at the end of a file name, it doesn't generate a mipmap.
-For example, Image.png and Image_NoMip.png results in the following image.
+如果文件名的末尾是_NoMip，则不会生成多级纹理。
+例如，Image.png和Image_NoMip.png会产生以下图像。
+
+译注：没图

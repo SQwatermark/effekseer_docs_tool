@@ -1,16 +1,16 @@
-﻿# Depth
+﻿# 深度
 
-## Overview
+## 概述
 
-Set the parameters for depth-of-direction processing.
+设置深度的相关参数。
 
-## Parameter
+## 参数
 
-### Z-Offset
+### Z-偏移
 
-Moves the particle position in the depth direction when it is drawn. This parameter affects drawing only. Only particles with this parameter are moved. Child's particles are not moved in Version 1.4. For example, when drawing a hit effect, this parameter can be used to prevent that the character clips the effect.
+在渲染时在深度方向上移动粒子的位置。这个参数只影响渲染。在1.4版本中，只有设置了这个参数的粒子会被移动，子粒子不会被移动。例如，在渲染击中特效时，这个参数可以用于防止角色与特效直接接触。
 
-(1) is an effect clipping the character. (2) is Z offset. You can see that Z-offset protect the character to be clipped.
+(1)是一个接触到角色的特效。(2)是Z-偏移。Z-偏移防止角色与特效接触。
 
 <img src="../../img/Reference/depth_Z-Offset.png"/>
 
@@ -22,13 +22,13 @@ Moves the particle position in the depth direction when it is drawn. This parame
 
 <td>
 
-Z-Offset : 0
+Z-偏移：0
 
 </td>
 
 <td>
 
-Z-Offset : 2
+Z-偏移：2
 
 </td>
 
@@ -46,9 +46,9 @@ Z-Offset : 2
 
 </table>
 
-### Is scaling invalid with Z offset
+### 禁用Z-偏移导致的缩放
 
-If Z-offset is changed, the position where an effect is drawn is moved and a distance between a camera and an effect. A size of drawn particle is changed by changing distance. This paramether specifies whether the size of particles does not change.
+使用Z-偏移可以移动渲染特效的位置，改变与摄像机的距离。当距离改变时，渲染的粒子的大小也会改变。你可以通过这个参数阻止这种变化的发生。
 
 <table>
 
@@ -58,13 +58,13 @@ If Z-offset is changed, the position where an effect is drawn is moved and a dis
 
 <td>
 
-Off
+关闭
 
 </td>
 
 <td>
 
-On
+开启
 
 </td>
 
@@ -82,9 +82,9 @@ On
 
 </table>
 
-### Scaling Z-Offset
+### 缩放Z-偏移
 
-Specifies whether Z-offset increases with particle's scale parameter.
+指定Z-偏移的值是否会随着粒子的缩放值而变化。
 
 <table>
 
@@ -94,13 +94,13 @@ Specifies whether Z-offset increases with particle's scale parameter.
 
 <td>
 
-Off
+关闭
 
 </td>
 
 <td>
 
-On
+开启
 
 </td>
 
@@ -118,9 +118,9 @@ On
 
 </table>
 
-### Depth sort
+### 深度排序
 
-Specify whether particles belonging to the same node are sorted by the distance in the depth direction. If this parameter is on, particles get a better appearance and processing becomes heavier.
+指定同一个节点生成的粒子是否按照距离排序。如果开启了此参数，粒子会有更好的表现效果，但性能消耗也会增加。
 
 <table>
 
@@ -130,13 +130,13 @@ Specify whether particles belonging to the same node are sorted by the distance 
 
 <td>
 
-Off
+关闭
 
 </td>
 
 <td>
 
-On
+开启
 
 </td>
 
@@ -154,19 +154,19 @@ On
 
 </table>
 
-### Drawing priority
+### 渲染优先级
 
-Specify the drawing order between nodes. The higher this parameter, the later particles are drawn. This parameter also affect a distortion. If the drawing priority is less than 0, distortion distorts only the background. Distortion does not distorts between particles. If the drawing priority is 0 or more, it distorts the background and particles with drawing priority less than 0.
+指定节点之间的渲染顺序。这个参数的值越高，则粒子越晚被绘制。这个参数也会影响到扭曲。如果渲染优先级低于0，扭曲将只影响到背景。粒子之间不会互相扭曲。如果渲染优先级大于或等于0，背景和渲染优先级小于0的粒子就会被扭曲。
 
-This picture is an example of a drawing order. (1) is parent node of (2) and a drawing priority is 0. (2)'s drawing priority is 0. (3)'s drawing priority is 1. You can see that the drawing order is determined by the drawing priority and child nodes are drawn later between nodes with the same drawing priority.
+下图是渲染优先级的粒子。(1)是(2)的父节点，其渲染优先级为0，(2)的渲染优先级为0。(3)的渲染优先级为1。可以看出，渲染的顺序是由渲染优先级决定的，在具有相同的渲染优先级的节点之间，子节点在后绘制。
 
 <img src="../../img/Reference/depth_drawingPriority.png"/>
 
-### Suppression of scaling by depth
+### 抑制随深度变化的缩放变化
 
-Makes particles appear approximately the same size, independent of the distance between particles and the camera.
-It is suitable for a lock-on marker.
+确保粒子以大致相同的尺寸显示，与粒子和相机之间的距离无关。
+适用于锁定标记等。
 
-You can also suppress the effect of distance.
+还可以降低距离的影响。
 
 <iframe src='../../Effects/viewer_en.html#References/Depth/suppression_of_scaling_by_depth.efkefc'></iframe>

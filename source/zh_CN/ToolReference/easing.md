@@ -1,35 +1,41 @@
-# Easing
+# 缓动
 
-Easing is a feature that allows you to specify two or three points and interpolate between them to change their values.
-In Effekseer, you can apply easing to various parmeters of your effects. There are various types of easing, and we describe them here.
+缓动允许你指定两个或三个点并在之间进行插值以改变它们的值。
+在Effekseer中，你可以将缓动应用到特效的多种参数。缓动也有多种类型，下面将描述这些类型。
 
-## Types of easing
+## 缓动的类型
 
-There are many different types of easing, such as a behavior that starts with a sudden change and ends with a slow change.
+缓动有多种不同的类型，例如开始时突然变化，结束时缓慢变化。
 
-A graph showing all types of easing is available at the end of this page.
+本页面末尾的图表显示了可用的所有类型的缓动。
 
-## Middle point
+## 中间点
 
-The standard easing is two points, but you can also add an intermediate point.
-The values always change via the middle point.
+基础的缓动有两个点，但你还可以加一个中间点。
+值的变化将始终通过中间点。
 
-## Random group
+## 随机组
 
-Effekseer's easing can be randomized for both start and end points.
-This is not a problem if all the values are disparate, but sometimes you want XY to be random but the same value, and only Z to be different.
-For example, if you have a 3D model of a cylinder that you want to use as a beam, the random XY values need to be the same because you want to keep the shape of the circle.
+Effekseer easing允许你为起点和终点指定随机性。如果所有的值都不一样，这不是问题，但有时你希望XY是随机的，但值是一样的，只有Z是不同的。例如，如果一个圆柱体的三维模型被用作梁，XY的随机性需要相同，因为你想保持圆的形状。
 
-In such a case, there is a feature called groups.
+在这种情况下，有一个叫做组的功能。
 
-If the group numbers are the same, the random behavior will be the same.
-It allows you to reproduce randomness where XY is equal but Z is different.
+如果组具有相同的数量，那么随机行为就会相同。这允许你再现一个XY相等但Z不同的随机。
 
-## Type individual
+Effekseer的缓动可以为起点和终点指定随机性。
+如果XYZ的值不必相等，这不是问题，但有时你希望XY轴是同一个随机值，只有Z轴是不同的。
+例如，如果你想将一个圆柱体的3D模型用作梁，XY轴的随机值需要是相同的，因为你需要保持形状是圆形的。
 
-It allows you to set different types of easing for each of XYZ.
+在这种情况下，有一个叫做组的功能。
 
-## List of easing types
+如果组的数字相同，则随机行为也会相同。
+这允许你实现XY相等但是Z不同的随机。
+
+## 各轴类型独立
+
+允许你为XYZ轴分别设置不同的缓动类型。
+
+## 缓动类型一览
 
 - EaseInBack
 ```eval_rst
