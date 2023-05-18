@@ -1,69 +1,74 @@
-﻿# Behavior
+﻿# 行为
 
-## Overview
+## 概述
 
-Changes how effects are displayed in the editor. Representations close to the game can be reproduced, such as displaying multiple particles.
+修改特效在编辑器中的显示。可以模拟游戏中的情况，例如播放多个粒子。
 
 <iframe src='../../Effects/viewer_en.html#References/Behavior/Original.efk'></iframe>
 
-## Parameter
+## 参数
 
-### Pos
+### 位置
 
-Specify the position of the root node in the node tree.
+指定节点树中的根节点的位置。
 
 <iframe src='../../Effects/viewer_en.html#References/Behavior/InitialPosition.efk'></iframe>
 
-### Speed
+### 速度
 
-Specify the movement speed of the root node in the node tree.
+指定节点树中的根节点的移动速度。
+
 <iframe src='../../Effects/viewer_en.html#References/Behavior/speed.efkefc'></iframe>
 
 
-### Angle
+### 角度
 
-Specify the angle of the root node in the node tree.
+指定节点树中的根节点的角度。
+
 <iframe src='../../Effects/viewer_en.html#References/Behavior/angle.efkefc'></iframe>
 
-### Angular Speed
+### 角速度
 
-Specify the rotation speed of the root node in the node tree.
+指定节点树中的根节点的角速度。
+
 <iframe src='../../Effects/viewer_en.html#References/Behavior/angular_speed.efkefc'></iframe>
 
-### Scale
+### 缩放
 
-Specify the scale of the root node in the node tee.
+指定节点树中的根节点的缩放。
+
 <iframe src='../../Effects/viewer_en.html#References/Behavior/behavior_scale.efkefc'></iframe>
 
-### Expansion Rate
+### 缩放速率
 
-Specify the scaling speed of the root node in the node tree.
+指定节点树中的根节点的缩放速率。
 
-### Life
+### 生命周期
 
-Specify the time (in frames) to delete particles generated from the root node while displaying the effect.
+指定播放特效时删除根节点生成的粒子的时间（以帧为单位）。
 
-### X Count
+### X方向数量
 
-Duplicates the effect in the X direction this many times.
+指定在X方向重复这个特效的次数。
 
-### Y Count
+### Y方向数量
 
-Duplicates the effect in the Y direction this many times.
+指定在Y方向重复这个特效的次数。
 
-### Z Count
+### Z方向数量
 
-Duplicates the effect in the Z direction this many times.
+指定在Z方向重复这个特效的次数。
 
-### Separation
+### 距离
 
-Specify the distance between effects when displaying duplicated effects.
+指定播放多个特效时，特效之间的距离。
+
 <iframe src='../../Effects/viewer_en.html#References/Behavior/count_set.efkefc'></iframe>
 
-### Playback speed
+### 播放速度
 
-Specify a playback speed of effects.
+指定特效的播放速度。
 
-### Point of Attraction
+### 引力点
 
-Specify the coordinates of the target point that will be used when Attraction is set in the Attraction Forces window.
+指定力场窗口中设置了引力时，目标点的坐标。
