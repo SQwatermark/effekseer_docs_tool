@@ -1,38 +1,38 @@
-﻿# Render - Sprite
+﻿# 渲染 - 精灵
 
-## Overview
+## 概述
 
-Here we explain the parameters that affect the drawing when "Sprite" is selected in the Render window.
+这里我们解释在渲染设置窗口中选择了“精灵”时，影响渲染的参数。
 
-When "Sprite" is selected, a simple square/rectangular surface will be drawn.
+在选择了“精灵”时，一个简单的方形/长方形面会被渲染。
 
 ![](../../img/Reference/renderSprite.png)
 
-## Parameters
+## 参数
 <div align="center">
 <img src="../../img/Reference/Render/panel_sprite_en.png">
-<p>"Render Settings" window</p>
+<p>“渲染设置”窗口</p>
 </div>
 
-### Rendering Order
+### 渲染顺序
 
-Specify the order in which sprites are drawn among sprites generated from the same node. For "Order of spawn", the first generated particle is the first drawn, while in "Reversed", the first generated particle will be drawn last. That is, in the order of generation, the drawing of the last generated particle is given priority over the first generated particle.
+指定同一个节点生成的精灵的渲染顺序。选择了“生成顺序”时，第一个生成的粒子被第一个绘制，选择了“倒序”时，第一个生成的粒子被最后绘制。
 
-### Configuration
+### 放置方法
 
-Specify how to draw the particle's sprite. In the case of "Billboard", the sprite always rotates to face the camera. In the case of "Rotated Billboard", the sprite rotates to face the camera while keeping the Z axis fixed. In the case of "Fixed Y-axis", the sprite rotates to face the camera while keeping the Y axis fixed. For "Fixed", the sprite will match the rotation setting of the particle.
+指定如何绘制粒子的精灵。选择“告示牌”时，精灵总是面向摄像机。选择“Z轴旋转告示牌”时，精灵面向摄像机，但是Z轴被锁定了。选择“固定Y轴”时，精灵面向摄像机，但是Y轴被锁定了。选择“固定”时，精灵将会符合粒子的旋转设置。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/sprite_configuration.efkefc'></iframe>
 
-### Color All
+### 整体颜色
 
-Specify the color of the whole sprite.
+指定精灵的整体的颜色。
 
-### Vertex Color
+### 顶点色
 
-Specify the color of each vertex (corner) of the sprite.
+指定精灵的每个顶点（拐角）的颜色。
 
-### Vertex Coords
+### 顶点坐标
 
-Specify the coordinates of each vertex of the sprite.
+指定精灵的每个顶点的坐标。
 

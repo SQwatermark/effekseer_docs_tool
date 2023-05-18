@@ -1,51 +1,54 @@
-﻿# Render - Ribbon
+﻿# 渲染 - 丝带
 
-## Overview
+## 概述
 
-Here we explain the parameters that affect the drawing when "Ribbon" is selected in the Render window.
+这里我们解释在渲染设置窗口中选择了“丝带”时，影响渲染的参数。
 
-When "Ribbon" is selected, effects are drawn along a continuous ribbon.
+在选择了“丝带”时，特效沿着一个连续的丝带渲染。
 
-The ribbon is not drawn for each individual particle. Rather, it connects all children of a certain particle by drawing a path between them. For example, if there are particles 1, 2, and 3 which are the children of particle 0, a shape like a ribbon will be drawn between 1, 2, and 3\. The ribbon is shaped by connecting lines between (-0.5, 0, 0) and (0.5, 0, 0) of each particle.
+丝带并不将每个粒子分开绘制。而是将一个粒子的所有子粒子连接起来形成一个路径。例如，如果粒子1、2、3都是粒子0的子粒子，一个像丝带的形状将会在粒子1、2、3之间绘制。这个丝带是通过将每个粒子的(-0.5, 0, 0)和(0.5, 0, 0)连线形成的。
 
 ![](../../img/Reference/renderRibbon.png)
 
 ## Parameters
 <div align="center">
 <img src="../../img/Reference/Render/panel_ribbon_en.png">
-<p>"Render Settings" window</p>
+<p>“渲染设置”窗口</p>
 </div>
 
 <iframe src='../../Effects/viewer_en.html#References/Render/ribbon_render.efkefc' class='effect'></iframe>
 
-### Rendering Order
+### 渲染顺序
 
-Specify the order in which particles are drawn among particles generated from the same node. For "Order of spawn", the first generated particle is the first drawn, while in "Reversed", the first generated particle will be drawn last. That is, in the order of generation, the drawing of the last generated particle is given priority over the first generated particle.
+译注：1.70b版本并没有没有这个选项
 
-### UV Type
+指定同一个节点生成的粒子的渲染顺序。选择了“生成顺序”时，第一个生成的粒子被第一个绘制，选择了“倒序”时，第一个生成的粒子被最后绘制。
 
-It sets the UV repeat pattern.
+### UV类型
 
-#### Strech
+它设置了UV重复的图案。
 
-It uses one image for the entire ribbon. It is suitable for particles with a long length, such as a laser.
+#### 拉伸
+
+整个丝带使用一张图片。适用于拉长的的粒子，例如激光。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/ribbon_uvtype_strech.efkefc' class='effect'></iframe>
 
-#### Tile
+#### 瓦片
 
-It repeats one image within one ribbon. It is suitable for particles with repeating patterns, such as chains.
-It can also specify not to repeat only the edges.
+它在丝带中重复一张图片。它适用于有重复图案的粒子，例如链条。
+还可以设置为不只重复边缘，而是在指定的循环区域内重复。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/ribbon_uvtype_tile.efkefc' class='effect'></iframe>
 
-### Configuration
+### 跟随视点
 
-The shape of the ribbon is a thick line connecting the (-0.5, 0, 0) and (0.5, 0, 0) points centered on each particle. Normally, the direction of the line connecting the two points will depend on the rotation of the particle (for "Fixed"), but these options specify whether to automatically rotate the ribbon toward the camera.
+丝带的形状是一条连接以粒子为中心的两个点(-0.5, 0, 0)和(0.5, 0, 0)的粗线。
+通常情况下，连接这两点的线的方向取决于粒子的旋转，但是你可以指定它是否应该旋转到指向观点的方向。
 
-### The number of spline division
+### 样条细分的数量
 
-This parameter makes the shape smooth by dividing the ribbon finely. It looks beautiful, although processing becomes heavier.
+这个参数通过细分丝带让形状更为平滑。它很好看，但性能消耗也更大。
 
 <table>
 
@@ -55,13 +58,13 @@ This parameter makes the shape smooth by dividing the ribbon finely. It looks be
 
 <td>
 
-Division : 1
+细分：1
 
 </td>
 
 <td>
 
-Division : 8
+细分：8
 
 </td>
 
@@ -79,14 +82,14 @@ Division : 8
 
 </table>
 
-### Color All
+### 整体颜色
 
-Specify the overall color of the ribbon.
+指定丝带的整体的颜色。
 
-### Vertex Color
+### 顶点颜色
 
-Specify the color used at each vertex (corner) of the ribbon.
+指定丝带的每个顶点（拐角）的颜色。
 
-### Vertex Coords
+### 顶点坐标
 
-Specify the coordinates of each vertex of the ribbon. Only X coordinates can be specified here.
+指定丝带的每个顶点的坐标。此处只可指定X坐标。

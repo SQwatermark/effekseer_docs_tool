@@ -1,73 +1,73 @@
-﻿# Render - Ring
+﻿# 渲染 - 环
 
-## Overview
+## 概述
 
-Here we explain the parameters that affect the drawing when "Ring" is selected in the Render window.
+这里我们解释在渲染设置窗口中选择了“环”时，影响渲染的参数。
 
-When "Ring" is selected, a circular effect is drawn.
+当选择“环”时，将绘制一个圆形特效。
 
-The ring consists of a triple structure of outside, center and inside.
+环由三层组成：外侧、中心和内侧。
 
 ![](../../img/Reference/renderRing.png)
 
-## Parameters
+## 参数
 <div align="center">
 <img src="../../img/Reference/Render/panel_ring_en.png">
-<p>"Render Settings" window</p>
+<p>“渲染设置”窗口</p>
 </div>
 
-### Rendering Order
+### 渲染顺序
 
-Specify the order in which particles are drawn among particles generated from the same node. For "Order of spawn", the first generated particle is the first drawn, while in "Reversed", the first generated particle will be drawn last. That is, in the order of generation, the drawing of the last generated particle is given priority over the first generated particle.
+指定同一个节点生成的粒子的渲染顺序。选择了“生成顺序”时，第一个生成的粒子被第一个绘制，选择了“倒序”时，第一个生成的粒子被最后绘制。
 
-### Configuration
+### 放置方法
 
-Specify how to draw the particle's ring. In the case of "Billboard", the ring always rotates to face the camera. In the case of "Rotated Billboard", the ring rotates to face the camera while keeping the Z axis fixed. In the case of "Fixed Y-axis", the ring rotates to face the camera while keeping the Y axis fixed. For "Fixed", the ring will match the rotation setting of the particle.
+指定如何绘制粒子的环。选择“告示牌”时，环总是面向摄像机。选择“Z轴旋转告示牌”时，环面向摄像机，但是Z轴被锁定了。选择“固定Y轴”时，环面向摄像机，但是Y轴被锁定了。选择“固定”时，环将会符合粒子的旋转设置。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/ring_configuration.efkefc' class='effect'></iframe>
 
-### Vertex Count
+### 顶点数量
 
-The number of corner verticies that will be used to display the ring. The more corners there are, the closer it will be to a smooth circle. However, you can also use small numbers to reduce it to a polygon. For example, 3 vertices will make the ring a triangle, 4 will make it a diamond, 5 will make it a pentagon, etc.
+用于显示环形的拐角顶点的数量。拐角数越多，形状就越接近于一个光滑的圆。但也可以通过故意减少角数使其成为一个多边形。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/render_ring_vertexcount.efkefc' class='effect'></iframe>
 
-### Shape
+### 形状
 
-It can specify the shape of the ring. 
+指定环的形状。
 
-#### Donut
+#### 甜甜圈
 
-It can draw a shape like a donut
+渲染一个类似甜甜圈的形状。
 
-#### Crescent
+#### 月牙
 
-It can draw a circle with a part cut. It can set the start / end angle and fade angle of the circle.
+渲染一个局部的环。可以设置开始/结束角度和淡入/淡出角度。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/render_ring_viewingangle.efkefc' class='effect'></iframe>
 
-### Outer
+### 外沿
 
-This is the shape/position of the outer part of the circle. The x value specifies the radius, while the y value specifies the height.
+环的外侧形状。X值指定半径。Y值指定高度。
 
-### Inner
+### 内沿
 
-This is the shape/position of the inner part of the circle. The x value specifies the radius, while the y value specifies the height.
+环的内侧形状。X值指定半径。Y值指定高度。
 
-### Center Ratio
+### 中心比率
 
-This is the ratio of the center gradient that transitions between the inner and outer rings. 0.5 will result in a smooth even gradient between the inside and outside edges. 0.0 will place the center gradient on the inner edge. 1.0 will place the center gradient on the outer edge.
+环的中心部分的位置的比例。如果中心要定位在内侧，指定为0.0。如果中心定位在外侧，则指定为1.0。如果将中心定位在中央，则指定0.5。
 
-### Outer Color
+### 外沿颜色
 
-This is the color of the outer part of the circle.
+环的外侧的颜色。
 
-### Center Color
+### 中心颜色
 
-This is the color of the center part of the circle.
+环的中心部分的颜色。
 
-### Inner Color
+### 内沿颜色
 
-This is the color of the inside part of the circle.
+环的外侧的颜色。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/render_ring_outin.efkefc'></iframe>

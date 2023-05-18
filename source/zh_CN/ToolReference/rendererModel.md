@@ -1,41 +1,41 @@
-﻿# Render - Model
+﻿# 渲染 - 模型
 
-## Overview
+## 概述
 
-Here we explain the parameters that affect the drawing when "Model" is selected in the Render window.
+这里我们解释在渲染设置窗口中选择了“模型”时，影响渲染的参数。
 
-When "Model" is selected, an external 3D model can be imported and displayed.
+在选择了“模型”时，可以导入并显示一个外部的3D模型。
 
-The color / distortion image set in the Basic Render Settings window will be used to texture the model. Depending on the model, it may be displayed incorrectly unless depth writing and depth test are enabled.
+在基础渲染设置窗口设置的颜色/扭曲图案可用于模型的纹理。如果不启用深度写入和深度测试，一些模型可能显示不正确。
 
 ![](../../img/Reference/renderModel.png)
 
-## Parameters
+## 参数
 <div align="center">
 <img src="../../img/Reference/Render/panel_model_en.png">
-<p>"Render Settings" window</p>
+<p>“渲染设置”窗口</p>
 </div>
 
-### Model
+### 模型
 
-There are two types of models: file and procedural models.
+有两种类型的模型：文件和程序化模型。
 
-If models are loaded from file, Specify FBX (.fbx), metasequoia file (.mqo) used for display, or model file for Effekseer (.efkmodel). If .efkmodel is specified, .efkmodel is generated in the same directory as the specified file. When playing effects with other applications, this generated file is necessary.
+如果从文件加载模型，需指定FBX（.fbx），水杉（.mqo）或Effekseer的模型文件（.efkmodel）。如果指定了.efkmodel以外的文件，将在与指定文件的同一目录下生成.efkmodel。如果你想在其他应用程序中播放特效，这个生成的文件是必需的。
 
-You can also load FBX (.fbx) with animation. The first animation in the FBX file is played.
+也可以加载带有动画的FBX（.fbx）。会播放在FBX文件中设置的第一个动画。
 
-If you want to use a procedural model, create a model in the Procedural Model panel and specify it.
+如果你想使用程序化模型，请在程序化模型面板中创建一个模型并指定它。
 
-### Configuration
+### 放置方法
 
-Specify how to draw the particle's model. In the case of "Billboard", the sprite always rotates to face the camera. In the case of "Rotated Billboard", the model rotates to face the camera while keeping the Z axis fixed. In the case of "Fixed Y-axis", the sprite rotates to face the camera while keeping the Y axis fixed. For "Fixed", the model will match the rotation setting of the particle.
+指定如何绘制粒子的模型。选择“告示牌”时，模型总是面向摄像机。选择“Z轴旋转告示牌”时，模型面向摄像机，但是Z轴被锁定了。选择“固定Y轴”时，模型面向摄像机，但是Y轴被锁定了。选择“固定”时，模型将会符合粒子的旋转设置。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/model_configuration.efkefc'></iframe>
 
-### Culling
+### 剔除
 
-Specify which side(s) of the model's faces should be displayed.
+指定模型的哪个/哪些面会被显示。
 
-### Overall Color
+### 整体颜色
 
-Specify the color tone of the whole model.
+指定整个模型的色调。
