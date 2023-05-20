@@ -1,68 +1,64 @@
-﻿# Network
+﻿# 网络
 
-## Overview
+## 概述
 
-Set parameters related to the network. You can edit the playing effect in an application (game etc.) via the network from the outside when application is running. If you would like to find out more, please read the help page about the runtime network.
-
-## Overview
-
-Set parameters related to the network. You can edit the effect of an application (game etc.) incorporating the running runtime via the network from the outside. Unity, UnrealEngine 4 etc, can be used in an environment where plug-ins are provided from the official of Effekseer. In other environments please consult the person who embeds Effekseer's runtime.
+设置与网络有关的参数。你可以通过网络在集成了Effekseer运行时的外部应用程序中编辑特效。Unity、虚幻引擎4和其他使用Effekseer官方提供的插件的程序都可作为编辑环境。对于其他环境，咨询向该环境中集成Effekseer运行时的人。
 
 ![](../../img/Reference/network.png)
 
-## How to use
+## 如何使用
 
-### The side on which the effect can be editted (application, game etc.)
+### 编辑特效的一侧（应用程序、游戏等）
 
-It depends on each plug-in or library. In order to edit the effect via the network, specify the port to be used for communication. Execute a function that explicitly activates the server for communication or make the function execute automatically. After that, play the effect you want to edit.
+这取决于插件或者库。为了通过网络编辑特效，指定用于通信的端口。
+执行一个函数以启动服务器的通信，或者让函数自动执行。然后播放你要编辑的特效。
 
 ![](../../img/Reference/network_app.png)
 
 ### Effekseer
 
-Effekseer opens the file from which the effect you want to edit is based. Then, specify the connection destination from the network panel and connect. Edit the effect and press "Send Data" button. Then the effect in the application be editted.
+在Effekseer中，打开你想编辑的特效的原始文件。在网络面板上设置连接目标并连接。编辑特效并按下“发送数据”按钮。这样程序中的特效就被编辑了。
 
 ![](../../img/Reference/network_tool_en.png)
 
-### Limitation
+### 限制
 
-The file name of the efk file to be load by the application must be the same as the file name to be edited. For example, if you are playing "Laser.efk" in your application, you will need to edit "Laser.efkproj" in the tool. Also, edits are not reflected on images, models, and sounds that do not exist in the application.
+由程序读取的efk文件的名字必须和编辑的文件的名字相同。例如，如果应用程序中播放“Laser.efk”，则工具中必须编辑“Laser.efkproj”。此外，编辑将不会影响程序中不存在的图像、模型和声音。
 
-### TIPS
+### 提示
 
-Specify 127.0.0.1 as the address when editing the effect of an application running on the same computer.
+当在同一台计算机上运行应用程序时，地址设置为127.0.0.1。
 
-## Parameters
+## 参数
 
-### Address
+### 地址
 
-Enter the IP address or DNS of the computer/server running the application.
+输入运行应用程序的计算机/服务器的IP地址或DNS。
 
-### Port
+### 端口
 
-Enter the port number of the computer/server running the application.
+输入运行应用程序的计算机/服务器的端口。
 
-### Auto-connect
+### 自动连接
 
-If connection has not yet been established, connection to the remote application will be attempted at a fixed interval.
+如果尚未建立连接，将会每隔一段固定的时间间隔尝试连接到远程应用程序。
 
-### Transmit data on load
+### 载入时发送数据
 
-When loading an effect file, if connection has been established, send the effect data to the application.
+当读取特效文件时，如果连接已建立，将特效数据发送给应用程序。
 
-### Transmit data on edit
+### 编辑时发送数据
 
-When making an edit to the effect, if connection has been established, send the effect data to the application.
+当编辑特效文件时，如果连接已建立，将特效数据发送给应用程序。
 
-### Transmit data on save
+### 保存时发送数据
 
-When saving the effect, if connection has been established, send the effect data to the application.
+当保存特效文件时，如果连接已建立，将特效数据发送给应用程序。
 
-### Send
+### 发送数据
 
-Forcefully send effect data to the application.
+强制发送数据给应用程序。
 
-### Connect
+### 连接
 
-Connect to the specified remote application.
-
+连接到指定远程应用程序。

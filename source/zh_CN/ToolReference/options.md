@@ -32,9 +32,7 @@
 
 ### 输出放大
 
-This is a parameter that previews the enlargement that would be applied if you were to change the magnification ratio during final export to an "*.efk" file. When this parameter is set, the effect is displayed at its scaled size.
-
-译注：不懂。大概的意思可能是：用于模拟在外部工具或游戏引擎中缩放不同的情况下播放的特效。但原文不是这样。
+如果你打算在输出到“*.efk”文件时修改放大率，你可以用此参数来预览放大后的特效。
 
 ### 输出FPS
 

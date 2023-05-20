@@ -1,22 +1,24 @@
-﻿# File - Export
+﻿# 文件 - 导出
 
-## Default format
-Exports the effect you are currently editing as an efk file.
+## 默认格式
 
-The efk file is a play-only binary format that does not contain tool edit information.
+将正在编辑的特效导出为efk文件。
 
-Various resource files such as textures are not output, so a separate copy is required.
+efk文件是一种仅能播放的二进制格式，不包含工具编辑信息。
 
-You can specify the enlargement ratio by specifying the file name of the export destination.
+各种资源文件，例如纹理，不会被输出，所以必须单独复制。
+
+指定要输出的文件的名称并点击保存后，可以指定放大率。
 
 ```eval_rst
 .. image:: ../../img/Reference/Export/export_efk_en.png
    :align: center
 ```
 
-## Effekseer package
-Exports the currently editing effect as an efkpkg file.
+## Effekseer包
 
-An efkpkg file is a package file that contains one or more efkefc files and various resource files.
+将正在编辑的特效导出为efkpkg文件。
 
-Specify the file name of the export destination to complete the export.
+efkpkg文件是包含了一个或多个efkefc文件和多个资源文件的包文件。
+
+指定导出目标的文件名以完成导出。
