@@ -1,144 +1,145 @@
 ﻿================================
-Material Node (Math)
+材质节点（数学）
 ================================
 
-Overview
+概述
 ================================
 
-Node list
+节点列表
 ================================
 
-Add
+加
 ------------------------
 
-Outputs the result of adding V1 and V2 is output.
-If the input is not connected, use the value of the property.
+输出V1加V2。
+如果没有连接输入值，则使用属性值。
 
-Subtract
+减
 ------------------------
 
-Outputs the result of subtracting V2 from V1.
-If the input is not connected, use the value of the property.
+输出V1减V2。
+如果没有连接输入值，则使用属性值。
 
-Multiply
+乘
 ------------------------
 
-Outputs the result of multiplying V1 and V2.
-If the input is not connected, use the value of the property.
+输出V1乘V2。
+如果没有连接输入值，则使用属性值。
 
-Divide
+除
 ------------------------
 
-Outputs the result of dividing V1 by V2.
-If the input is not connected, use the value of the property.
+输出V1除以V2。
+如果没有连接输入值，则使用属性值。
 
-Mod
+求余
 ------------------------
 
-Outputs the remainder when V1 is divided by V2.
-If the input is not connected, use the value of the property.
+输出V1除以V2的余数。
+如果没有连接输入值，则使用属性值。
 
-Step
-------------------------
-Outputs 1 if the value input to V is larger than Edge, 
-and outputs 0 if it is smaller.
-
-Round up
+步
 ------------------------
 
-Outputs the result of rounding up V.
+如果V的输入值大于Edge的输入值，输出1，
+反之输出0。
 
-Round down
+向上取整
 ------------------------
 
-Outputs the value obtained by rounding down V.
+输出V的向上取整。
 
-Fractional part
+向下取整
 ------------------------
 
-Outputs the fractional part of V.
-For example, if you enter 1.15, it outputs 0.15.
+输出V的向下取整。
 
-Maximum
+小数部分
 ------------------------
 
-Outputs large value at V1 and V2.
+输出V的小数部分。
+例如，输入1.15时，输出值为0.15。
 
-Minimum
+最大值
 ------------------------
 
-Outputs small value at V1 and V2.
+输出V1和V2中较大的值。
 
-Power
+最小值
 ------------------------
 
-Outputs the value of Base raised to the power of Exp.
+输出V1和V2中较小的值。
 
-SquareRoot
+乘方
 ------------------------
 
-Outputs the root of V.
+输出Base的Exp次幂。
 
-Clamp
+平方根
 ------------------------
 
-Outputs a value in which V is between Min and Max.
+输出V的平方根。
 
-Dot
+钳制
 ------------------------
 
-Outputs the inner product of V1 and V2.
+输出值将V限制在Min和Max之间。
 
-Cross
+点乘
 ------------------------
 
-Outputs the cross product of V1 and V2.
+输出V1和V2的内积。
 
-Normalize
+叉乘
 ------------------------
 
-Outputs the normalized value of V.
-Make sure the length of the input number is 1.
+输出V1和V2的外积。
 
-LinearInterpolate
+归一化
+------------------------
+
+输出V的归一化值。
+确保输入值的长度为1。
+
+线性插值
 --------------------------------
 
-Outputs the value complemented between V1 and V2 by alpha ratio.
-If the input is not connected, use the value of the property.
+输出V1和V2以alpha为比率的线性插值。
+如果没有连接输入值，则使用属性值。
 
-If alpha is 1, V1 is output.
-If alpha is 0, output V2.
-If alpha is 0.7, V1 x 0.3 + V2 x 0.7 is output.
+如果alpha为1，输出V1。
+如果alpha为0，输出V2。
+如果alpha为0.1，输出V1 x 0.3 + V2 x 0.7。
 
 1-V
 ------------------------
 
-Outputs 1-V.
+输出1-V。
 
-Absolute
+绝对值
 ------------------------
 
-Outputs the absolute value of V.
+输出V的绝对值。
 
-Sine
+正弦
 ------------------------
 
-Outputs V Sine.
+输出V的正弦值。
 
-Arctangent2
+arctan2
 ------------------------
 
-Outputs X / Y Arctangent.
-If the input is not connected, use the value of the property.
+输出X/Y的反正切。
+如果没有连接输入值，则使用属性值。
 
-MaskElements
+遮罩元素
 --------------------------------
 
-Extract elements from V.
-For example, extract part of number 4 and output number 2.
+从V中提取元素。
+例如，提取数值4的一部分，输出为数值2。
 
-MergeElements
+合并元素
 --------------------------------
 
-Join the elements of V1 and V2.
-For example, input number 3 and number 1 and output number 4.
+合并V1和V2的元素。
+例如，输入数值3和数值1，输出数值4。

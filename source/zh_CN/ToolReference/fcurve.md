@@ -1,61 +1,62 @@
-﻿# F-Curve
+﻿# F-曲线
 
-## Overview
+## 概述
 
-This is a feature that lets you automate frame-by-frame values over time by defining curves in a graph.
+通过此功能，你可以在图表中编辑曲线，为每一帧设置数值。
 
 ![](../../img/Reference/fcurve_en.png)
 
-## How to use
+## 使用方法
 
-### Display Graph
+### 显示图表
 
-When you specify the F-curve for each item (position, rotation, etc.), their graphs will be displayed in the F-curve window.
+当你为每个项目（位置、旋转等）设置了F-曲线时，它们的图表会显示在F-曲线窗口中。
 
 ![](../../img/Reference/fcurve_select_en.png)
 
-When you select an item in the tree on the left side of the screen, the F-Curve is displayed. You can also select multiple items at the same time by holding down Shift and selecting items.
+当你在窗口左侧的树中选择一个项目，F-曲线就显示出来了。你可以通过按住Shift键来一次性选择多个项目。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kTTrY7wjosg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
-### About Timeline
+### 关于时间线
 
-There are two timelines for the F-curve.
 
-The first is a timeline represented by a number between 0 and 100, where 0 represents the time when the particle was created, and 100 represents the time the particle was discarded.
-It will still play back to 100 even if the life of the particle changes.
+F-曲线有两种时间线。
 
-The second is a timeline that directly specifies the time of the frame. The time number directly represents the time.
+第一种用0到100之间的数字表示，0表示粒子生成的时间，100表示粒子被销毁的时间。
+如果粒子的生命周期发生变化，它仍将播放到100。
 
-These can be toggled by the timeline mode parameter.
+第二种直接指定帧数。时间的数值直接表示时间。
 
-### Movement / Scaling of Graphs
+可以用时间线模式参数切换时间线。
 
-<table>
+### 移动/缩放图表
+
+<table border="1">
 
 <tbody>
 
 <tr>
 
-<td>Move graph</td>
+<td>移动图表</td>
 
-<td>On the graph, move the mouse while right clicking.</td>
-
-</tr>
-
-<tr>
-
-<td>Horizontal scaling</td>
-
-<td>On the graph, hold down Ctrl and scroll the mouse wheel.</td>
+<td>在图表中按住右键并移动鼠标。</td>
 
 </tr>
 
 <tr>
 
-<td>Vertical scaling</td>
+<td>水平缩放</td>
 
-<td>On the graph, hold down Alt and scroll the mouse wheel.</td>
+<td>在图表中按住Ctrl键并滚动鼠标滚轮。</td>
+
+</tr>
+
+<tr>
+
+<td>竖直缩放</td>
+
+<td>在图表中按住Alt键并滚动鼠标滚轮。</td>
 
 </tr>
 
@@ -63,76 +64,78 @@ These can be toggled by the timeline mode parameter.
 
 </table>
 
-### Add key frame
+### 添加关键帧
 
-You can add a key by left double clicking the mouse on a line.
+你可以通过在线上双击鼠标左键添加一个关键帧。
 
-You can also add it from the menu by right-clicking the mouse on the line.
+你还可以在线上右键鼠标并通过弹出的菜单添加关键帧。
 
-### Delete key frame
+### 删除关键帧
 
-You can remove a key by left double clicking the mouse on the key or delete button.
+你可以通过在关键帧上双击鼠标左键或者（在选择了关键帧的情况下）按下Delete键删除一个关键帧。
 
-You can also delete it from the menu by right-clicking the mouse on the key.
+你还可以（在选择了关键帧的情况下）在关键帧上右键鼠标并通过弹出的菜单删除关键帧。
 
-### Select key frame
+### 选择关键帧
 
-You can select by left clicking the mouse.
+你可以通过鼠标左键选择关键帧。
 
-### Move key frame
+（译注：按住Shift键或Alt键可以选择多个关键帧。可以直接左键框选多个关键帧。）
 
-After selecting the key, you can move it by moving the mouse while holding down the left mouse button. In the same way, you can also move the handles that control the curves.
+### 移动关键帧
 
-You can also move multiple keys holding Alt.
+在选中关键帧后，你可以按住鼠标左键并移动鼠标以移动关键帧。通过同样的方式，你还可以移动用于控制曲线的锚点。
 
-### Enlarge, shrink anchor
+你还可以按下Alt键移动多个关键帧。
 
-You can specify a position of an anchor automatically by selecting the key and pressing enlarge anchor or chrink anchor buttons. Pressing enlarge anchor expands the anchor and smoothes the line. Pressing shrink anchor merges positions between key and anchors and makes a F-Curve sharp.
+### 展开/收缩锚点
 
-### Show entire graph
+你可以自动设置锚点的位置，方法是选中关键帧并点击展开锚点或收缩锚点按钮。点击展开锚点按钮将展开锚点并使线更加平滑。点击收缩锚点按钮将锚点合并到关键帧的位置，使F-曲线的变化更为急剧。
 
-You can show entire graph by left double clicking a corresponding graph's label.
+### 显示整个图表
+
+你可以左键双击图表对应的标签以显示整个图表。
 
 ![](../../img/Reference/fcurve_show_entire.png)
 
-## Parameter
+## 参数
 
-### Frame
+### 时间（百分比/帧）
 
-Set for each key. Specify the frame of the key.
+每个关键帧分别设置。指定关键帧的时间百分比/帧。
 
-### Value
+### 值
 
-Set for each key. Specify the value of the key.
+每个关键帧分别设置。指定关键帧的值。
 
-### Type
+### 补间
 
-Set for each key. Specify the interpolation method between this key and its neighboring keys.
+每个关键帧分别设置。指定这个关键帧和相邻关键帧之间的插值方法。
 
-### Start
+### 开始
 
-Set for each graph. Specify how values before the left edge of the graph should be generated.
+每个图表分别设置。指定如何生成图表左侧的值。
 
-### End
+### 结束
 
-Set for each graph. Specify how values after the right edge of the graph should be generated.
+每个图表分别设置。指定如何生成图表右侧的值。
 
-### Sampling
+### 采样
 
-Set for each graph. When actually playing back, specify how many frames to use as the resolution for interpolation. The smaller the value, the more accurate the result will be to the actual shape of the graph.
+每个图表分别设置。指定实际播放时，使用多少帧进行插值。值越小，图表的实际形状就越精确。
 
-### Left X/Y
+### 左
 
-Set for each key. Specify the position of the left handle of the key's curve control.
+每个关键帧分别设置。指定关键帧的左侧锚点的位置。
 
-### Right X/Y
+### 右
 
-Set for each key. Specify the position of the right handle of the key's curve control.
+每个关键帧分别设置。指定关键帧的右侧锚点的位置。
 
-### Max/Min Offset
+### 最大/最小偏移
 
-Set for each graph. When using values, offset the range, randomly shift the value up or down the graph.
+每个图表分别设置。在偏移范围内随机向上/向下移动图表。
 
-### Timeline Mode
+### 时间线模式
 
-You can toggle Timeline Mode.
+你可以切换时间线模式。

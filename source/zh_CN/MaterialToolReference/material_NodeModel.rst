@@ -1,51 +1,50 @@
 ﻿================================
-Material Node (Model)
+材质节点（模型）
 ================================
 
-Overview
+概述
 ================================
 
-Node list
+节点列表
 ================================
 
-VertexPosition
+顶点位置
 --------------------------------
 
-Outputs the positions of particle vertices.
+输入粒子顶点的位置。
 
 UV
 --------------------------------
 
-Outputs UV coordinates of particles.
-By switching the UV number, you can use the UV before it is changed by the UV parameter of the Effekseer.
+输出粒子的UV坐标。
+通过切换UV序号，你可以使用受到Effekseer的UV参数影响前的UV坐标。
 
-MovingUV
+移动UV
 --------------------------------
 
-Moves the UV coordinates of particles according to time and outputs them.
-You can enter UV coordinates, time, and movement speed.
-If the input is not connected, use the value of the property.
+按照时间移动粒子的UV坐标并输出。
+你可以输入UV坐标，时间（Time）和移动速度。
+如果没有连接输入值，则使用属性值。
 
-VertexNormal
+顶点法线
 --------------------------------
 
-Outputs the normals of particle vertices.
+输出粒子顶点的法线。
 
-PixelNormal
+像素法线
 --------------------------------
 
-Outputs the particle normal after the direction of 
-the normal has been changed for each pixel by a normal input in OutputNode.
+输出像素的法线被输出节点的法线（Normal）入参修改前的值。
 
-VertexColor
+顶点颜色
 --------------------------------
 
-Outputs the vertex color of the particles.
-This includes all colors of sprite, ring, and so on.
+输出粒子的顶点颜色。
+包括精灵、环之类的整体颜色。
 
-ObjectScale
+物体缩放
 --------------------------------
 
-Outputs the enlargement ratio of particles in Effekseer.
+输出Effekseer中粒子的放大率。
 
-However, only it is valid when used for the OutputNode WorldPositionOffset with the model.
+但是，只在用于输出节点的WorldPositionOffset时有效，并且只用于模型。
