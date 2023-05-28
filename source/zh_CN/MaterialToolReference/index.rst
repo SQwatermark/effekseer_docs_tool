@@ -5,14 +5,13 @@
 概述
 ================================================
 
-Effekseer allows you to create materials for use with the Material Editor.
-You can use materials to specify how particles are drawn.
+可以用材质编辑器为Effekseer制作材质。
+材质用于设置粒子的绘制方式。
 
-The Material Editor starts from Material in the Effekseer Basic Render Settings Panel.
+材质编辑器可以从Effekseer的基础渲染设置面板中的材质选项打开。
 
-In the Material Editor, you can use nodes to write calculations.
-The result of the calculation is drawn as particles.
-
+在材质编辑器中，可用节点编写运算流程。
+运算的结果被渲染为粒子。
 
 
 .. image:: ../../img/Reference/Material/material_sample_effect.png
@@ -24,77 +23,77 @@ The result of the calculation is drawn as particles.
    :align: center
 
 
-You can connect the input and output of the node with the left mouse drag.
+用鼠标左键拖拽可以连接节点的输入和输出。
 
-You can create a new node from the right-click menu.
+可以通过右键打开的菜单新建节点。
 
 .. image:: ../../img/Reference/Material/menu_create_node_en.png
    :scale: 80%
    :align: center
 
-The simplest design has two nodes: Constant3 and Output.
+最简单的设计包含两个节点：常量3和输出。
 
-For Constant3, you can specify three values.
-On Output, you receive the final output value.
+可以为常量3设置3个值。
+在输出节点中，可以设置最终输出的值。
 
-You connect the output Emissive input pin and the Constant3 output pin.
+将输出节点的Emissive输入与常量3节点的输出相连。
 
-Then, the value of Constant3 is displayed on the particle.
+接着，常量3的值就显示在粒子上了。
 
 .. image:: ../../img/Reference/Material/basic_en.png
    :scale: 80%
    :align: center
 
-Detailed operation method
+细节操作方法
 ================================================
 
-Move node
+移动节点
 ------------------------------------------------
 
-After selecting with left click, you can move with left drag.
+左键选中节点后，可以按住左键拖拽节点。
 
-Search node
+搜索节点
 ------------------------------------------------
 
-If you enter a keyword in the menu with right-click, only the nodes that contain that keyword are displayed.
-Keyword is shown by mouse over.
+在右键打开的菜单中输入一个关键词，则只有包含关键词的节点会被显示。
+鼠标悬停在菜单中的节点上，可以显示该节点的关键词。
 
 .. image:: ../../img/Reference/Material/menu_create_node_search_en.png
    :scale: 80%
    :align: center
 
-Delete line or node
+删除线和节点
 ------------------------------------------------
 
-Left-click to select and right-click to display Delete in the menu.
-Select Delete to delete nodes and lines.
+在节点或线上右键鼠标，打开的菜单中有删除选项。
+点击删除可以删除节点和线。
 
 .. image:: ../../img/Reference/Material/menu_delete_en.png
    :scale: 80%
    :align: center
 
-Description of parameters
+参数的说明
 ------------------------------------------------
 
-A summary and description can be written in the parameter node.
-This summary and description are displayed in Effekseer.
-I recommend that you write a clear description.
+可以为参数节点编辑概要和详细说明。
+概要和详细说明会在Effekseer中显示。
+建议编写一个清晰的说明。
 
-Shortcut
+快捷键
 ------------------------------------------------
 
 .. csv-table::
    
-   "Ctrl(Command) + Z", "Undo"
-   "Ctrl(Command) + Y", "Redo"
-   "Ctrl(Command) + C", "Copy"
-   "Ctrl(Command) + V", "Paste"
-   "Ctrl(Command) + S", "Save"
+   "Ctrl(Command) + Z", "撤销"
+   "Ctrl(Command) + Y", "重做"
+   "Ctrl(Command) + C", "复制"
+   "Ctrl(Command) + V", "粘贴"
+   "Ctrl(Command) + S", "保存"
 
-About lighting
+关于光照
 ================================================
 
-You can select whether are particles lighttten with the property of Outout node in a material.
+你可以在材质的输出节点的属性中设置粒子是否受到光照影响。
 
 |pic1| |pic2|
 
@@ -104,21 +103,21 @@ You can select whether are particles lighttten with the property of Outout node 
 .. |pic2| image:: ../../img/Reference/Material/lighting_unlit.png
    :scale: 100%
 
-Value types of input and output
+输入值和输出值的类型
 ================================================
 
-There are two value types: Number and Image.
-Number in the material consists of 1 to 4 numerical values.
-In many cases, Number can be connected with different number of elements.
-Image can only be connected to image.
+值有两种类型：数值类型和图像类型。
+数值类型由1到4个数值元素组成。（译注：如同3维向量由3个浮点数组成）
+在很多情况下，数值类型可以连接到元素数量不同的数值类型。
+但图像只能连接到图像。
 
-In this document, I call Number 1 to Number 4 depending on the number of elements.
+在这个文档中，根据元素数量不同，数值类型被称为数值1到数值4。
 
 
 节点
 ================================================
 
-There are various nodes in the material editor.
+材质编辑器中有多种节点。
 
 .. toctree::
     :maxdepth: 1
@@ -135,13 +134,13 @@ There are various nodes in the material editor.
 输出
 ------------------------------------------------
 
-You can specify the final output value.
+可以指定最终输出的值。
 
-In the output, you can spefiy the type of lighting.
+在输出节点中，可以设置光照的类型（着色模型）。
 
-There are Lit and Unlit lighting.
-If you specify Lit, it will be affected by the light source.
-If you specify Unlit, the entered value is displayed.
+有Lit和Unlit两个选项。
+如果选择Lit，它将受到光源的影响。
+如果设置为Unlit，则直接显示输入值（译注：而不会受到外部光照的影响）。
 
 |pic_lit| |pic_unlit|
 
@@ -151,73 +150,73 @@ If you specify Unlit, the entered value is displayed.
 .. |pic_unlit| image:: ../../img/Reference/Material/lighting_unlit.png
    :scale: 100%
 
-BaseColor (Number3)
-^^^^^^^^^^^^^^^^^^^^^^^^
+BaseColor（基础颜色，数值3）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Valid only for Lit. Input the color of the material.
+仅在选择了Lit时有效。输入材质的颜色。
 
-Emissive (Number3)
-^^^^^^^^^^^^^^^^^^^^^^^^
+Emissive（自发光，数值3）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Input the emission color of the material.
-For Unlit, input the color to display.
+输入材质的自发光颜色。
+在选择了Unlit时，需要通过它来设置输入的颜色。
 
-Opacity (Number1)
-^^^^^^^^^^^^^^^^^^^^^^^^
+Opacity（不透明度，数值1）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Input the transparency.
+输入不透明度。
 
-OpacityMask (Number1)
-^^^^^^^^^^^^^^^^^^^^^^^^
+OpacityMask（不透明遮罩，数值1）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Input the mask. If it is less than 0, it is not displayed at all.
+输入遮罩。如果值小于或等于0，则完全不显示。
+如果值大于0，则完全显示。
 
-Roughness (Number1)
-^^^^^^^^^^^^^^^^^^^^^^^^
+Roughness（粗糙度，数值1）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Valid only for Lit. Input the surface roughness.
+仅在选择了Lit时有效。输入表面的粗糙度。
 
-Normal (Number3)
-^^^^^^^^^^^^^^^^^^^^^^^^
+Normal（法线，数值3）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Valid only for Lit. Input the direction of the normal.
+仅在选择了Lit时有效。输入法线方向。
 
-AmbientOcclusion
-^^^^^^^^^^^^^^^^^^^^^^^^
+AmbientOcclusion（环境光遮蔽）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Valid only for Lit. Input the value to darken the lighting.
-Specify 0 to make it black.
+仅在选择了Lit时有效。输入值使光照变暗。
+设置为0可使之完全变成黑色。
 
-WorldPositionOffset (Number3)
+WorldPositionOffset（世界坐标偏移，数值3）
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Input the moving distance of the vertex.
-The vertex position moves by the input value.
+输入顶点的移动距离。
+顶点的坐标被输入值移动。
 
-Refraction (Number1)
+Refraction（折射率，数值1）
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Input the refractive index. If the refractive index is 1, it is not be refracted.
-If the refractive index is not 1, it show the refracted background.
-Input larger value than 1.
+输入折射率。如果折射率为1，则不被折射。
+如果折射率不为1，则显示被折射的背景。
+输入值需大于1。
 
-DepthFade
+深度衰减
 ------------------------------------------------
 
-Output a smaller value as it gets closer to the background object.
-Output 1 if the distance is farther than FadeDistance, 0 if the distance is 0.
+当距离背景物体更近时，输出更小的值。
+当距离大于FadeDistance时，输出1，距离为0时输出0。
 
-Comment (Comment)
+注释
 ------------------------------------------------
 
-Comments for clarity. Does not affect operation.
+注释使条理更清晰，并不影响运算。
 
-Details of calculation behavior
+计算行为的细节
 ================================================
 
-If V1 and V2 have inputs, you can enter the same type of value or the Number 1 for V1 or V2.
-If V1 and V2 are of the same type, the result with the type is output.
+如果一个计算节点有输入值V1和V2，可以输入相同类型的值，也可以在V1或V2中输入数值1。
+如果V1和V2类型相同，则输出值也是相同的类型。
 
-If V1 is the numerical value 1, it outputs each element of V2 and the result of calculating V1.
-If V2 is the numerical value 1, it outputs each element of V1 and the result of calculating V2.
-
+如果V1是数值1，则输出值是V2的每个元素分别和V1进行计算。
+如果V2是数值1，则输出值是V1的每个元素分别和V2进行计算。
