@@ -2,7 +2,7 @@
 材质参考
 ================================================
 
-Overview
+概述
 ================================================
 
 Effekseer allows you to create materials for use with the Material Editor.
@@ -115,7 +115,7 @@ Image can only be connected to image.
 In this document, I call Number 1 to Number 4 depending on the number of elements.
 
 
-Node
+节点
 ================================================
 
 There are various nodes in the material editor.
@@ -132,7 +132,7 @@ There are various nodes in the material editor.
     material_NodeNoise
     material_NodeEnvironment
     
-Output
+输出
 ------------------------------------------------
 
 You can specify the final output value.

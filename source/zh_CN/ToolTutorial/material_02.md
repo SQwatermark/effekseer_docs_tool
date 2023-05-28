@@ -156,7 +156,7 @@ Depending on the gradient image, you may want to fix the R value and change only
 
 图像可以设置为Clamp（钳制）或Repeat，这是决定如何处理边缘的参数。
 
-当UV坐标超过1.0时，你可以指定超出边缘的区域是应该填充边缘的颜色，还是应该重复图像。如果设置为Repeat，它将从另一侧开始重复采样。
+当UV坐标超过1.0时，你可以设置超出边缘的区域是应该填充边缘的颜色，还是应该重复图像。如果设置为Repeat，它将从另一侧开始重复采样。
 
 下图左边是Clamp，右边是Repeat。
 

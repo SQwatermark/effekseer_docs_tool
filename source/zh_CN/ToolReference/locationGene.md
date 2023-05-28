@@ -1,16 +1,17 @@
-﻿# Spawning Method
+﻿# 生成方法
 
-## Overview
+## 概述
 
 Set parameters for specifying the position where the node's particles will be initially generated. In addition to the influence that parent particle positions have on their child particles' positions, the values set here affects position as well. In other words, particles are generated around an origin point located at the parent particle's position, then translated and rotated from that point by the parameters specified for the spawning method. ![](../../img/Reference/locationGene.png)
 
-## Parameter
+## 参数
+
 <div align="center">
 <img src="../../img/Tutorial/08_spawn_en.png">
-<p>"Spawning Method" window</p>
+<p>“生成方法”窗口</p>
 </div>
 
-### Set angle on spawn
+### 生成时设置角度
 
 Specify whether the parameter of the spawning method affects not only the position but also the angle. For example, if you specify "sphere", the Y direction of the generated particles will be the normal direction of the sphere.
 
@@ -20,9 +21,9 @@ Specify whether the parameter of the spawning method affects not only the positi
 
 <tr>
 
-<td>Checked</td>
+<td>勾选</td>
 
-<td>Unchecked</td>
+<td>未勾选</td>
 
 </tr>
 
@@ -38,41 +39,41 @@ Specify whether the parameter of the spawning method affects not only the positi
 
 </table>
 
-### Method of Spawning
+### 生成方法
 
 Specify how to set the generation position.
 
-#### Point
+#### 点
 
 Treats the point at the specified position as the generation position.
 
-#### Line
+#### 线
 
 Particles are placed on the line. When you specify the init position (1) and the final position (2) of the line, the particle is placed at the position where the line is divided by the number of divisions. The particle rotates so that the X direction of the particle is in the direction of the line.
 
 ![](../../img/Reference/locationGene_line.png)
 
-##### Position noise
+##### 位置噪声
 
 Noise in the distance range specified by this parameter is added to the position value where particles are generated, in the direction of the line. It is possible to suppress the sense of uniformity of the generated position.
 
-##### Spwan Mode
+##### 生成模式
 
-###### Random
+###### 随机
 
 Particles are placed at randomly chosen points from each point on the line.
 
 ![](../../img/Reference/locationGeneModelRand.png)
 
-###### Order
+###### 顺序
 
 Particles are placed at selected points in order from each point on the line.
 
-#### Circle
+#### 圆
 
 Place the particles in a circle. At this time, you specify just the radius and rotation angle. If "Set angle on spawn" is checked, the Y direction of the particle will be normal to the surface of the circle.
 
-##### Axis direction
+##### 轴方向
 
 Specify the direction of the axis of the circle. When checking "Influence on generation angle", the upward direction of particles is as shown in the table below.
 
@@ -84,19 +85,19 @@ Specify the direction of the axis of the circle. When checking "Influence on gen
 
 <td>
 
-X-Axis
+X轴
 
 </td>
 
 <td>
 
-Y-Axis
+Y轴
 
 </td>
 
 <td>
 
-Z-Axis
+Z轴
 
 </td>
 
@@ -106,19 +107,19 @@ Z-Axis
 
 <td>
 
-Arc direction
+弧
 
 </td>
 
 <td>
 
-Axis direction
+沿轴
 
 </td>
 
 <td>
 
-Outer direction
+向外
 
 </td>
 
@@ -138,15 +139,15 @@ Outer direction
 
 </table>
 
-##### Angle noise
+##### 角度噪声
 
 Noise in the angle range specified by this parameter is added to the generated angle. It is possible to suppress the sense of uniformity of the generated position.
 
-#### Sphere
+#### 球
 
 Place the particles in a spherical shape. At this time, you specify just the radius and rotation angle of the X and Y axes. If "Set angle on spawn" is checked, the Y direction of the particle will be normal to the surface of the sphere.
 
-#### Model
+#### 模型
 
 Place particles along the shape of the model for Effekseer. If "Set angle on spawn" is checked, the Z direction of the particle will be normal to the surface of the model.
 
@@ -156,38 +157,38 @@ If models are loaded from file, Specify FBX (.fbx), metasequoia file (.mqo) used
 
 You can also load FBX (.fbx) with animation. The first animation in the FBX file is played. The animation is played along the time of the parent particle. Particles are generated from the model deformed by animation.
 
-プロシージャルモデルを使用する場合、プロシージャルモデルのパネルでモデルを作成し、それを指定します。
+プロシージャルモデルを使用する場合、プロシージャルモデルのパネルでモデルを作成し、それを设置します。
 
 If you want to use a procedural model, create a model in the Procedural Model panel and specify it.
 
 
-##### Spawn Mode
+##### 生成模式
 
-###### Random
+###### 随机
 
 Place particles randomly along the surface of the model.
 
 ![](../../img/Reference/locationGeneModelRand.png)
 
-###### Vertex
+###### 顶点
 
 Place particles on vertices in sequential order.
 
 ![](../../img/Reference/locationGeneModelVertex.png)
 
-###### Random Vertex
+###### 随机顶点
 
 Place particles randomly on any of the vertices in the model.
 
 ![](../../img/Reference/locationGeneModelVertexRand.png)
 
-###### Surface
+###### 表面
 
 Place the particles on the center of each of the model's faces, in sequential order.
 
 ![](../../img/Reference/locationGeneModelFace.png)
 
-###### Random Surface
+###### 随机表面
 
 Place particles on the center of each of the model's faces, chosen in random order.
 

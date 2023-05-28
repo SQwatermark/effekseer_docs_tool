@@ -1,40 +1,40 @@
-﻿# Force Field (Local)
+﻿# 力场（Local）
 
-## Overview
+## 概述
 
-It specifies an effect that gives power from outside the particles.
+设定外力对粒子的影响。
 
 ## Parameters
 <div align="center">
 <img src="../../img/Reference/Atraction/panel_en.png">
-<p>"Force Field (Local)" window</p>
+<p>“力场（Local）”窗口</p>
 </div>
 
-## Force Field
+## 力场
 
-It can specifies up to 4 types of force fields.
+可以设置至多4种力场。
 
-## Kind
+## 类型
 
-### None
+### 无
 
-No additional external forces will be applied to the particles.
+粒子不受外力影响。
 
-### Force
+### 力
 
 The force is applied outward from the specified position.
 You can also make it so that the force decays when it leaves the specified position.
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Force.mp4"/></div>
 
-### Wind
+### 风
 
 It applies a force in the specified direction.
 The direction can be changed by rotation.
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Wind.mp4"/></div>
 
-### Vortex
+### 龙卷风
 
 It gives the force to rotate the axis in the specified direction.
 The direction of the axis can be changed by rotation.
@@ -43,30 +43,32 @@ The movement speed can be specified so that the rotation speed is the same for t
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Vortex.mp4"/></div>
 
-### Turbulence
+### 湍流
 
 It gives power with a turburence.
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Turbulence.mp4"/></div>
 
-#### Kind
+#### 类型
 
 You can specify whether it is simple or complex.
 The more complex one looks better, but it is slower.
 
-#### Random Seed
+#### 随机种子
 
 The flow of turbulence changes according to the value.
 
-#### Field scale
+#### 粒度
 
 Larger value ​​increases the turbulence width.
 
-#### Strength
+#### 强度
 
 The strength of turbulence on particles.
 
-#### Complexity
+译注：似乎没有这个设置。也许是统一改成“力”了。
+
+#### 复杂度
 
 Larger value ​​complicates turbulence. However, processing becomes heavy.
 
@@ -76,66 +78,66 @@ It gives a force that suppresses movement.
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Drag.mp4"/></div>
 
-### Gravity
+### 重力
 
 Apply acceleration in one direction. It can be applied not only to the bottom but also to the top and the right.
 This direction is not affected by the orientation of the parent particle.
 
 <iframe src='../../Effects/viewer_en.html#References/Attraction_Forces/gravity.efkefc'></iframe>
 
-### Attraction (if point is set)
+### 引力（需要设置引力点）
 
 The particle moves towards the position specified under "Point of Attraction" in the "Behavior" window.
 
 ![](../../img/Reference/locationAbs_attraction.gif)
 
-#### Attraction
+#### 引力
 
 This is the rate of acceleration towards the target position per frame.
 
-#### Resistance
+#### 阻力
 
 This is the rate that the angle of motion is adjusted towards the target direction per frame. It takes a value between 0.00 and 1.00.
 
-#### Minimum Range
+#### 最小范围
 
 This is the attenuation start distance of attraction.
 
-#### Maximum Range
+#### 最大范围
 
 This is the attenuation end distance of attraction. When the position of the particle is in the range from 0 to the minimum range, the attraction is 100%. If it is farther than the maximum range, the attractive force becomes 0%. If it is between the minimum range and the maximum range, the attraction force interpolates linearly.
 
 
-## Position of force field
+## 力场的位置
 
 It specifies the location of the center of the force field.
 It affects the settings of some force fields.
 
-## Angle of force field
+## 力场的角度
 
 It specifies the angle of the force field.
 It affects the settings of some force fields.
 
-## Fall off
+## 衰减类型
 
 Outside this range, the effect of the force field is decayed.
 There are several ways to specify the range.
 
-### Sphere
+### 球
 
 This parameter is used to decay the effect of the force field as it approaches or moves away from the center.
 The greater the decay force, the more the force field is decayed as you move outward.
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/FallOff_Sphere.mp4"/></div>
 
-### Tube
+### 管道
 
 This parameter is used to decay the effect of the force field as it approaches or moves away from the axis at the center of the cylinder to the outside.
 The greater the decay force, the more the force field is decayed as you move outward.
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/FallOff_Column.mp4"/></div>
 
-### Cone
+### 圆锥
 
 The shape of the cone is a part of a sphere cut into a cone.
 This parameter is used to decay the force field as it approaches or leaves the outside of the cone.

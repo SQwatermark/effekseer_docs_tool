@@ -1,11 +1,11 @@
-# Procedural Model
+# 程序化模型
 
-## Overview
+## 概述
 
 This function allows you to create a 3D model by simply adjusting the parameters.
 Normally, you would need to use other software to create a 3D model, but you can create a simple 3D model within Effekseer.
 
-## Parameters
+## 参数
 
 ### Type
 

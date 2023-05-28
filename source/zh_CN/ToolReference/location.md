@@ -8,7 +8,7 @@
 
 ### 位置
 
-指定粒子的生成位置。它将影响粒子相对于其父节点的位置。如果没有父粒子，或者基础设置窗口中设置了不继承位置，它将表示绝对位置。
+设置粒子的生成位置。它将影响粒子相对于其父节点的位置。如果没有父粒子，或者基础设置窗口中设置了不继承位置，它将表示绝对位置。
 
 <div align="center">
 <img src="../../img/Tutorial/02_position_en.png">
@@ -24,20 +24,20 @@
 
 #### 位置・速度・加速度
 
-指定粒子的位置、速度和加速度。
+设置粒子的位置、速度和加速度。
 <iframe src='../../Effects/viewer_en.html#References/Position/movingposition.efkefc' class='effect'></iframe>
 
 #### 缓动
 
-指定生成和移除的位置，以及粒子的生命周期中在这两个位置之间插值的方法。
+设置生成和移除的位置，以及粒子的生命周期中在这两个位置之间插值的方法。
 <iframe src='../../Effects/viewer_en.html#References/Position/easing.efkefc' class='effect'></iframe>
 
-#### F-曲线
+#### F曲线
 
-在F-曲线窗口中，通过定义自动化曲线来控制位置。
+在F曲线窗口中，通过定义自动化曲线来控制位置。
 <iframe src='../../Effects/viewer_en.html#References/Position/f_curve.efkefc' class='effect'></iframe>
 
-#### NURBS-曲线
+#### NURBS曲线
 
 导入其他软件（如Maya）制作的曲线的3D数据，让粒子沿着它移动。
 

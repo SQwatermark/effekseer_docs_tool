@@ -1,13 +1,13 @@
-# Kill Rules
+# 销毁规则
 
-## Overview
+## 概述
 
 Kill rules allow you to specify an area in which particles should be destroyed.
 If a particle has configured fade out, it will be applied before removal.
 
 While in the editor, you can select a node in the node tree to preview its configured kill rule shape.
 
-## Box
+## 盒子
 
 Box is used to kill particles when they're either inside or outside the defined box.
 
@@ -17,11 +17,11 @@ Box is used to kill particles when they're either inside or outside the defined 
 ```
 
 
-#### Center
+#### 中心
 
 The position of the center of the box in effect space.
 
-#### Size
+#### 尺寸
 
 Extents of the box around its center.
 For example, if size is set to (0.5, 0.5, 0.5) the box will have a width, height, and depth of 1.

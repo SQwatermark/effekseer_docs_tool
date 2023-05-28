@@ -1,8 +1,8 @@
-﻿# Recorder
+﻿# 录像
 
-## Overview
+## 概述
 
-Allows you to output the created effect as a sprite sheet, gif animation, AVI, etc. This function is very useful in situations such as when posting effects on your Twitter/Blog/Website/etc., or other situations where you cannot directly play effects created with Effekseer, through the runtime or otherwise.
+允许你将特效输出为精灵表单（Sprite Sheet）、gif动画、AVI等。可用于将特效发布到Twitter/博客/网站/其他场合，或者你无法通过运行时播放Effekseer制作的特效的情况。
 
 <table>
 
@@ -20,38 +20,38 @@ Allows you to output the created effect as a sprite sheet, gif animation, AVI, e
 
 </table>
 
-## Parameter
+## 参数
 
-### Resolution
+### 分辨率
 
-#### Width/Height
+#### 宽度/高度
 
-Sets the output size for each frame of the animation.
+设置动画每帧的输出尺寸。
 
-#### Scale
+#### 缩放
 
-The recording area is enlarged from the actual screen.
-For example, if the width and height are 256 and the Scale is 2, the 256 range is enlarged by a factor of 2 and recorded, and an image with a resolution of 512 is exported.
+录像区域相对于实际的屏幕放大。
+例如，如果宽度和高度是256，且缩放为2，也就是在256的区域中以两倍的缩放比率录像，输出分辨率为512的图片。
 
-#### Show guide
+#### 显示向导
 
-When checked, the bounds of the recording canvas is displayed on the screen. Anything inside the guide will be recorded, anything outside the guide will be cropped out.
+勾选时，录像区域的边界会在屏幕上显示。向导区域内的一切都会被录像，区域之外的东西会被裁剪掉。
 
-### Exported Frame
+### 导出的帧
 
-#### Start Frame
+#### 开始帧
 
-Sets the frame to start recording from for outputting the image to a file.
+设置从第几帧开始录像。
 
-#### End Frame
+#### 结束帧
 
-Sets the frame where recording will be stopped when outputting the image to a file.
+设置从第几帧结束录像。
 
-#### Frequency (Frame)
+#### 频率（帧）
 
 Sets the level of frame skipping in the file output. For example, for a value of 1, when 60 frames are recorded, 60 images will be output. For a value of 2, when 60 frames are recorded, only 30 images will be output (every other frame). If you increase the number like this, the file size will become smaller at the cost of choppier animations.
 
-### Format
+### 格式
 
 There are 4 options: "Export as a single image", "Export images", "Export as a gif animation", and "Export as a AVI".
 
@@ -69,11 +69,11 @@ There are 4 options: "Export as a single image", "Export images", "Export as a g
 
 <tr>
 
-<td>Export as a single image</td>
+<td>导出为单张图片</td>
 
-<td>Export images</td>
+<td>导出为连续多张图片</td>
 
-<td>Export as a gif animation</td>
+<td>导出为gif动画</td>
 
 </tr>
 
@@ -91,42 +91,42 @@ There are 4 options: "Export as a single image", "Export images", "Export as a g
 
 </table>
 
-### Options
+### 选项
 
-### Make transparent
+### 透明
 
-It specifies how to handle the background except gif animation.
+设置如何处理背景，gif动画除外。
 
-#### None
+#### 无
 
-It specifies black color to the background.
+将背景设置为黑色。
 
 ```eval_rst
 .. image:: ../../img/Reference/Recording/none.png
    :align: center
 ```
 
-#### Original image
+#### 使用原始图片
 
-It specifies transparent to the background.
-If images with a black background are used with additive, it sometimes generates wrong image.
+将背景设置为透明。
+如果使用了黑色背景且混合方法为加法的图片，有时候会生成错误的图像。
 
 ```eval_rst
 .. image:: ../../img/Reference/Recording/original.png
    :align: center
 ```
 
-#### Generate alpha
+#### 生成alpha
 
-It generates alpha channel automatically.
-If images with dark color are used with blend, it sometimes generates wrong image.
+自动生成alpha通道。
+如果使用了深色且混合方法为混合的图片，有时候会生成错误的图像。
 
 ```eval_rst
 .. image:: ../../img/Reference/Recording/generate.png
    :align: center
 ```
 
-#### Generate alpha(Blend+Add)
+#### 生成alpha(Blend+Add)
 
 By outputting the recorded results separately from blend and addition, 
 the color when the background is changed can be reproduced in the possible range.
@@ -146,7 +146,7 @@ When using, draw the added image by addition after drawing the blended image by 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XqhE_pllD90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-#### Comparison of methods
+#### 方法间的对比
 
 From left to right, None, Original image, Generate alpha, Generate alpha(Blend+Add) images are displayed.
 
@@ -155,6 +155,6 @@ From left to right, None, Original image, Generate alpha, Generate alpha(Blend+A
    :align: center
 ```
 
-### Setting save destination
+### 设置保存目标
 
 It can specify whether to save the recording settings to the application or the project.
