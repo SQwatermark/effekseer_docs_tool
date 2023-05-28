@@ -1,65 +1,65 @@
 ﻿================================
-Material Node(Constant)
+材质节点（常量）
 ================================
 
-Overview
+概述
 ================================
 
-Node list
+节点列表
 ================================
 
 
 
-Constant1,2,3,4
+常量1,2,3,4
 ------------------------------------------------
 
-Outputs the value specified in the property.
+输出属性中设置的值。
 
-Parameter1,2,3,4
+参数1,2,3,4
 ------------------------------------------------
 
-Outputs externally specified parameters.
-This parameter is common for each node.
-The summary and details specified in the parameters are displayed in Effekseer and external tools.
+输出外部设置的参数。
+参数对于每个节点都相同。
+参数中设置的概要和详细会在Effekseer和外部工具中显示。
 
-The parameters can be specified from Basic Render Settings in Effekseer.
+这些参数可以在Effekseer的基础渲染设置面板中设置。
 
-By right-clicking on the Effekseer input field and pressing Reset, you can enter the value specified in the Mateiral.
+右键Effekseer中的输入框并点击弹出的重置按钮，可以输入材质中设置的默认值。
 
 .. image:: ../../img/Reference/Material/node_Parameter.png
    :align: center
 
-CustomData1, CustomData2
+自定义数据1, 自定义数据2
 ------------------------------------------------
 
-Outputs externally specified parameters.
-This parameter can be set differently for each particle.
-The summary and details specified in the parameters are displayed in Effekseer and external tools.
+输出外部设置的参数。
+可以为每个粒子设置不同的参数。
+参数中设置的概要和详细会在Effekseer和外部工具中显示。
 
-The parameters can be specified from Basic Render Settings in Effekseer.
-For example, you can enter random or F-curve values to achieve more complex materials.
+这些参数可以在Effekseer的基础渲染设置面板中设置。
+例如，可以输入随机或F曲线以实现更复杂的材质。
 
-By right-clicking on the Effekseer input field and pressing Reset, you can enter the value specified in the Mateiral.
+右键Effekseer中的输入框并点击弹出的重置按钮，可以输入材质中设置的默认值。
 
 .. image:: ../../img/Reference/Material/node_CustomData.png
    :align: center
 
-Time
+时间
 ------------------------
 
-Outputs the current time in seconds.
+以秒为单位输出当前时间。
 
-LocalTime
+局部时间
 ------------------------
 
-Outputs the time in seconds since the effect was generated.
+以秒为单位输出特效生成至今经过的时间。
 
-CameraPosition
+相机位置
 ------------------------
 
-Outputs the camera position.
+输出相机的位置。
 
-EffectScale
+特效缩放
 ------------------------
 
-Gets the scale specified when the effect file is loaded
+获取特效文件被加载时设置的缩放。

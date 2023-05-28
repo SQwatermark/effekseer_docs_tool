@@ -82,7 +82,7 @@
 在屏幕左侧的输入栏设置图像。
 这次选择准备好的`Textures/Grid01.png`。
 
-连接`采样图像`节点的RGB锚点，替代`常量3`节点。
+连接`采样图像`节点的RGB连接桩，替代`常量3`节点。
 
 <div align="center">
 <img src="../../img/Tutorial/Mat_01/add_GridImage_en.png">

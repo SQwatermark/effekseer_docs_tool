@@ -1,16 +1,16 @@
 ================================
-Material Node(Environment)
+材质节点（环境）
 ================================
 
-Overview
+概述
 ================================
 
-Node list
+节点列表
 ================================
 
-Light
+光照
 ------------------------
 
-Outputs information about externally set lights.
+输出外部设置的光照的信息。
 
-Depending on the environment in which it is run, this node may not work correctly.
+该节点可能无法在某些运行环境中正常运行。

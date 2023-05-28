@@ -1,22 +1,21 @@
 ================================
-Material Node(Noise)
+材质节点（噪声）
 ================================
 
-Overview
+概述
 ================================
 
-Node list
+节点列表
 ================================
 
-Simple Noise
+简单噪声
 ------------------------
 
-Outputs noise.
-When a value is entered for UV, noise is output according to that value.
-Changing the Scale value changes the size of the noise.
+输出噪声。
+当为UV输入一个值时，噪声会根据该值进行输出。
+改变Scale的值可以改变噪声的大小。
 
-This is a very heavy processing node. Basically, this node should be used only 
-when calculating the value of WorldOffset.
+这是一个非常重的计算节点。基本上，这个节点应该只在计算WorldOffset的值时使用。
 
 .. image:: ../../img/Reference/Material/node_SimpleNoise.png
    :align: center

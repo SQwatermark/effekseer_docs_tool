@@ -1,32 +1,32 @@
 ﻿================================
-Material Node (Others)
+材质节点（高级）
 ================================
 
-Overview
+概述
 ================================
 
-There are other advanced nodes that cannot be classified.
-You can easily make complicated expressions.
+其他不易分类的高级节点。
+可以简单地实现复杂的表现。
 
-Node list
+节点列表
 ================================
 
 
-Fresnel
+菲涅尔
 ------------------------
 
-The larger the surface direction is from the front, the larger the value is output.
-You can specify the intensity in the properties.
+面的法向和视线的张角越大，输出值就越大。
+可以在属性中设置强度。
 
-Rotator
+旋转
 ------------------------
 
-The input value (mainly UV) is rotated and output.
-Used to rotate an image on a material.
-An angle is expressed as 1 per lap.
+旋转输入值（主要是UV）并将其输出。
+用于在材质中旋转图像。
+角度为1则表示一圈。
 
-PolarCoords
+极坐标
 ------------------------
 
-Outputs UVs located on the radiation from the center.
-You can specify how many images are arranged in one round and the rotation angle.
+输出UV坐标以中心位置为原点的极坐标表示。
+可以设置一圈有多少张图片以及旋转角度。

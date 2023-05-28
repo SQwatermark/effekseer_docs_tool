@@ -1,31 +1,31 @@
 ﻿================================
-Material Node (Image)
+材质节点（图像）
 ================================
 
-Overview
+概述
 ================================
 
-Node list
+节点列表
 ================================
 
 
-Constant Image
+图像
 ------------------------
 
-Outputs the specified image.
-It cannot be displayed directly becase it is an image.
+输出指定的图像。
+图像不能被直接显示。（译注：需要通过采样图像节点将图像类型转换为数值类型）
 
-Parameter Image
+参数图像
 ------------------------
 
-Outputs an externally specified image.
-It cannot be displayed directly becase it is an image.
-The summary and details specified in the parameters are displayed in Effekseer and external tools.
+输出外部指定的图像。
+图像不能被直接显示。（译注：需要通过采样图像节点将图像类型转换为数值类型）
+参数中设置的概要和详细会在Effekseer和外部工具中显示。
 
 .. image:: ../../img/Reference/Material/node_ParameterImage.png
    :align: center
 
-Sample Image
+采样图像
 ------------------------
 
-Get the pixels from the image.
+从图像中获取像素。
