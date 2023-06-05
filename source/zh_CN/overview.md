@@ -1,73 +1,73 @@
 ﻿# 概要
 
-## Operating Environment, Required Runtimes, etc.
+## 操作环境和所需的运行时
 
-### Editing Tool(Windows)
+### 编辑工具（Windows）
 
-Windows7 SP1 or later
+Windows7 SP1或之后的版本
 
-DirectX 11 (ShaderModel 4.0 or later)
+DirectX 11（ShaderModel 4.0或之后的版本）
 
-If this application doesn't run, please install D3DCompiler_47.dll from a bellow link.
+如果程序不能运行，请通过以下链接安装D3DCompiler_47.dll。
 
 [D3DCompiler_47.dll](https://support.microsoft.com/en-us/help/4020302/the-net-framework-4-7-installation-is-blocked-on-windows-7-windows-ser)
 
-### Editing Tool(macOS)
+### 编辑工具（macOS）
 
-macOS Sierra or later
+macOS Sierra或之后的版本
 
-If this application doesn't run, please install mono from a bellow link.
+如果程序不能运行，请通过以下链接安装mono。
 
 [mono](https://www.mono-project.com/)
 
-### Runtime
+### 运行时
 
-*   DirectX 9 (ShaderModel 3.0 or later)
-*   DirectX 11 (ShaderModel 3.0 or later)
-*   OpenGL 4.1 or later
-*   OpenGL ES 2.0 or later
+*   DirectX 9（ShaderModel 3.0或之后的版本）
+*   DirectX 11（ShaderModel 3.0或之后的版本）
+*   OpenGL 4.1或之后的版本
+*   OpenGL ES 2.0或之后的版本
 
-## Installation/Uninstallation
+## 安装/卸载
 
 ### Windows
 
-The editing tool exists entirely within the "Tool/" directory. We do not modify the registry, or anything else at all. You can start the program directly, or copy it to any directory.  
-To uninstall, just delete each directory.
+编辑器整个位于“Tool/”文件夹下。我们未对注册表和其他东西做任何修改。你可以直接启动程序，或将其复制到任何文件夹。
+卸载的方式就是删除文件夹。
 
 ### macOS
 
-Open Effekseer.dmg and copy the Effekseer.app to your Applications or Home directory.
-If you want to uninstall Effekseer, please delete Effekseer.app.
+打开Effekseer.dmg并将Effekseer.app复制到Applications或Home文件夹。
+卸载Effekseer的方式是删除Effekseer.app。
 
-### Others
+### 其他
 
-To play effects in your game, you must download separate packages such as the runtime, Unity, or DX libraries.  
+要在游戏中播放特效，必须下载单独的包，例如运行时、Unity或者DX库。
 
-Alternatively, if you just want to use the effect as an exported image, sprite sheet, or video, refer to the [Recording](ToolReference/record) reference guide.
+此外，如果只想将特效导出为图片、精灵表单（Sprite Sheet）或视频，参考[录像](ToolReference/record)。
 
-## License
+## 许可证
 
-The runtime license is the MIT license.
+运行时以MIT许可证发布。
 
-In the case of DirectX, it depends on [DirectX Tool Kit](https://directxtk.codeplex.com/).
+使用DirectX时，依赖[DirectX Tool Kit](https://directxtk.codeplex.com/)。
 
-In the case of Vulkan, it depends on [glslang](https://github.com/KhronosGroup/glslang).
+使用Vulkan时，依赖[glslang](https://github.com/KhronosGroup/glslang)。
 
-Please refer to the license below as the tool depends on various libraries.
+具体请参考下面的许可证。
 
-The data for textures and effects is CC-0. Please feel free to use them as you wish.
+纹理和特效数据以CC-0协议发布。你可以任意使用。
 
-## Disclaimer
+## 免责声明
 
-We can not assume any responsibility for troubles etc. when using this software and runtime.
+对于使用本软件和运行时可能出现的任何问题，我们不承担任何责任。
 
-## Contact information
+## 联系方式
 
 effekseer(at)gmail.com
 
-## Copyright notice
+## 版权声明
 
-### License(Runtime)
+### 许可证（运行时）
 
 <pre>
 The MIT License (MIT)
@@ -93,7 +93,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 </pre>
 
-### License(Tool)
+### 许可证（编辑器）
 
 <pre>
 The MIT License (MIT)
