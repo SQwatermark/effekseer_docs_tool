@@ -1,58 +1,58 @@
-﻿# Render - Track
+﻿# 渲染 - 轨迹
 
-## Overview
+## 概述
 
-Here we explain the parameters that affect the drawing when "Track" is selected in the Render window.
+这里我们解释在渲染设置窗口中选择了“轨迹”时，影响渲染的参数。
 
-When "Track" is selected, effects are drawn along a continuous track.
+在选择了“轨迹”时，特效将沿着一条连续轨迹渲染。
 
 The track is drawn by connecting a thick line between all the children of a certain particle instead of drawing each particle individually. For example, if particles 1, 2, and 3 are the children of particle 0, a shape is generated with a track drawn between 1, 2, and 3\. The track is shaped by "connecting the dots" between each particle. Unlike the ribbon, which is influenced by the rotation and enlargement of the particle, the track is not influenced by them and always faces the camera.
 
 ![](../../img/Reference/renderTrack.png)
 
-## Parameters
+## 参数
 <div align="center">
 <img src="../../img/Reference/Render/panel_track_en.png">
-<p>"Render Settings" window</p>
+<p>“渲染设置”窗口</p>
 </div>
 
-### UV Type
+### UV类型
 
-It sets the UV repeat pattern.
+设置UV重复的图案。
 
-#### Strech
+#### 拉伸
 
-It uses one image for the entire track. It is suitable for particles with a long length, such as a laser.
+整个轨迹使用一张图片。适用于拉长的的粒子，例如激光。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/track_uvtype_strech.efkefc' class='effect'></iframe>
 
-#### Tile
+#### 瓦片
 
-It repeats one image within one track. It is suitable for particles with repeating patterns, such as chains.
-It can also specify not to repeat only the edges.
+它在轨迹中重复一张图片。它适用于有重复图案的粒子，例如链条。
+还可以设置为不只重复边缘，而是在设置的循环区域内重复。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/track_uvtype_tile.efkefc' class='effect'></iframe>
 
-### Smoothing
+### 平滑
 
 Smooth or set even on a sharply bent part, etc.
 
-### Source of color time
+### 颜色时间来源
 
-When using time to obtain UVs and colors, select from which element to obtain the time.
+当设置颜色随时间的变化时，使用什么的时间。
 
-#### Group
+#### 组
 
-Use the time survived by the entire particle of the track.
+使用整个轨迹的生存时间。
 
-#### First particle
+#### 第一个粒子
 
-Uses the first particle time.
-Left mainly for compatibility with past versions.
+使用第一个粒子的生存时间。
+主要用于兼容旧版本。
 
-### The number of spline division
+### 样条细分的数量
 
-This parameter makes the shape smooth by dividing the track finely. It looks beautiful, although processing becomes heavier.
+通过细分轨迹让形状更为平滑。视觉效果更好，但性能消耗也更大。
 
 <table>
 
@@ -62,13 +62,13 @@ This parameter makes the shape smooth by dividing the track finely. It looks bea
 
 <td>
 
-Division : 1
+细分：1
 
 </td>
 
 <td>
 
-Division : 8
+细分：8
 
 </td>
 
@@ -86,40 +86,40 @@ Division : 8
 
 </table>
 
-### Front Size
+### 前侧尺寸
 
-Specify the width of the front of the track.
+设置轨迹前侧的宽度。
 
-### Middle Size
+### 中间尺寸
 
-Specify the width of the middle of the track.
+设置轨迹中间的宽度。
 
-### Back Size
+### 后侧尺寸
 
-Specify the width behind the track.
+设置轨迹后侧的宽度。
 
-### Color, Left
+### 颜色・左侧前后
 
-Specify the color of the left front and left rear of the track.
+设置轨迹左前侧和左后侧的颜色。
 
-### Color, Left-Center
+### 颜色・左侧中间
 
-Specify the color of the left middle of the track.
+设置轨迹左侧的中间部位的颜色。
 
-### Color, Center
+### 颜色・中间前后
 
-Specify the color in front of the middle of the track and the rear in the center.
+设置轨迹中间的前侧和后侧的颜色。
 
-### Color, Center-Middle
+### 颜色・中间中间
 
-Specify the middle middle color of the track.
+设置轨迹中间的中间部位的颜色。
 
-### Color, Right
+### 颜色・右侧前后
 
-Specify the color to the front right and back right of the track.
+设置轨迹右前侧和右后侧的颜色。
 
-### Color, Right-Center
+### 颜色・右侧中间
 
-Specify the color of the right middle of the track.
+设置轨迹右侧的中间部位的颜色。
 
 <iframe src='../../Effects/viewer_en.html#References/Render/render_track.efkefc'></iframe>

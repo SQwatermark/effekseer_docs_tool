@@ -1,21 +1,21 @@
-﻿# Basic Render Settings
+﻿# 基础渲染设置
 
-## Overview
+## 概述
 
 This section explains about the "Basic Render Settings" window, which provides common parameters that manipulate how the current node's particles are drawn.
 
-## Parameter
+## 参数
 <div align="center">
 <img src="../../img/Tutorial/03_rendercommon_en.png">
-<p>"Basic Render Settings" window</p>
+<p>“基础渲染设置”窗口</p>
 </div>
 
-### Material
+### 材质
 
 Specifies the material used to draw the particles.
 You can make settings such as being lighten or distorting the background.
 
-#### Default
+#### 默认
 
 The image in the color image is displayed.
 
@@ -73,7 +73,7 @@ No distortion
 
 In the case of the default settings, the distortion distorts only the background without own effect itself. To distort other nodes of own effect with distortion, specify the drawing priority from the depth panel. Nodes with drawing priority less than 0 are distorted with the background due to the distortion of the node of own effect.
 
-#### File
+#### 文件
 
 You can use a user-created material file for drawing particles.
 The widest range of expressions can be achieved.
@@ -86,7 +86,7 @@ More parameters may be emerging depends on the material file.
 In addition to constants, custom parameters can be specified by easing or F-curve.
 The displayed name of the custom parameter depends on the material file.
 
-##### Cache
+##### 缓存
 
 To speed up material loading or to play the effect on certain platforms, you can save the material as a compiled format.
 To generate that file, press ``Generate Cache`` after loading the material.
@@ -122,15 +122,15 @@ Specify the filtering method to be applied when displaying the particle.
 
 Specify whether to write depth information when displaying particles. After writing the depth information, if you draw the particles for which the depth test is enabled, if the particles are deep inside, they will not be drawn.
 
-### Depth Test
+### 深度测试
 
 If the depth test is valid, particles will not be drawn deeper than the written depth information.
 
-### Fade-In
+### 淡入
 
 When a particle is first spawned, it fades in over a duration until fully visible.
 
-### Fade-Out
+### 淡出
 
 When a particle is about to be despawned, it fades out over a duration and disappears.
 <iframe src='../../Effects/viewer_en.html#References/Render/fade_in_out.efkefc'></iframe>
@@ -141,7 +141,7 @@ In an image, this specifies the region of the image actually used when displayin
 The region can be changed over time, allowing you to scroll or animate the image. 
 The units used in these parameters for specifying the area are pixels.
 
-#### Animation
+#### 动画
 
 Play animation based on images with animations arranged in succession.
 

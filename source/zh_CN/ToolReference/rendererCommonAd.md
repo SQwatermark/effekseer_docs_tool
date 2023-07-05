@@ -1,12 +1,12 @@
-# Basic Render Settings (Advanced)
+# 高级渲染设置
 
-## Overview
+## 概述
 
 It is possible to specify more complex parameters than those that can be specified in the Basic Render Settings.
 
-## Parameters
+## 参数
 
-### Alpha Texture
+### Alpha纹理
 
 Displays a color image of only the red area of the set image.
 For example, if you set a star-shaped image as the alpha texture, you will see a color image of the star-shaped area.

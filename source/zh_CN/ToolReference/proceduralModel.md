@@ -7,11 +7,11 @@ Normally, you would need to use other software to create a 3D model, but you can
 
 ## 参数
 
-### Type
+### 类型
 
 Specifies the type of mesh to be generated.
 
-#### Mesh
+#### 网格
 
 Generates the outer mesh of a sphere or cylinder, depending on the specified parameters.
 Basically, it generates a rotating object about an axis.

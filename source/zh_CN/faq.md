@@ -8,23 +8,23 @@
 
 ## 编辑器
 
-### My changes to parameters are not getting applied.
+### 我修改的参数没生效
 
-If you change a parameter's value, please press enter afterwards, or move the focus to a different field. The change will be applied by doing so.
+修改参数的值之后，要按一次回车，或者点击别的输入框，输入的值才会生效。
 
-### My rotation settings are not applied to the sprite.
+### 旋转设置对精灵无效
 
-If the drawing method is "Sprite", rotation will be ignored when the render configuration is set to "Billboard" (since Billboard locks the sprite's rotation to make it always face the camera). To apply rotation to a sprite render, please choose any of the other render configuration options.
+当渲染方法是“精灵”，且放置方法为“告示牌”时，旋转是无效的（因为告示牌锁定了精灵的旋转，使之始终朝向摄像机）。要让精灵受到旋转设置的影响，请选择其他防止方法。
 
 ### 如何录像？
 
-When you select "Window -> Recording" from the editing tool, the recording screen will be displayed. By pressing Record on the recording screen, the recording result is output. If you select "Window -> Viewpoint Operation", the viewpoint operation screen will be displayed. On the viewpoint operation screen, you can manipulate the viewpoint numerically.
+在编辑器中选择“窗口 -> 录像”，将会显示录像窗口。按下录像窗口的录像按钮，可以输出录像的结果。如果选择“窗口 -> 相机设置”，将会显示相机设置窗口，你可以设置画面的放大率。
 
 ## Embedding Effects
 
-### How can I use it with other applications?
+### 怎么用于其他程序？
 
-Please download plugins and libraries for other applications from the official site. By using them you will be able to play effects in other applications.
+从官网下载其他软件的插件或库。你可以用它们在其他软件中播放特效。
 
 ### How do you format it for playback at runtime?
 
@@ -32,7 +32,7 @@ Select "File -> Output -> Effekseer Game Output Format" from the editing tool an
 
 ## 其他
 
-### I want the function of ....
+### 我想要……功能
 
-We will consider as much as possible. The earliest thing is to become a committer or to modify this tool as a separate project by yourself.
+我们会尽可能考虑。最快的办法是给我们提交代码或者自行修改软件。
 

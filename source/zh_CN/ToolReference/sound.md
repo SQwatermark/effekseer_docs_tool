@@ -1,50 +1,46 @@
-﻿<div class="main">
+﻿# 声音
 
-# Sound
+## 概述
 
-## Overview
+设置节点伴随的音效的参数。
 
-Set the parameters of the sound accompanying the node.
+## 参数
 
-## Parameter
+### 声音数据
 
-### Sound Data
+加载WAV格式的音频文件。
 
-Load the WAV file of the sound to be played.
+### 响度
 
-### Volume
+设置播放声音的响度。取值范围为0到1：
 
-Specify the playback volume of the sound. This is a value between 0 and 1:
+*   1： 与原音频相同
+*   0： 静音
 
-*   1： Equivalent to the original source audio
-*   0： Silence
+### 音高
 
-### Pitch
+设置播放音频的音高。取值范围为-2到2：
 
-Specify the pitch of the sound to be played. This is a value between -2 and 2:
+*   0： 与原音频相同
+*   1： 音高提高一个八度
+*   -1： 音高降低一个八度
 
-*   0： Equivalent to the original source audio
-*   1： Increase the pitch by 1 octave
-*   -1： Decrease the pitch by 1 octave
+### 声像类型
 
-### Panning Type
+用于控制立体声（左/右）平衡的方法。有两种，2D和3D。
 
-This is the method for handling stereo (left / right) balance. There are 2 methods, 2D mode and 3D mode.
+#### 声像
 
-#### Pan
+2D模式下使用的参数。取值范围为-1到1：
 
-This is the parameter used in 2D mode. The range is between -1 and 1:
+*   0： 与原音频相同
+*   -1： 音频将只在左声道播放
+*   1： 音频将只在右声道播放
 
-*   0： Equivalent to the original source audio
-*   -1： Audio will only play in the left speaker
-*   1： Audio will only play in the right speaker
+#### 衰减距离
 
-#### Damping Range
+3D模式下使用的参数。物体越远，自然声音就越小。此处设置的是响度开始降低的距离。可以是任意正数。
 
-This is the parameter used in 3D mode. It is natural that the farther an object is, the less audible it becomes. This is the distance value at which the volume begins to decrease. It can be any positive valued number.
+### 延迟
 
-### Delay
-
-This is the time between node creation and the playback of the sound. This can be any positive valued number.
-
-</div>
+从粒子生成到声音播放之间的经过的帧数。可以是任意正整数。

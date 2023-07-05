@@ -1,24 +1,24 @@
-﻿# DynamicParameter
+﻿# 动态参数
 
-## Overview
+## 概述
 
 DynamicParameter specifies a parameter to rewrite refresh (during game) effect parameters during effect playback.
 It controls parameters with simple code. Parameters can be given externally.
 
-## How to use
+## 使用方法
 
-### Basic
+### 基础
 
-#### Panel
+#### 面板
 
-Open the dynamic parameter panel.
+打开动态参数面板。
 
 ```eval_rst
 .. image:: ../../img/Reference/DynamicParameter/menu_en.png
    :align: center
 ```
 
-#### Add an expression
+#### 添加表达式
 
 You can add an expression with the add button.
 You can specify the name of the expression and the content of the expression.
@@ -28,7 +28,7 @@ You can specify the name of the expression and the content of the expression.
    :align: center
 ```
 
-#### Write an expression
+#### 编写表达式
 
 For example, to rewrite the first parameter to 2.0, write as follows.
 
@@ -43,7 +43,7 @@ After that you press Compile. If no problem exists, OK is displayed. If a proble
 ```
 
 
-#### Apply the expression
+#### 应用表达式
 
 Right-click on the parameter to which it applies and select Dynamic.
 Then, a field for selecting the expression is displayed.
@@ -83,38 +83,38 @@ If the destination is a color, x, y, z, w correspond to RGBA.
 @O.w = 5.0
 ```
 
-#### Four arithmetic operations
+#### 四则运算
 
-Expressions can use arithmetic operations. You can change the priority of the operation with ().
+表达式可以使用算术运算。可以用()修改运算优先级。
 
 ```
 @O.x = (2.0 + 3.0 * 2.0 / 3.0) - 2.0
 ```
 
-#### Parameter
+#### 参数
 
 Parameters input from the external can be specified from the numeric field on the panel and runtime.
 
-|Parameter|Description|
+|参数|说明|
 |:----|:----|
 |@P.x @P.y @P.z @P.w|Parameters before dynamic parameter is applied|
 |@In0 @In1 @In2 @In3|Parameters input from the external|
-|@GTime|Current time(s)|
-|@PTime|A time since parent particle is generated (s)|
+|@GTime|当前时间（秒）|
+|@PTime|父粒子生成至今的时间（s）|
 
-#### Function
+#### 函数
 
-The following functions can be used.
+可以使用以下函数。
 
-|Parameter|Description|
+|函数|说明|
 |:----|:----|
-|sin(x)|Return the result of Sine. x is in radians. |
-|cos(x)|Return the result of Cosine. x is in radians.|
-|rand()|Return the random value|
-|rand(x)|Return the random value corresponding with x. If x is same, returned value is same|
-|step(edge,x)|Return 1.0 if x is larger than edge. Otherwise return 0. |
+|sin(x)|返回正弦值，x使用弧度制。|
+|cos(x)|返回余弦值，x使用弧度制。|
+|rand()|返回随机值|
+|rand(x)|返回与x相关的随机值。如果x相同，则返回值也相同。|
+|step(edge,x)|如果x大于edge，返回1.0。否则返回0。|
 
-#### Target
+#### 目标
 
 Dynamic parameter can applies to following parameters.
 
@@ -126,7 +126,7 @@ Dynamic parameter can applies to following parameters.
 - Rotation - Fixed, PVA, Easing
 - Scaling - Fixed, PVA, Easing
 
-## Examples
+## 示例
 
 ### LOD
 
@@ -136,7 +136,7 @@ The number of generations can be changed externally.
 @O.x = @In0 * @P.x
 ```
 
-### Laser
+### 激光
 
 The length of the laser can be changed externally.
 The size of Z is controlled externally.
@@ -145,9 +145,9 @@ The size of Z is controlled externally.
 @O.z = @In0 * @P.z
 ```
 
-### Sine Wave
+### 正弦波
 
-Move like a sine wave.
+像正弦波一样移动。
 
 ```
 @O.x = sin(@GTime)
