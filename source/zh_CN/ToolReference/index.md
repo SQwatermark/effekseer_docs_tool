@@ -113,24 +113,26 @@ Until version 1.4, the roles were separated from efkproj for tool editing and ef
 For compatibility, the current version can read efkproj and efk.
 
 #### 资源文件
+
 A few resource files referenced by the effect. There are general file formats and Effekseer's own file formats.
 
 | 扩展名 | 说明   |
 |----------|--------|
-| png      | Texture image file |
-| wav      | Sound wave file |
-| efkmat   | Material file(Create by Material editor) |
-| efkmodel | 3D Model file(Convert from fbx,mqo) |
-| efkcurve | Curve parameter file(Convert from fbx) |
+| png      | 纹理图片文件 |
+| wav      | 音频文件 |
+| efkmat   | 材质文件（使用材质编辑器生成） |
+| efkmodel | 3D模型文件（从fbx、mqo转换） |
+| efkcurve | 曲线参数文件（从fbx转换） |
 
 #### 打包文件（efkpkg）
+
 An efkpkg file is a package file that contains one or more efkefc files and various resource files.
 
 When you export, the resource files referenced by the effect are automatically packaged with it.
 It can be imported and used in another project of yourself or someone else.
 
-- <a href="fileImport.html">Import</a>
-- <a href="fileExport.html">Export</a>
+- <a href="fileImport.html">导入</a>
+- <a href="fileExport.html">导出</a>
 
 
 ## 特效参数

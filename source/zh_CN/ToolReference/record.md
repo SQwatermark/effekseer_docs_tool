@@ -49,11 +49,21 @@
 
 #### 频率（帧）
 
-Sets the level of frame skipping in the file output. For example, for a value of 1, when 60 frames are recorded, 60 images will be output. For a value of 2, when 60 frames are recorded, only 30 images will be output (every other frame). If you increase the number like this, the file size will become smaller at the cost of choppier animations.
+设置每几帧输出一帧。例如，值为1时，录像60帧，输出60张图。值为2时，录像60帧，只会输出30张图（隔帧输出）。提高这一项的值，输出的文件尺寸会变小，但动画会变得不连贯。
 
 ### 格式
 
-There are 4 options: "Export as a single image", "Export images", "Export as a gif animation", and "Export as a AVI".
+有5个选项：
+
+“导出为单张图片”
+
+“导出为连续多张图片”
+
+“导出为gif动画”
+
+“导出为AVI”
+
+“导出为mp4(h264)”
 
 "Export as a single image" will create a sprite-sheet image with frames arranged from the upper left to the lower right. The number of frames arranged horizontally will be number specified under "X Count". Consequently, the number of frames arranged vertically will be the total number of recorded frames / X Count.
 
@@ -148,13 +158,13 @@ When using, draw the added image by addition after drawing the blended image by 
 
 #### 方法间的对比
 
-From left to right, None, Original image, Generate alpha, Generate alpha(Blend+Add) images are displayed.
+从左到右分别是“无”、“使用原始图片”、“生成alpha”和“生成alpha(Blend+Add)”的显示效果。
 
 ```eval_rst
 .. image:: ../../img/Reference/Recording/compare.png
    :align: center
 ```
 
-### 设置保存目标
+### 设置的保存位置
 
-It can specify whether to save the recording settings to the application or the project.
+将录像的设置保存在应用，还是每个项目分别保存。

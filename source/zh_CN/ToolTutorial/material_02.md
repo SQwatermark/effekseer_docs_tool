@@ -112,20 +112,16 @@
 
 渐变图像被参照的位置随着输入的流动的图像的颜色而改变。这导致颜色随着渐变而变化。
 
-黑色的值为0，所以它指向图像的顶部，而白色的值为1，所以指向图像的顶部。我们据此将一张灰色的图像转换为一张彩色的图像。
+黑色的值为0，所以会被替换成Gradient2.png顶部的颜色，而白色的值为1，所以会被替换成Gradient2.png底部的颜色。这样可以将一张灰色的图像转换为一张彩色的图像。
 
 ```eval_rst
 .. image:: ../../img/Tutorial/Mat_02/LookUp.png
    :align: center
 ```
 
-There is the question of whether we can enter two RG's when we only change the position of the reference up and down. For that matter, since the color is the same in the left and right directions this time, it doesn't matter what value you enter.
+流动的图像RG值被转换为Gradient2.png的横纵坐标，在这个例子中，R值和G值是同步变化的，也就是说，实际上黑色采样的是Gradient2.png的左上方(0,0)，白色采样的是Gradient2.png的右下方(1,1)。由于Gradient2.png在水平方向没有变化，所以即便输入的R值变化了，输出的颜色也不会受到影响。
 
-有一个问题是，当我们只改变参照的上下位置时，是否可以输入两个RG。就这一点而言，因为这个例子中左右方向的颜色是一样的，所以你输入什么值不重要。（译注：不知所云，但看图连接即可）
-
-Depending on the gradient image, you may want to fix the R value and change only the G value.
-
-根据梯度图像，R值应该是固定的，只有G值应该被改变。（译注：不知所云，但看图连接即可）
+如果Gradient2.png在水平方向上也有变化，而你只需要竖直方向的变化，你需要固定输入的R值，而只改变G值。
 
 同样地，为了改变透明度。添加一个`采样图像`节点并选择图像`Textures/Gradation3.png`。以同样方式连接流动的图像。白色区域将是不透明的，黑色区域是透明的。
 
