@@ -9,7 +9,7 @@
 让我们创建一个材质，实现复杂的渲染。
 
 <div align="center">
-<iframe src='../../Effects/viewer_ch_CN.html#Tutorials/Mat_01/Sample07.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#Tutorials/Mat_01/Sample07.efkefc'></iframe>
 <p>本章制作的特效</p>
 </div>
 
@@ -186,7 +186,7 @@
 
 这样扭曲的程度就很合适了。
 
-<iframe src='../../Effects/viewer_ch_CN.html#Tutorials/Mat_01/Sample05.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#Tutorials/Mat_01/Sample05.efkefc'></iframe>
 
 ## 移动扭曲
 
@@ -198,7 +198,7 @@
 
 可以看到扭曲在移动。
 
-<iframe src='../../Effects/viewer_ch_CN.html#Tutorials/Mat_01/Sample06.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#Tutorials/Mat_01/Sample06.efkefc'></iframe>
 
 ## 颜色
 
@@ -216,7 +216,7 @@
 
 颜色乘到一起，所以图像被上色了。
 
-<iframe src='../../Effects/viewer_ch_CN.html#Tutorials/Mat_01/Sample07.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#Tutorials/Mat_01/Sample07.efkefc'></iframe>
 
 最后，你可以通过下面的链接下载本章中制作的特效。
 

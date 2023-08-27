@@ -169,4 +169,4 @@ Z偏移：2
 
 还可以降低距离的影响。
 
-<iframe src='../../Effects/viewer_ch_CN.html#References/Depth/suppression_of_scaling_by_depth.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Depth/suppression_of_scaling_by_depth.efkefc'></iframe>

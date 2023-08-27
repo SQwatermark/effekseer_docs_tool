@@ -22,7 +22,7 @@
 
 设置如何绘制粒子的精灵。选择“告示牌”时，精灵总是面向摄像机。选择“Z轴旋转告示牌”时，精灵面向摄像机，但是Z轴被锁定了。选择“固定Y轴”时，精灵面向摄像机，但是Y轴被锁定了。选择“固定”时，精灵将会符合粒子的旋转设置。
 
-<iframe src='../../Effects/viewer_ch_CN.html#References/Render/sprite_configuration.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/sprite_configuration.efkefc'></iframe>
 
 ### 整体颜色
 
