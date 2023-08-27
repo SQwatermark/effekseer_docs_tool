@@ -4,7 +4,7 @@
 
 修改特效在编辑器中的显示。可以模拟游戏中的情况，例如播放多个粒子。
 
-<iframe src='../../Effects/viewer_en.html#References/Behavior/Original.efk'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Behavior/Original.efk'></iframe>
 
 ## 参数
 
@@ -12,32 +12,32 @@
 
 设置节点树中的根节点的位置。
 
-<iframe src='../../Effects/viewer_en.html#References/Behavior/InitialPosition.efk'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Behavior/InitialPosition.efk'></iframe>
 
 ### 速度
 
 设置节点树中的根节点的移动速度。
 
-<iframe src='../../Effects/viewer_en.html#References/Behavior/speed.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Behavior/speed.efkefc'></iframe>
 
 
 ### 角度
 
 设置节点树中的根节点的角度。
 
-<iframe src='../../Effects/viewer_en.html#References/Behavior/angle.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Behavior/angle.efkefc'></iframe>
 
 ### 角速度
 
 设置节点树中的根节点的角速度。
 
-<iframe src='../../Effects/viewer_en.html#References/Behavior/angular_speed.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Behavior/angular_speed.efkefc'></iframe>
 
 ### 缩放
 
 设置节点树中的根节点的缩放。
 
-<iframe src='../../Effects/viewer_en.html#References/Behavior/behavior_scale.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Behavior/behavior_scale.efkefc'></iframe>
 
 ### 缩放速率
 
@@ -63,7 +63,7 @@
 
 设置播放多个特效时，特效之间的距离。
 
-<iframe src='../../Effects/viewer_en.html#References/Behavior/count_set.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Behavior/count_set.efkefc'></iframe>
 
 ### 播放速度
 

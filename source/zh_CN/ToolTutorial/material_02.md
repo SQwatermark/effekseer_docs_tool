@@ -5,7 +5,7 @@
 在这一章中，我们用材质表现卡通风格的火焰。你可以用材质实现原本很难实现的表现。
 
 <div align="center">
-<iframe src='../../Effects/viewer_en.html#Tutorials/Mat_02/Fire.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#Tutorials/Mat_02/Fire.efkefc'></iframe>
 <p>本章制作的特效</p>
 </div>
 
@@ -175,7 +175,7 @@
 这样就完成了。
 
 <div align="center">
-<iframe src='../../Effects/viewer_en.html#Tutorials/Mat_02/Fire.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#Tutorials/Mat_02/Fire.efkefc'></iframe>
 </div>
 
 最后，你可以通过下面的链接下载本章中制作的特效。

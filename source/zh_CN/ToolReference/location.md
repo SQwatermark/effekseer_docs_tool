@@ -18,24 +18,24 @@
 #### 固定位置
 
 将粒子置于一个固定的位置。
-<iframe src='../../Effects/viewer_en.html#References/Position/setposition.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Position/setposition.efkefc' class='effect'></iframe>
 
 
 
 #### 位置・速度・加速度
 
 设置粒子的位置、速度和加速度。
-<iframe src='../../Effects/viewer_en.html#References/Position/movingposition.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Position/movingposition.efkefc' class='effect'></iframe>
 
 #### 缓动
 
 设置生成和移除的位置，以及粒子的生命周期中在这两个位置之间插值的方法。
-<iframe src='../../Effects/viewer_en.html#References/Position/easing.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Position/easing.efkefc' class='effect'></iframe>
 
 #### F曲线
 
 在F曲线窗口中，通过定义自动化曲线来控制位置。
-<iframe src='../../Effects/viewer_en.html#References/Position/f_curve.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Position/f_curve.efkefc' class='effect'></iframe>
 
 #### NURBS曲线
 

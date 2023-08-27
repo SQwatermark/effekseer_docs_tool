@@ -24,14 +24,14 @@ The track is drawn by connecting a thick line between all the children of a cert
 
 整个轨迹使用一张图片。适用于拉长的的粒子，例如激光。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/track_uvtype_strech.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Render/track_uvtype_strech.efkefc' class='effect'></iframe>
 
 #### 瓦片
 
 它在轨迹中重复一张图片。它适用于有重复图案的粒子，例如链条。
 还可以设置为不只重复边缘，而是在设置的循环区域内重复。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/track_uvtype_tile.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Render/track_uvtype_tile.efkefc' class='effect'></iframe>
 
 ### 平滑
 
@@ -122,4 +122,4 @@ Smooth or set even on a sharply bent part, etc.
 
 设置轨迹右侧的中间部位的颜色。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/render_track.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Render/render_track.efkefc'></iframe>

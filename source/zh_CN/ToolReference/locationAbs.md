@@ -83,7 +83,7 @@ It gives a force that suppresses movement.
 Apply acceleration in one direction. It can be applied not only to the bottom but also to the top and the right.
 This direction is not affected by the orientation of the parent particle.
 
-<iframe src='../../Effects/viewer_en.html#References/Attraction_Forces/gravity.efkefc'></iframe>
+<iframe src='../../Effects/viewer_ch_CN.html#References/Attraction_Forces/gravity.efkefc'></iframe>
 
 ### 引力（需要设置引力点）
 
