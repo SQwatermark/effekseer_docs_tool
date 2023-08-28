@@ -30,7 +30,7 @@
 
 设置如何绘制粒子的模型。选择“告示牌”时，模型总是面向摄像机。选择“Z轴旋转告示牌”时，模型面向摄像机，但是Z轴被锁定了。选择“固定Y轴”时，模型面向摄像机，但是Y轴被锁定了。选择“固定”时，模型将会符合粒子的旋转设置。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/model_configuration.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/model_configuration.efkefc'></iframe>
 
 ### 剔除
 

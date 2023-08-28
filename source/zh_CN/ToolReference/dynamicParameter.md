@@ -20,8 +20,8 @@ It controls parameters with simple code. Parameters can be given externally.
 
 #### 添加表达式
 
-You can add an expression with the add button.
-You can specify the name of the expression and the content of the expression.
+你可以单击“添加”按钮添加一个表达式。
+你可以编辑表达式的名称和内容。
 
 ```eval_rst
 .. image:: ../../img/Reference/DynamicParameter/add_en.png
@@ -30,23 +30,23 @@ You can specify the name of the expression and the content of the expression.
 
 #### 编写表达式
 
-For example, to rewrite the first parameter to 2.0, write as follows.
+例如，要将第一个参数修改为2.0，可写为如下形式。
 
 ```
 @O.x = 2.0
 ```
 
-After that you press Compile. If no problem exists, OK is displayed. If a problem exists, the cause of error is displayed.
+然后点击编译。如果没出现问题，会显示OK。如果出现问题，会显示出错的原因。
 
 ```
 @O.x = 2.0
 ```
 
 
-#### 应用表达式
+#### 使用表达式
 
-Right-click on the parameter to which it applies and select Dynamic.
-Then, a field for selecting the expression is displayed.
+右键要使用表达式的参数并选择动态。
+然后会显示一个选择表达式的文本框。
 
 ```eval_rst
 .. image:: ../../img/Reference/DynamicParameter/select_dynamic_en.png
@@ -116,15 +116,15 @@ Parameters input from the external can be specified from the numeric field on th
 
 #### 目标
 
-Dynamic parameter can applies to following parameters.
+动态参数可应用于以下参数。
 
-- Spawn Count
-- Spawn Rate
-- Initial Delay
-- Time to live
-- Position - Fixed, PVA, Easing
-- Rotation - Fixed, PVA, Easing
-- Scaling - Fixed, PVA, Easing
+- 生成数量
+- 生成速率
+- 生成开始时间
+- 生命周期
+- 位置 - 固定，位置・速度・加速度，缓动
+- 旋转 - 固定，角度・速度・加速度，缓动
+- 缩放 - 固定，缩放・速度・加速度，缓动
 
 ## 示例
 

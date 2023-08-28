@@ -24,13 +24,13 @@
 
 设置如何绘制粒子的环。选择“告示牌”时，环总是面向摄像机。选择“Z轴旋转告示牌”时，环面向摄像机，但是Z轴被锁定了。选择“固定Y轴”时，环面向摄像机，但是Y轴被锁定了。选择“固定”时，环将会符合粒子的旋转设置。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/ring_configuration.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/ring_configuration.efkefc' class='effect'></iframe>
 
 ### 顶点数量
 
 用于显示环形的拐角顶点的数量。拐角数越多，形状就越接近于一个光滑的圆。但也可以通过故意减少角数使其成为一个多边形。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/render_ring_vertexcount.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/render_ring_vertexcount.efkefc' class='effect'></iframe>
 
 ### 形状
 
@@ -44,7 +44,7 @@
 
 渲染一个局部的环。可以设置开始/结束角度和淡入/淡出角度。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/render_ring_viewingangle.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/render_ring_viewingangle.efkefc' class='effect'></iframe>
 
 ### 外沿
 
@@ -70,4 +70,4 @@
 
 环的外侧的颜色。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/render_ring_outin.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/render_ring_outin.efkefc'></iframe>

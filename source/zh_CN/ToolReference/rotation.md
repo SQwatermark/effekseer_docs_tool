@@ -17,22 +17,22 @@
 #### 固定角度
 
 设置粒子的角度。
-<iframe src='../../Effects/viewer_en.html#References/Rotation/rotation.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Rotation/rotation.efkefc' class='effect'></iframe>
 
 #### 角度・速度・加速度
 
 设置粒子的初始角度、角速度和角加速度。
-<iframe src='../../Effects/viewer_en.html#References/Rotation/rotation_pva.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Rotation/rotation_pva.efkefc' class='effect'></iframe>
 
 #### 缓动
 
 设置粒子的初始角度和粒子生命周期结束时的最终角度，以及之间的过渡。
-<iframe src='../../Effects/viewer_en.html#References/Rotation/rotation_easing.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Rotation/rotation_easing.efkefc' class='effect'></iframe>
 
 #### F曲线
 
 使用F曲线设置粒子整个生命周期内旋转角度。
-<iframe src='../../Effects/viewer_en.html#References/Rotation/rotation_f_curve.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Rotation/rotation_f_curve.efkefc' class='effect'></iframe>
 
 #### 旋转至摄像机方向
 

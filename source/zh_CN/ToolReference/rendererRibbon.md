@@ -16,7 +16,7 @@
 <p>“渲染设置”窗口</p>
 </div>
 
-<iframe src='../../Effects/viewer_en.html#References/Render/ribbon_render.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/ribbon_render.efkefc' class='effect'></iframe>
 
 ### 渲染顺序
 
@@ -32,14 +32,14 @@
 
 整个丝带使用一张图片。适用于拉长的的粒子，例如激光。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/ribbon_uvtype_strech.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/ribbon_uvtype_strech.efkefc' class='effect'></iframe>
 
 #### 瓦片
 
 它在丝带中重复一张图片。它适用于有重复图案的粒子，例如链条。
 还可以设置为不只重复边缘，而是在设置的循环区域内重复。
 
-<iframe src='../../Effects/viewer_en.html#References/Render/ribbon_uvtype_tile.efkefc' class='effect'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#References/Render/ribbon_uvtype_tile.efkefc' class='effect'></iframe>
 
 ### 跟随视点
 

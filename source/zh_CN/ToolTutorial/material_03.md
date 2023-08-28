@@ -10,7 +10,7 @@
 在本章中，上一章中制作的火焰将变得更为通用。
 
 <div align="center">
-<iframe src='../../Effects/viewer_en.html#Tutorials/Mat_03/Fire.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#Tutorials/Mat_03/Fire.efkefc'></iframe>
 <p>本章制作的特效</p>
 </div>
 
@@ -132,7 +132,7 @@ Effekseer将显示速度参数，你可以改变它的值。
 然后特效现在会淡入和淡出。
 
 <div align="center">
-<iframe src='../../Effects/viewer_en.html#Tutorials/Mat_03/Fire.efkefc'></iframe>
+<iframe src='../../Effects/viewer_zh_CN.html#Tutorials/Mat_03/Fire.efkefc'></iframe>
 </div>
 
 最后，你可以通过下面的链接下载本章中制作的特效。
