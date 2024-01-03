@@ -20,15 +20,15 @@
 
 在编辑器中选择“窗口 -> 录像”，将会显示录像窗口。按下录像窗口的录像按钮，可以输出录像的结果。如果选择“窗口 -> 相机设置”，将会显示相机设置窗口，你可以设置画面的放大率。
 
-## Embedding Effects
+## 嵌入特效
 
 ### 怎么用于其他程序？
 
 从官网下载其他软件的插件或库。你可以用它们在其他软件中播放特效。
 
-### How do you format it for playback at runtime?
+### 如何导出为运行时格式
 
-Select "File -> Output -> Effekseer Game Output Format" from the editing tool and output it.
+在编辑器中选择“文件 -> 导出 -> Effekseer Game Output Format”
 
 ## 其他
 

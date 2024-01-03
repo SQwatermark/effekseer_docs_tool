@@ -25,15 +25,15 @@ I will explain parent-child relationships using an example. In this example, nod
 <table border="1">
 <tr>
 <td>旋转</td>
-<td>Click the right mouse button and move the mouse while holding.</td>
+<td>按住鼠标右键并拖拽鼠标。</td>
 </tr>
 <tr>
 <td>平移</td>
-<td>Click the middle mouse button or right button + Shift and move the mouse while holding.</td>
+<td>按住鼠标中键，或右键+Shift并拖拽鼠标。</td>
 </tr>
 <tr>
 <td>缩放</td>
-<td>Scroll the mouse wheel or right button + Control to zoom in and out.</td>
+<td>滑动鼠标滚轮，或按住鼠标右键+Ctrl并拖拽鼠标。</td>
 </tr>
 </table>
 </div>
@@ -195,11 +195,11 @@ It can be imported and used in another project of yourself or someone else.
 
 ## 命令行
 
-When starting Effekseer from the command line, you can change the behavior of Effekseer by adding arguments. For example, you can convert ".efkproj" files to ".efk" without activating the Effekseer GUI. By combining this with a script, you can batch convert effect files in any folder at once.
+通过命令行启动Effekseer时，可以通过参数改变Effekseer的行为。例如，你可以在无需打开Effekseer界面的情况下将“.efkproj”文件转换为“.efk”文件。通过与脚本结合，你可以批量转换文件夹下的特效文件。
 
 ```eval_rst
 
-.. list-table:: Command Line
+.. list-table:: 命令行
    :widths: 20 70
 
    * - -cui

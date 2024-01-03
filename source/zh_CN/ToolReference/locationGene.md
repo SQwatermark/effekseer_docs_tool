@@ -13,7 +13,7 @@ Set parameters for specifying the position where the node's particles will be in
 
 ### 生成时设置角度
 
-Specify whether the parameter of the spawning method affects not only the position but also the angle. For example, if you specify "sphere", the Y direction of the generated particles will be the normal direction of the sphere.
+让生成方法的参数影响角度。例如，如果勾选此项，且选择“球”，那么粒子的Y方向就会是球的法向。
 
 <table>
 
@@ -41,15 +41,15 @@ Specify whether the parameter of the spawning method affects not only the positi
 
 ### 生成方法
 
-Specify how to set the generation position.
+指定如何设置生成的位置。
 
 #### 点
 
-Treats the point at the specified position as the generation position.
+将某个点设置为生成的位置。
 
 #### 线
 
-Particles are placed on the line. When you specify the init position (1) and the final position (2) of the line, the particle is placed at the position where the line is divided by the number of divisions. The particle rotates so that the X direction of the particle is in the direction of the line.
+粒子会沿着线生成。当你指定了线的起点位置和终点位置时，粒子会被放置在按照顶点数分割线的等分点上。粒子的X方向会沿着线的方向（勾选“生成时设置角度”时）。
 
 ![](../../img/Reference/locationGene_line.png)
 
@@ -61,13 +61,13 @@ Noise in the distance range specified by this parameter is added to the position
 
 ###### 随机
 
-Particles are placed at randomly chosen points from each point on the line.
+粒子会被随机放置在线的任意一个分割点上。
 
 ![](../../img/Reference/locationGeneModelRand.png)
 
 ###### 顺序
 
-Particles are placed at selected points in order from each point on the line.
+粒子会依次放置在线从起点到终点的每一个分割点上。
 
 #### 圆
 

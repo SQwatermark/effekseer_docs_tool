@@ -217,5 +217,5 @@
 However, this will only result in a fixed continuous flow of flame.
 In the next chapter, we will be able to apply this to a variety of things.
 
-然而，制作出的火焰只是在固定地持续流动。在下一章，我们可以将其应用于各种东西。（译注：？？？）
+然而，制作出的火焰只是在固定地持续流动。在下一章，我们可以将其应用于各种东西。（译注：看不懂）
 

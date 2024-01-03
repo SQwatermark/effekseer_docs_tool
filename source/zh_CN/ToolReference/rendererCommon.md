@@ -2,7 +2,7 @@
 
 ## 概述
 
-This section explains about the "Basic Render Settings" window, which provides common parameters that manipulate how the current node's particles are drawn.
+本章讲解“基础渲染窗口”，它提供了用于控制当前粒子渲染的基础参数。
 
 ## 参数
 <div align="center">
@@ -12,28 +12,28 @@ This section explains about the "Basic Render Settings" window, which provides c
 
 ### 材质
 
-Specifies the material used to draw the particles.
-You can make settings such as being lighten or distorting the background.
+设置用于绘制粒子的材质。
+你可以设置光照对粒子的影响或者扭曲背景之类。
 
 #### 默认
 
-The image in the color image is displayed.
+粒子将直接显示贴图的颜色。
 
 <iframe src='../../Effects/viewer_zh_CN.html#References/BasicRender/render_unlit.efkefc'></iframe>
 
-#### Lighting
+#### 照明
 
-Particles are lightened.
-In addition to color images, you can specify normal images.
-If you specify a normal image,  the orientation of the surface is changed.
+粒子会受到光照的影响（出现明暗）。
+除了用于提供颜色的贴图（可以称为漫反射贴图）外，还可以设置法线（Normal）贴图。
+设置了法线贴图之后，表面的方向会被改变。
 
 <iframe src='../../Effects/viewer_zh_CN.html#References/BasicRender/render_lit.efkefc'></iframe>
 
-#### Distortion(Back)
+#### 扭曲（背景）
 
-If the distortion setting is enabled, the particles will distort anything behind it. The way the distortion is applied depends on the pixel data of the distorted image, and the distortion intensity.
+如果启用了扭曲，粒子将会扭曲它后面的任何东西。扭曲的方式取决于扭曲贴图的像素数据和扭曲强度。
 
-In the color of the distortion image, red and green channels are used as distortion information. Both of them do not distort at all when the value is 127\. When red is 127 or more, it is distorted to the right, and when it is less than 127 it distorts to the left. When green is 127 or more, distortion is in the upward direction and distortion is in the downward direction when the green is less than 127\. However, this up / down / left / right direction depends on the drawing method. For example, in the case of a sprite, the top, bottom, left, and right directions are those perpindicular to the sides of the image's rectangle.
+扭曲贴图的红色和绿色通道将被用作扭曲信息。它们的值为127时，不会产生扭曲效果。当红色通道的值超过127时，背景将向右扭曲，小于127时，背景将向左扭曲。绿色通道的值大于127时，背景将向上扭曲，小于127时，背景将向下扭曲。但是，这里的上下左右取决于渲染方法。例如，渲染方法为精灵时，上下左右方向垂直于图片的四个边。
 
 The color of each drawing weakens the strength of distortion. Values range between 0 and 255\. Red affects left and right, and green affects up and down.
 
@@ -47,13 +47,13 @@ Distortion strength adjusts the strength of all colors. When it reaches 0, no mo
 
 <td>
 
-With distortion
+扭曲
 
 </td>
 
 <td>
 
-No distortion
+无扭曲
 
 </td>
 
@@ -75,6 +75,7 @@ In the case of the default settings, the distortion distorts only the background
 
 #### 文件
 
+你可以用用户创建的材质绘制粒子。
 You can use a user-created material file for drawing particles.
 The widest range of expressions can be achieved.
 
@@ -108,13 +109,13 @@ In environments other than those that support HDR, increasing the value may resu
    :align: center
 ```
 
-### Blend
+### 混合
 
 Specifies the method of alpha blending applied when displaying the particle. This controls how drawn images will be composited when they are on top of each other, such as translucency, addition, or subtraction.
 
 ![](../../img/Reference/BasicRender/AlphaBlend.png)
 
-### Filter
+### 过滤
 
 Specify the filtering method to be applied when displaying the particle.
 
@@ -166,13 +167,13 @@ This will ensure that the image does not change suddenly.
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/BasicRenderSettings/Flip_Lerp.mp4"/></div>
 
-#### Scroll
+#### 滚动
 
 Move the UV range at a constant speed.
 
 ![](../../img/Reference/renderCommon_uv_scroll.png)
 
-#### F-Curve
+#### F-曲线
 
 Use the F-Curve window to control the UV by defining automation curves.
 
@@ -186,7 +187,7 @@ When using a material, the number of ```Referenced``` matches the material a pri
 
 ![](../../img/Reference/BasicRender/uv_referenced.png)
 
-### Inherit color
+### 继承颜色
 
 Specify whether the color of the parent particle affects the color of the child's particles. In case of inheritance of color, the color of the parent's particle multiplied by the color of the child's particle becomes the color of the final child's particle. When "Only on create" is selected, the color of the parent particle when the child particles are generated is always applied.
 
@@ -198,19 +199,19 @@ Specify whether the color of the parent particle affects the color of the child'
 
 <td>
 
-Never
+从不
 
 </td>
 
 <td>
 
-Only on create
+仅生成时
 
 </td>
 
 <td>
 
-Always
+始终
 
 </td>
 
