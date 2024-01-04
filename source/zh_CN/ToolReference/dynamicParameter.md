@@ -67,11 +67,11 @@ The parameter of the position is (0, 0, 0). But a particle is shown on 2 because
    :align: center
 ```
 
-### Functions of an expression
+### 表达式中的函数
 
-#### Change multiple parameters
+#### 修改多个参数
 
-x, y, z, w, each parameter can be changed.
+x, y, z, w, 每个参数都是可修改的。
 Entering the following changes the values ​​to 2, 3, 4, and 5, respectively.
 If the destination is a color, x, y, z, w correspond to RGBA.
 
@@ -138,8 +138,7 @@ The number of generations can be changed externally.
 
 ### 激光
 
-The length of the laser can be changed externally.
-The size of Z is controlled externally.
+可以从外部设置激光的Z轴的长度。
 
 ```
 @O.z = @In0 * @P.z

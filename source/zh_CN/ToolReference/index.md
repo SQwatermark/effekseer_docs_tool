@@ -4,13 +4,13 @@
 
 ### 工具
 
-This tool consists of a viewer section to preview effects and multiple windows to edit the effects' parameters. By editing the parameters in each window, you can create an effect and change its appearance and behavior. By dragging and dropping each window, you can rearrange them as you please, or collapse them into tabs. By selecting "Menu bar -> Window", you can access windows that are not visible in the default view. Also, you can reset all windows back to their default locations.
+这个工具包含一个用来预览特效的视窗和一系列用来编辑特效参数的窗口。通过编辑窗口中的参数，你可以制作特效，修改它的外观和行为。通过拖拽，你可以随心所欲地重新布局这些窗口，或者将它们折叠进选项卡。通过在菜单栏中选择“窗口”，你可以找到不在默认视图中的窗口。而且，你可以将所有窗口恢复到默认位置。
 
 ### 特效
 
-With this tool, you create an effect by editing nodes. Nodes have parent-child relationships, where children are influenced by their parents. By utilizing the parent-child relationships, it is possible to create complex effects.
+在这个工具中，你可以通过编辑节点制作特效。节点具有父子关系，子节点会受到父节点的影响。通过父子关系，得以制作复杂的特效。
 
-I will explain parent-child relationships using an example. In this example, node 2 is the child of node 1, and node 3 is the child of node 2\. An effect 1 particle will be generated from node 1\. After a few frames, several effect 2 particles will be generated relative to the position of the effect 1 particle generated from node 1\. After a few more frames, several effect 3 particles will be generated relative to the positions of each of the node 2 particles. This is shown in the figure below. In this way, by describing the behavior of the effect through parent-child relationships on the nodes, a much greater variety of effects can be expressed. In this tool, one effect generated based on the parameters within a "node" is called a "particle".
+我将通过一个例子解释父子关系。在这个例子中，节点2是节点1的子节点，节点3是节点2的子节点。节点1会生成粒子effect 1。几帧后，节点2会在相对于effect 1的位置处会生成一些effect 2粒子。再过几帧后，节点3会在相对于节点2生成的每个粒子的相对位置处生成一些effect 3粒子。下面的图表展示了这种关系。通过使用父子关系描述特效的行为，可以表现出极为丰富的效果。在这个工具中，一个“节点”生成的基于参数的特效被称作一个“粒子”。
 
 ```eval_rst
 .. image:: ../../img/Reference/overview_en.png
@@ -40,9 +40,9 @@ I will explain parent-child relationships using an example. In this example, nod
 
 #### 如何输入值
 
-A value can be entered from the keyboard by left-clicking a text entry box with the mouse.
+鼠标左键文本输入框，可以输入值。
 
-Left-click and drag a text entry box to change the value gradually.
+左键并拖拽文本输入框，可以逐渐改变值。
 
 ```eval_rst
 .. image:: ../../img/Reference/Overview/input_value.png
@@ -51,14 +51,14 @@ Left-click and drag a text entry box to change the value gradually.
 
 #### 如何输入颜色
 
-In addition to the text box, the color can be entered by left-clicking the color field with the mouse.
+除了文本框之外，可以用鼠标左键颜色区域来输入颜色。
 
 ```eval_rst
 .. image:: ../../img/Reference/Overview/input_color_basic.png
    :align: center
 ```
 
-Left-click and drag a color field to copy the value to another color field.
+左键并拖拽一个颜色区域可以将值复制到另一个颜色区域。
 
 ```eval_rst
 .. image:: ../../img/Reference/Overview/input_color.png
@@ -67,13 +67,13 @@ Left-click and drag a color field to copy the value to another color field.
 
 #### 节点树
 
-In the node tree, you can edit the nodes that compose the effect.
-You can right-click to add or delete a node.
+在节点树中，你可以编辑构成特效的节点。
+你可以右键添加或删除节点。
 
-You can drag & drop nodes to reorder them.
+你可以拖拽节点来重新布局它们。
 
-You can click on the eye icon to toggle the display of nodes.
-You can shift and click at the same time to toggle display, including child nodes.
+你可以点击眼睛图标来切换节点的显示。
+你可以按住Shift并单击来切换显示，包括子节点。
 
 ```eval_rst
 .. image:: ../../img/Reference/Overview/node_tree.png
@@ -82,11 +82,9 @@ You can shift and click at the same time to toggle display, including child node
 
 #### 面板（窗口）
 
-There are very few panels (windows) available for editing the parameters you create for your effects.
-If you select "Window" from the menu bar, you will see a list of windows that can be displayed.
-If you select it, the window will appear.
+有许多用于编辑特效的参数的面板（窗口）。如果在菜单栏中选择“窗口”，会列出所有可用的窗口。选择其中的一个，会打开相应的窗口。
 
-You can move the displayed window by moving it while left-clicking the window's menu bar.
+你可以左键窗口的菜单栏并拖拽窗口来移动它的位置。
 
 You can also add a window to another panel by overlapping it with the square that appears while moving it.
 
@@ -106,15 +104,16 @@ You can also add to the tabs by dragging and dropping them between the tabs.
 ### 文件格式
 
 #### 特效文件（efkefc）
-An effect is saved in a file with "efkefc" format.
-This file can be editted and played with a runtime in a game.
 
-Until version 1.4, the roles were separated from efkproj for tool editing and efk for game playback.
-For compatibility, the current version can read efkproj and efk.
+特效以“efkefc”格式保存在文件中。
+这个文件既可以被编辑，也可以在游戏运行时播放。
+
+直到1.4版本，这个功能还是分成两个功能实现，efkproj文件用于在工具中编辑，efk用于在游戏中播放。
+为了兼容性，当前版本可以读取efkproj和efk文件。
 
 #### 资源文件
 
-A few resource files referenced by the effect. There are general file formats and Effekseer's own file formats.
+特效可引用的资源文件。包括通用文件格式和Effekseer自己的文件格式。
 
 | 扩展名 | 说明   |
 |----------|--------|
@@ -126,10 +125,9 @@ A few resource files referenced by the effect. There are general file formats an
 
 #### 打包文件（efkpkg）
 
-An efkpkg file is a package file that contains one or more efkefc files and various resource files.
+efkpkg文件是包含一个或多个efkefc文件和各种资源文件的包文件。
 
-When you export, the resource files referenced by the effect are automatically packaged with it.
-It can be imported and used in another project of yourself or someone else.
+导出时，特效引用的资源文件会被自动打包进去。它可被导入到其他项目中进行使用。
 
 - <a href="fileImport.html">导入</a>
 - <a href="fileExport.html">导出</a>
@@ -203,15 +201,15 @@ It can be imported and used in another project of yourself or someone else.
    :widths: 20 70
 
    * - -cui
-     - Start up in CUI mode
+     - 以CUI模式启动
    * - -in \*
      - \* open and launch
    * - -o \*
-     - Save as \*
+     - 保存为 \*
    * - -e \*
-     - Output in standard format to \*
+     - 以标准格式输出到 \*
    * - -m \*
-     - Set the magnification ratio of the effect when outputting in standard format to \*
+     - 设置以标准格式输出时的放大倍率
    * - --materialcache
-     - Generate a cache of all materials included in the specified effect
+     - 生成指定的特效中的所有材质的缓存
 ```
