@@ -22,22 +22,22 @@
 
 ### 力
 
-The force is applied outward from the specified position.
-You can also make it so that the force decays when it leaves the specified position.
+从指定的位置向外侧施加力。
+也可以让远离指定位置的力场产生衰减。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Force.mp4"/></div>
 
 ### 风
 
-It applies a force in the specified direction.
-The direction can be changed by rotation.
+朝向指定的方向施加力。
+可以通过旋转改变方向。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Wind.mp4"/></div>
 
 ### 龙卷风
 
-It gives the force to rotate the axis in the specified direction.
-The direction of the axis can be changed by rotation.
+施加绕指定方向旋转的力。
+可以通过旋转改变轴的方向。
 
 The movement speed can be specified so that the rotation speed is the same for the outside, or so that the movement speed is constant regardless of the position.
 
@@ -45,22 +45,22 @@ The movement speed can be specified so that the rotation speed is the same for t
 
 ### 湍流
 
-It gives power with a turburence.
+施加具有湍流的力。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Turbulence.mp4"/></div>
 
 #### 类型
 
-You can specify whether it is simple or complex.
-The more complex one looks better, but it is slower.
+你可以选择简单或复杂。
+越复杂，视觉效果越好，但运算速度也更慢。
 
 #### 随机种子
 
-The flow of turbulence changes according to the value.
+通过随机种子产生随机的湍流。
 
 #### 粒度
 
-Larger value ​​increases the turbulence width.
+值越大，湍流越宽。
 
 #### 强度
 
@@ -70,58 +70,57 @@ The strength of turbulence on particles.
 
 #### 复杂度
 
-Larger value ​​complicates turbulence. However, processing becomes heavy.
+值越大，湍流越复杂。但也会增大计算负担。
 
-### 抵抗
+### 粘滞阻力
 
-It gives a force that suppresses movement.
+施加一个阻碍运动的力。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Drag.mp4"/></div>
 
 ### 重力
 
-Apply acceleration in one direction. It can be applied not only to the bottom but also to the top and the right.
-This direction is not affected by the orientation of the parent particle.
+在一个方向上施加加速度。重力可以朝向任意方向。且不会受到父节点的方向影响。
 
 <iframe src='../../Effects/viewer_zh_CN.html#References/Attraction_Forces/gravity.efkefc'></iframe>
 
 ### 引力（需要设置引力点）
 
-The particle moves towards the position specified under "Point of Attraction" in the "Behavior" window.
+粒子向“行为”窗口中的“引力点”处移动。
 
 ![](../../img/Reference/locationAbs_attraction.gif)
 
 #### 引力
 
-This is the rate of acceleration towards the target position per frame.
+一帧中向目标位置的速度增量。
 
 #### 阻力
 
-This is the rate that the angle of motion is adjusted towards the target direction per frame. It takes a value between 0.00 and 1.00.
+一帧中运动方向修正为目标方向的百分比，取值在0.00和1.00之间。
 
 #### 最小范围
 
-This is the attenuation start distance of attraction.
+引力开始衰减的距离。
 
 #### 最大范围
 
-This is the attenuation end distance of attraction. When the position of the particle is in the range from 0 to the minimum range, the attraction is 100%. If it is farther than the maximum range, the attractive force becomes 0%. If it is between the minimum range and the maximum range, the attraction force interpolates linearly.
+引力结束衰减的距离。当粒子的位置在0到最小范围之间时，引力为100%。如果位置大于最大范围，引力为0%。如果在最小范围和最大范围之间，引力线性插值。
 
 
 ## 力场的位置
 
-It specifies the location of the center of the force field.
-It affects the settings of some force fields.
+设置力场中心的位置。
+影响部分力场的行为。
 
 ## 力场的角度
 
-It specifies the angle of the force field.
-It affects the settings of some force fields.
+设置力场的角度。
+影响部分力场的行为。
 
 ## 衰减类型
 
-Outside this range, the effect of the force field is decayed.
-There are several ways to specify the range.
+在范围之外，力场的效果会衰减。
+有几种方式指定范围。
 
 ### 球
 
