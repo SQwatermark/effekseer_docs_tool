@@ -6,7 +6,7 @@
 
 在选择了“轨迹”时，特效将沿着一条连续轨迹渲染。
 
-The track is drawn by connecting a thick line between all the children of a certain particle instead of drawing each particle individually. For example, if particles 1, 2, and 3 are the children of particle 0, a shape is generated with a track drawn between 1, 2, and 3\. The track is shaped by "connecting the dots" between each particle. Unlike the ribbon, which is influenced by the rotation and enlargement of the particle, the track is not influenced by them and always faces the camera.
+轨迹将节点的所有子粒子按照顺序连成一条粗线，而不是单独渲染每个子粒子。例如，粒子1, 2, 3是粒子0的子粒子，则会在1, 2, 3之间绘制一条轨迹。这个轨迹是通过连接各个粒子的点形成的。与丝带不同，轨迹不会受到粒子的旋转和缩放的影响，它永远面向摄像机。
 
 ![](../../img/Reference/renderTrack.png)
 
@@ -35,7 +35,7 @@ The track is drawn by connecting a thick line between all the children of a cert
 
 ### 平滑
 
-Smooth or set even on a sharply bent part, etc.
+平滑急转弯处。
 
 ### 颜色时间来源
 

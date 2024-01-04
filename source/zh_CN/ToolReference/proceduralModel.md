@@ -127,7 +127,7 @@
 #### 球
 
 球。
-You can specify which region of the sphere is to be specified.
+你可以选择球的一部分区域。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Sphere.png

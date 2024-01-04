@@ -86,15 +86,14 @@
 
 你可以左键窗口的菜单栏并拖拽窗口来移动它的位置。
 
-You can also add a window to another panel by overlapping it with the square that appears while moving it.
+你可以将窗口拖放到出现的方块上，将其添加到另一个面板。
 
 ```eval_rst
 .. image:: ../../img/Reference/Overview/DockPanel_Panel.png
    :align: center
 ```
 
-You can also add to the tabs by dragging and dropping them between the tabs.
-(If you have a single panel of tab, drag & drop them onto the tab.)
+你还可以在选项卡之间进行拖放。
 
 ```eval_rst
 .. image:: ../../img/Reference/Overview/DockPanel_Tab.png
@@ -203,7 +202,7 @@ efkpkg文件是包含一个或多个efkefc文件和各种资源文件的包文�
    * - -cui
      - 以CUI模式启动
    * - -in \*
-     - \* open and launch
+     - \* 打开并启动
    * - -o \*
      - 保存为 \*
    * - -e \*
