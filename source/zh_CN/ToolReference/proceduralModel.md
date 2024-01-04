@@ -2,131 +2,131 @@
 
 ## 概述
 
-This function allows you to create a 3D model by simply adjusting the parameters.
-Normally, you would need to use other software to create a 3D model, but you can create a simple 3D model within Effekseer.
+使用这个功能，你可以通过仅仅调整参数来制作3D模型。
+通常你情况下，你可能需要在其他软件中制作3D模型，但是你可以用Effekseer制作简单的3D模型。
 
 ## 参数
 
 ### 类型
 
-Specifies the type of mesh to be generated.
+指定要生成的网格类型。
 
 #### 网格
 
-Generates the outer mesh of a sphere or cylinder, depending on the specified parameters.
-Basically, it generates a rotating object about an axis.
+按照设置的参数，生成球或圆柱的网格外侧。
+总的来说，它生成一个绕轴旋转的物体。
 
-##### Region (angle)
+##### 范围（角度）
 
-Specifies the region of rotators to be generated.
-Normally, it is a circle, but it can be made into a cut out part of it.
+设置生成网格的角度范围。
+默认情况下是个圆，但可以从中切出一部分。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Angle.png
    :align: center
 ```
 
-##### Division
+##### 细分
 
-The number of divisions of the mesh.The larger this value is, the smoother it becomes.
+网格的细分数量。值越大，越平滑。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Division.png
    :align: center
 ```
 
-#### Rotated angle
+#### 旋转角度
 
-Twist the mesh.
+扭曲网格（麻花状）。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Mesh_Rotated.png
    :align: center
 ```
 
-#### Ribbon
+#### 丝带
 
-Generates a shape that looks like it wraps around the mesh.
+生成一个环绕网格的形状。
 
-##### Cross-section
+##### 截面
 
-Specify the shape of the ribbon section.
+设置丝带的截面的形状。
 
-- Plane
+- 平面
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Ribbon.png
    :align: center
 ```
 
-- Cross
+- 交叉
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Ribbon_Cross.png
    :align: center
 ```
 
-- Point
+- 点
 
-It is not displayed as a mesh, but can be used as a parameter for the spawn method.
+不会显示为网格，但可以用作生成方法的参数。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Ribbon_Point.png
    :align: center
 ```
 
-##### Rotated angle
+##### 旋转角度
 
-Specifies the amount of angle at which the ribbon rotates about its axis.
+设置丝带绕轴旋转的角度。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Ribbon_Rotation.png
    :align: center
 ```
 
-##### Thickness of ribbon
+##### 丝带厚度
 
-Specifies the thickness of the ribbon at the start and end points.
+设置丝带的起点和终点的厚度。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Ribbon_Thickness.png
    :align: center
 ```
 
-##### Angles of ribbon
+##### 丝带角度
 
-Specifies the amount of rotation from the viewpoint to the end point per ribbon.
+设置从视点到每个丝带的终点的旋转角度。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Ribbon_Angle.png
    :align: center
 ```
 
-##### Noises to length
+##### 长度噪声
 
-Move the ribbon and the start and end points randomly.
+随机移动丝带的起点和终点。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Length_Noise.png
    :align: center
 ```
 
-##### The number of ribbons
+##### 丝带数量
 
-Specifies the number of ribbons.
+设置丝带的数量。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Ribbon_Count.png
    :align: center
 ```
 
-### Shape Type
+### 形状
 
-Specify the mesh shape of the actual model to be generated.
+指定要生成的模型的网格形状。
 
-#### Sphere
+#### 球
 
-Sphere.
+球。
 You can specify which region of the sphere is to be specified.
 
 ```eval_rst
@@ -134,110 +134,110 @@ You can specify which region of the sphere is to be specified.
    :align: center
 ```
 
-#### Cone
+#### 圆锥
 
-Cone.
-Radius and depth can be specified.
+圆锥。
+可设置半径和深度。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Cone.png
    :align: center
 ```
 
-#### Cylinder
+#### 圆柱
 
-Cylinder.
-You can specify different values for the top and bottom radii of the cylinder.
-It can also be made into a disk by setting the depth to 0.
+圆柱。
+可以分别设置圆柱顶面和底面的半径。
+也可以通过将深度设置为0制作一个盘面。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Cylinder.png
    :align: center
 ```
 
-#### Spline
+#### 样条曲线
 
-This is a rotator with four points specifying the sides.
-This is useful for expressing tornadoes, auras, etc.
+这是一个用四个点表示边缘，通过旋转产生的网格。
+适合用来表现龙卷风、极光等。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Spline.png
    :align: center
 ```
 
-### Axis
+### 轴
 
-Specifies in which direction the mesh will be generated.
+设置网格将按照什么方向生成。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Axis.png
    :align: center
 ```
 
-### Noise
+### 噪声
 
-It distorts the generated shape.
+扭曲生成的形状。
 
-#### Tilt-noise
+#### 倾斜噪声
 
-Causes the mesh to tilt at each axial position.
-It is suitable for creating meshes that are diagonal in each part, such as tornadoes.
+让网格在每个轴向产生倾斜。
+适合用来制作每个位置都是斜线的网格，例如龙卷风。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Tilt.png
    :align: center
 ```
 
-#### Wave noise
+#### 波噪声
 
-Shake each position of the model with a wave.
-It is good for generating meshes that look like they are shaken by waves at regular intervals.
+用一个波晃动模型的每个位置。
+方便用来让网格看上去像是被固定间隔的波晃动。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Wave.png
    :align: center
 ```
 
-#### Curl-noise
+#### 卷曲噪声
 
-For each position of the model, distort it in a random direction.
+朝向随机方向扭曲模型的每个位置。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/Curl.png
    :align: center
 ```
 
-### Vertex color
+### 顶点颜色
 
-Specify a color for each position and interpolate the colors between them.
+设置每个顶点的颜色，并在顶点之间进行插值。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/VertexColors.png
    :align: center
 ```
 
-#### Position of center area
+#### 中心区域位置
 
-Specifies the position that the center specified by the vertex color indicates on the mesh.
+设置顶点颜色中的中心所代表的位置。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/VertexColors_CenterPosition.png
    :align: center
 ```
 
-#### Rate of center area
+#### 中心区域比率
 
-Specifies how much the center color specified by the vertex color will occupy the center area.
-The larger this value is, the more area the central vertex color occupies.
+设置顶点颜色中的中心所占据的区域大小。
+值越大，中心顶点颜色所占据的范围越大。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/VertexColors_CenterArea.png
    :align: center
 ```
 
-#### Vertex Color Noise
+#### 顶点颜色噪声
 
-Adds colorful noise to the vertex color.
+给顶点颜色添加随机噪声。
 
 ```eval_rst
 .. image:: ../../img/Reference/ProceduralModel/VertexColors_Noise.png
@@ -246,4 +246,4 @@ Adds colorful noise to the vertex color.
 
 #### UV
 
-Specifies the UV region to use for the mesh.
+设置网格使用的UV区域。
