@@ -2,8 +2,8 @@
 
 ## 概述
 
-DynamicParameter specifies a parameter to rewrite refresh (during game) effect parameters during effect playback.
-It controls parameters with simple code. Parameters can be given externally.
+动态参数可以实现在特效在游戏中播放时动态地修改参数的值。
+通过简单的代码控制参数。参数可以通过外部程序设置。
 
 ## 使用方法
 
@@ -53,14 +53,14 @@ It controls parameters with simple code. Parameters can be given externally.
    :align: center
 ```
 
-Then, select the expression you entered earlier and the expression is applied.
+然后，选择你先前输入的表达式，这个表达式就会被应用到参数。
 
 ```eval_rst
 .. image:: ../../img/Reference/DynamicParameter/apply_dynamic_en.png
    :align: center
 ```
 
-The parameter of the position is (0, 0, 0). But a particle is shown on 2 because the expression changes positions into 2
+位置的参数是(0,0,0)。但是粒子出现在(2,0,0)，因为表达式改变了位置参数。
 
 ```eval_rst
 .. image:: ../../img/Reference/DynamicParameter/move2.png
@@ -72,9 +72,8 @@ The parameter of the position is (0, 0, 0). But a particle is shown on 2 because
 #### 修改多个参数
 
 x, y, z, w, 每个参数都是可修改的。
-Entering the following changes the values ​​to 2, 3, 4, and 5, respectively.
-If the destination is a color, x, y, z, w correspond to RGBA.
-
+下面的输入将值分别修改为2, 3, 4, 5。
+如果目标是颜色，x, y, z, w 对应RGBA。
 
 ```
 @O.x = 2.0
@@ -93,12 +92,12 @@ If the destination is a color, x, y, z, w correspond to RGBA.
 
 #### 参数
 
-Parameters input from the external can be specified from the numeric field on the panel and runtime.
+外部程序输入的参数可以通过面板中的数字输入框或运行时设置。
 
 |参数|说明|
 |:----|:----|
-|@P.x @P.y @P.z @P.w|Parameters before dynamic parameter is applied|
-|@In0 @In1 @In2 @In3|Parameters input from the external|
+|@P.x @P.y @P.z @P.w|动态参数应用之前的参数|
+|@In0 @In1 @In2 @In3|外部程序输入的值|
 |@GTime|当前时间（秒）|
 |@PTime|父粒子生成至今的时间（s）|
 
@@ -130,7 +129,7 @@ Parameters input from the external can be specified from the numeric field on th
 
 ### LOD
 
-The number of generations can be changed externally.
+生成的数量可以通过外部设置。
 
 ```
 @O.x = @In0 * @P.x
