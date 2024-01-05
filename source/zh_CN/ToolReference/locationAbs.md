@@ -12,7 +12,7 @@
 
 ## 力场
 
-可以设置至多4种力场。
+最多可同时设置4种力场。
 
 ## 类型
 
@@ -39,7 +39,7 @@
 施加绕指定方向旋转的力。
 可以通过旋转改变轴的方向。
 
-The movement speed can be specified so that the rotation speed is the same for the outside, or so that the movement speed is constant regardless of the position.
+可以设置移动速度，使外侧的旋转速度和内侧相同，否则内外侧的移动速度是相同的。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/Vortex.mp4"/></div>
 
@@ -64,7 +64,7 @@ The movement speed can be specified so that the rotation speed is the same for t
 
 #### 强度
 
-The strength of turbulence on particles.
+湍流的强度。
 
 译注：似乎没有这个设置。也许是统一改成“力”了。
 
@@ -124,22 +124,22 @@ The strength of turbulence on particles.
 
 ### 球
 
-This parameter is used to decay the effect of the force field as it approaches or moves away from the center.
-The greater the decay force, the more the force field is decayed as you move outward.
+远离球心时，力场会发生衰减。
+衰减力越大，向外移动时力场衰减的越多。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/FallOff_Sphere.mp4"/></div>
 
 ### 管道
 
-This parameter is used to decay the effect of the force field as it approaches or moves away from the axis at the center of the cylinder to the outside.
-The greater the decay force, the more the force field is decayed as you move outward.
+远离圆柱中轴线时，力场会发生衰减。
+衰减力越大，向外移动时力场衰减的越多。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/FallOff_Column.mp4"/></div>
 
 ### 圆锥
 
-The shape of the cone is a part of a sphere cut into a cone.
-This parameter is used to decay the force field as it approaches or leaves the outside of the cone.
-The larger the decay force, the more the force field will decay as it approaches the maximum angle.
+这个圆锥是球的一部分切出来的。（在球的表面画一个圆，再与球心连接起来）
+圆锥范围外的地方，力场会发生衰减。该位置和圆锥顶点的连线与圆锥轴线之间的夹角越大，衰减越大。
+衰减力越大，向外移动时力场衰减的越多。
 
 <div class="video_center"><video autoplay loop="true" muted="true" src="../../movies/Reference/LocalForceField/FallOff_Cone.mp4"/></div>

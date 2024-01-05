@@ -53,25 +53,17 @@
 
 ### 格式
 
-有5个选项：
+有5个选项：“导出为单张图片”、“导出为连续多张图片”、“导出为gif动画”、“导出为AVI”和“导出为mp4(h264)”。
 
-“导出为单张图片”
+“导出为单张图片”将生成一幅由多个帧组成的图像。这些帧从左上到右下排列，水平方向上的帧数为“X轴方向帧数”设置的帧数。因此，竖直方向上的帧数将会是帧的总数/X轴方向帧数。
 
-“导出为连续多张图片”
+“导出为连续多张图片”将每帧输出为独立的文件，文件名带有编号。
 
-“导出为gif动画”
+“导出为gif动画”将录制的特效输出为gif文件。
 
-“导出为AVI”
+“导出为AVI”将录制的特效输出为带alpha通道的未压缩的动画文件。
 
-“导出为mp4(h264)”
-
-"Export as a single image" will create a sprite-sheet image with frames arranged from the upper left to the lower right. The number of frames arranged horizontally will be number specified under "X Count". Consequently, the number of frames arranged vertically will be the total number of recorded frames / X Count.
-
-"Export images" outputs frames as individual files with numbers attached to each filename.
-
-"Export as a gif animation" outputs the captured effect to a gif file.
-
-"Export as a AVI" outputs the captured effect to an uncompressed animation file.
+“导出为mp4(h264)”将录制的特效输出为mp4文件。
 
 <table>
 
@@ -138,16 +130,16 @@
 
 #### 生成alpha(Blend+Add)
 
-By outputting the recorded results separately from blend and addition, 
-the color when the background is changed can be reproduced in the possible range.
-It can also record an effect which contains blend and additive particles.
+通过分别输出混合方法为混合和叠加的结果，
+可以在可能的范围内再现背景变化时的颜色。
+它还可以记录包含混合和叠加粒子的特效。
 
 ```eval_rst
 .. image:: ../../img/Reference/Recording/generate_blend_add.png
    :align: center
 ```
 
-When using, draw the added image by addition after drawing the blended image by blending, 
+使用时，先将混合图像混合到背景上，再将叠加图像叠加到背景上。
 
 ```eval_rst
 .. image:: ../../img/Reference/Recording/blend_add_desc.png
