@@ -53,7 +53,7 @@ Sets the level of frame skipping in the file output. For example, for a value of
 
 ### Format
 
-There are 4 options: "Export as a single image", "Export images", "Export as a gif animation", and "Export as a AVI".
+There are 5 options: "Export as a single image", "Export images", "Export as a gif animation", "Export as a AVI", and "Export as a mp4(h264)".
 
 "Export as a single image" will create a sprite-sheet image with frames arranged from the upper left to the lower right. The number of frames arranged horizontally will be number specified under "X Count". Consequently, the number of frames arranged vertically will be the total number of recorded frames / X Count.
 
@@ -61,7 +61,9 @@ There are 4 options: "Export as a single image", "Export images", "Export as a g
 
 "Export as a gif animation" outputs the captured effect to a gif file.
 
-"Export as a AVI" outputs the captured effect to an uncompressed animation file.
+"Export as a AVI" outputs the captured effect to an uncompressed animation file with alpha channel.
+
+"Export as a mp4(h264)" outputs the captured effect to a mp4 file.
 
 <table>
 
